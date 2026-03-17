@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="animations.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designer Certifications & Skills</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f20d33",
+            "background-light": "#f8f5f6",
+            "background-dark": "#221013",
+          },
+          fontFamily: {
+            "display": ["Times New Roman", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .proficiency-bar-fill {
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: fill-bar 1s forwards;
+    }
+    @keyframes fill-bar {
+      to {
+        transform: scaleX(1);
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-slate-50 selection:bg-primary/20 font-serif text-slate-800 relative overflow-x-hidden">
+  <!-- Ambient Background -->
+  <div
+    class="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-slate-50 to-emerald-50/40 opacity-70">
+  </div>
+  <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+    <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-purple-200/20 blur-3xl animate-blob">
+    </div>
+    <div
+      class="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-emerald-200/20 blur-3xl animate-blob animation-delay-2000">
+    </div>
+    <div
+      class="absolute -bottom-[20%] left-[20%] w-[40%] h-[40%] rounded-full bg-blue-200/20 blur-3xl animate-blob animation-delay-4000">
+    </div>
+  </div>
+
+  <div class="relative flex min-h-screen w-full flex-col">
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Top Utility Bar (Premium Dark) -->
+  <div id="site-header-placeholder"></div>
+
+
+
+
+
+
+      <!-- Certifications carousel / cards (Dynamic) -->
+      <section id="certifications" class="mb-16">
+        <div class="flex items-center justify-between mb-8 scroll-reveal">
+          <div>
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Certifications</h2>
+            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Verified achievements & continuous learning.</p>
+          </div>
+          <div class="hidden sm:flex items-center gap-2">
+            <div class="flex gap-1" id="certArrows">
+              <button
+                class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                onclick="document.getElementById('certificationsContainer').scrollBy({left: -300, behavior: 'smooth'})">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </button>
+              <button
+                class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                onclick="document.getElementById('certificationsContainer').scrollBy({left: 300, behavior: 'smooth'})">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="certificationsContainer"
+          class="no-scrollbar -mx-4 flex gap-6 overflow-x-auto px-4 pb-8 snap-x snap-mandatory scroll-smooth">
+          <!-- Certifications will be injected here by JS -->
+
+          <!-- Placeholder / Loading State -->
+          <article
+            class="min-w-[320px] sm:min-w-[360px] snap-center rounded-3xl bg-white/50 dark:bg-slate-900/50 p-6 shadow-xl shadow-slate-200/30 dark:shadow-black/20 border border-slate-100 dark:border-slate-800 animate-pulse">
+            <div class="aspect-video rounded-xl bg-slate-200 dark:bg-slate-800 mb-5"></div>
+            <div class="h-6 w-3/4 bg-slate-200 dark:bg-slate-800 rounded mb-2"></div>
+            <div class="h-4 w-1/2 bg-slate-200 dark:bg-slate-800 rounded mb-5"></div>
+            <div class="flex gap-2">
+              <div class="h-6 w-16 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+              <div class="h-6 w-20 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- HERO SECTION -->
+      <main class="flex-grow pt-32 pb-20 relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section class="mb-16 relative">
+          <!-- Ambient background effect for hero -->
+          <div
+            class="absolute -top-20 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none">
+          </div>
+
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-primary text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-sm shadow-sm scroll-reveal">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            Engineering Arsenal
+          </div>
+
+          <h1
+            class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight scroll-reveal leading-tight">
+            Tools, Frameworks &<br>
+            <span class="bg-gradient-to-r from-primary via-rose-500 to-indigo-600 bg-clip-text text-transparent">
+              Core Expertise.
+            </span>
+          </h1>
+
+          <p
+            class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl scroll-reveal mb-10 leading-relaxed">
+            A dynamically generated overview of my technical skills, pulled directly from my GitHub repositories and
+            verified certifications.
+          </p>
+
+          <div class="flex flex-wrap gap-4 scroll-reveal">
+            <a href="#github-stats"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 text-white hover:bg-slate-800 transition-colors dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 shadow-lg shadow-slate-900/20 font-medium">
+              View Live GitHub Stats
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
+              </svg>
+            </a>
+            <a href="#certifications"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition-colors dark:bg-slate-800 dark:text-slate-200 dark:border-slate-700 dark:hover:bg-slate-700 shadow-sm font-medium">
+              Verified Certifications
+            </a>
+          </div>
+        </section>
+
+        <!-- Two-column: Dynamic Skills Graph and Tools Bento -->
+        <section id="github-stats" class="mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- LEFT: GitHub Language Chart -->
+          <div
+            class="rounded-3xl bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border border-white/50 dark:border-slate-700/50 p-8 shadow-xl shadow-slate-200/40 dark:shadow-black/40 hover-float scroll-reveal relative overflow-hidden group">
+            <div
+              class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/10 transition-colors duration-500">
+            </div>
+
+            <div class="flex items-center justify-between mb-8 relative z-10">
+              <div>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                  <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  Language Graph
+                </h2>
+                <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Live breakdown from my public GitHub
+                  repositories.</p>
+              </div>
+            </div>
+
+            <div class="relative h-64 w-full flex items-center justify-center">
+              <canvas id="skillsChart"></canvas>
+            </div>
+
+            <div class="mt-8 border-t border-slate-100 dark:border-slate-800/80 pt-6 relative z-10">
+              <h3 class="text-sm font-semibold text-slate-900 dark:text-white mb-3">Detected Languages</h3>
+              <div id="languagesList" class="flex flex-wrap gap-2">
+                <!-- Populated by JS -->
+                <div class="animate-pulse w-16 h-7 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+                <div class="animate-pulse w-20 h-7 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+                <div class="animate-pulse w-14 h-7 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Auto-Generated Tools Bento Grid -->
+          <aside
+            class="rounded-3xl bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border border-white/50 dark:border-slate-700/50 p-8 shadow-xl shadow-slate-200/40 dark:shadow-black/40 hover-float scroll-reveal flex flex-col">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Tools & Frameworks</h2>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Dynamically detected from repo structures and
+                topics.</p>
+            </div>
+
+            <div id="toolsGrid" class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 flex-grow content-start">
+              <!-- Populated by JS -->
+              <div class="animate-pulse h-12 bg-slate-200 dark:bg-slate-700 rounded-xl"></div>
+              <div class="animate-pulse h-12 bg-slate-200 dark:bg-slate-700 rounded-xl"></div>
+              <div class="animate-pulse h-12 bg-slate-200 dark:bg-slate-700 rounded-xl"></div>
+              <div class="animate-pulse h-12 bg-slate-200 dark:bg-slate-700 rounded-xl"></div>
+            </div>
+
+            <div class="mt-8 border-t border-slate-100 dark:border-slate-800/80 pt-6">
+              <h3 class="text-sm font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                  </path>
+                </svg>
+                System Architectures
+              </h3>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                <li class="flex items-start gap-2">
+                  <span class="text-primary">•</span> Design thinking & rapid prototyping
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary">•</span> Microservices & edge computing pipelines
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary">•</span> Secure-by-design & threat modelling
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Short Projects / Evidence -->
+        <section class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Selected Evidence</h2>
+          <p class="text-sm text-gray-600 mb-6">Short pointers to projects that demonstrate these skills — click to
+            open case study pages.</p>
+
+          <div class="scroll-reveal grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-stagger-list>
+            <a href="case-study-biometric-voting.html"
+              class="group rounded-3xl overflow-hidden bg-white hover-float scroll-reveal">
+              <div class="h-44 bg-cover bg-center"
+                style="background-image:url('https://i.postimg.cc/XYg9c3Z6/biometric-thumbnail.jpg')"></div>
+              <div class="p-4">
+                <h4 class="font-semibold text-gray-900">Fingerprint Biometric Voting</h4>
+                <p class="text-sm text-gray-600 mt-1">Embedded integration, R307 sensor, automated counting &
+                  validation code.</p>
+              </div>
+            </a>
+
+            <a href="case-study-smart-cart.html"
+              class="group rounded-3xl overflow-hidden bg-white hover-float scroll-reveal">
+              <div class="h-44 bg-cover bg-center"
+                style="background-image:url('https://i.postimg.cc/6p0wHk2m/smartcart-thumb.jpg')"></div>
+              <div class="p-4">
+                <h4 class="font-semibold text-gray-900">Smart Cart — Automated Checkout</h4>
+                <p class="text-sm text-gray-600 mt-1">RFID + load cell prototype, NodeMCU telemetry & Firebase
+                  integration.</p>
+              </div>
+            </a>
+
+            <a href="case-study-agrohub.html"
+              class="group rounded-3xl overflow-hidden bg-white hover-float scroll-reveal">
+              <div class="h-44 bg-cover bg-center"
+                style="background-image:url('https://i.postimg.cc/4dSg1rT7/agrohub-thumb.jpg')"></div>
+              <div class="p-4">
+                <h4 class="font-semibold text-gray-900">AgroHub — AI · IoT · Blockchain</h4>
+                <p class="text-sm text-gray-600 mt-1">Crop monitoring, edge inference & secure farmer transactions.
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <section
+          class="rounded-3xl bg-primary/5 border border-primary/10 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-bold text-gray-900">Want the full skills matrix or certificates?</h3>
+            <p class="text-sm text-gray-600 mt-1">I can share verified PDF certificates, GitHub repos and technical
+              reports on request.</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="Resume_page.html?download=true"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-primary shadow-sm">Download
+              Resume</a>
+            <a href="Contact_page.html"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 bg-white text-gray-800">Request
+              documents</a>
+          </div>
+        </section>
+    </div>
+
+    <!-- small JS for subtle animation (progress bars) -->
+    <script>
+      // animate progress bars on intersection
+      document.addEventListener('DOMContentLoaded', () => {
+        const bars = document.querySelectorAll('.proficiency-bar-fill, .h-2 .bg-primary');
+        // already inline widths set. Add intersection based fade (optional)
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.h-2 > div, .min-w-[300px] .aspect-video').forEach(el => observer.observe(el));
+      });
+    </script>
+    </main>
+
+    <!-- === ULTIMATE CTA & NEWSLETTER (Combined Premium Footer Capstone) === -->
+    <section class="relative py-24 sm:py-32 overflow-hidden">
+      <!-- Dynamic Background -->
+      <div class="absolute inset-0 bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
+        <!-- Animated Grain/Pattern -->
+        <div class="absolute inset-0 opacity-20"
+          style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+      </div>
+
+      <!-- Glowing Orbs -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse animation-delay-2000">
+      </div>
+
+      <div class="relative container mx-auto px-6 lg:px-20 z-10 text-center">
+
+        <!-- Main Call to Action -->
+        <div class="max-w-4xl mx-auto mb-20 ">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-8">
+            Ready to build something <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">secure, scalable &
+              future-proof?</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+            From rapid prototyping to production-grade deployment, I help turn complex engineering challenges into
+            polished, robust solutions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="Contact_page.html"
+              class="group relative px-8 py-4 bg-white text-slate-900 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <span class="relative z-10 flex items-center gap-2">
+                Start a Project
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </span>
+            </a>
+            <a href="Resume_page.html"
+              class="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Glass Newsletter Strip -->
+        <div class="max-w-3xl mx-auto  delay-200">
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 sm:p-3 flex flex-col sm:flex-row gap-2 shadow-2xl">
+            <div class="flex-grow flex items-center px-4">
+              <svg class="w-6 h-6 text-slate-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <input type="email" placeholder="Subscribe to newsletter for updates..."
+                class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full outline-none h-12"
+                required />
+            </div>
+            <button
+              class="px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-colors shadow-lg shadow-primary/20 whitespace-nowrap btn-shine">
+              Join Now
+            </button>
+          </div>
+          <p class="text-slate-400 text-xs mt-4">
+            Join 500+ engineers. No spam, unsubscribe anytime.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    </main>
+    <!-- ============================================================
+     UPGRADED FOOTER — Canonical Template
+     Features:
+       • 4-column: Brand | Explore | Resources | Connect
+       • Full social icons with brand hover colors in Connect column
+       • Back-to-top button (appears after 300px scroll)
+       • Auto-updating copyright year via JS
+       • Ambient glow orbs & scroll-reveal
+     ============================================================ -->
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top"
+      class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-slate-900 text-white shadow-2xl shadow-slate-900/30 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-primary hover:scale-110 hover:shadow-primary/30 dark:bg-slate-800 dark:hover:bg-primary">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
+    <!-- ============================================================
+     FOOTER v2 — Ultra-Premium Canonical Template
+     New features over v1:
+       • Full-width CTA pre-footer strip with animated gradient
+       • Animated tech/tool scrolling marquee tape
+       • Newsletter signup with shake validation
+       • "Currently building" live status block
+       • Footer social icons with brand-glow hover rings
+       • Shimmer divider between sections
+       • Staggered reveal columns (CSS transitions)
+       • Back-to-top button with progress-arc ring
+       • Location pin with time zone live clock
+     ============================================================ -->
+  <div id="site-footer-placeholder"></div>
+    <!-- Footer & Back-to-Top Scripts -->
+    <script>
+      // Auto copyright year
+      var fy = document.getElementById('footerYear');
+      if (fy) fy.textContent = new Date().getFullYear();
+
+      // Back to top
+      var backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) {
+            backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            backToTop.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            backToTop.classList.remove('opacity-100', 'translate-y-0');
+          }
+        }, { passive: true });
+        backToTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    </script>
+
+
+  </div>
+  </div>
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis for Smooth Scrolling -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <!-- Central Portfolio Data Engine -->
+  <script src="js/portfolio-engine.js"></script>
+
+  <script>
+    // ─── Skills Page — powered by ENGINE ─────────────────────────
+    const BRAND_COLORS = [
+      '#f20d33','#4f46e5','#10b981','#f59e0b',
+      '#6366f1','#ec4899','#8b5cf6','#14b8a6'
+    ];
+
+    function renderLanguages(skills) {
+      const el = document.getElementById("languagesList");
+      if (!el) return;
+      if (!skills.length) { el.innerHTML = `<span class="text-sm text-slate-500">No languages detected.</span>`; return; }
+      el.innerHTML = skills.map(({ lang, count }) => `
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-semibold shadow-sm">
+          ${lang} <span class="opacity-60 font-normal">(${count})</span>
+        </span>`).join("");
+    }
+
+    function renderChart(skills) {
+      const ctx = document.getElementById("skillsChart");
+      if (!ctx || !skills.length) return;
+      new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels:   skills.map(s => s.lang),
+          datasets: [{ data: skills.map(s => s.count), backgroundColor: BRAND_COLORS.slice(0, skills.length), borderWidth: 0, hoverOffset: 10 }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, cutout: "65%",
+          plugins: {
+            legend: { position: "right", labels: { color: document.documentElement.classList.contains("dark") ? "#94a3b8" : "#475569", font: { family: "'Space Grotesk', sans-serif", size: 11 }, usePointStyle: true, padding: 20 }},
+            tooltip: { backgroundColor: "rgba(15,23,42,0.9)", padding: 12, cornerRadius: 8 }
+          },
+          animation: { animateScale: true, animateRotate: true }
+        }
+      });
+    }
+
+    function renderTools(tools) {
+      const el = document.getElementById("toolsGrid");
+      if (!el) return;
+      if (!tools.length) { el.innerHTML = `<span class="text-sm text-slate-500 col-span-2">No tools detected.</span>`; return; }
+      el.innerHTML = tools.map(tool => `
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 hover:border-primary/30 hover:shadow-md hover:shadow-primary/5 transition-all duration-300 group">
+          <div class="w-8 h-8 rounded-lg bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm shrink-0 group-hover:scale-110 transition-transform">
+            <img src="https://simpleicons.org/icons/${tool.icon}.svg" alt="${tool.display}" class="w-4 h-4 opacity-80 dark:invert">
+          </div>
+          <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors line-clamp-1">${tool.display}</div>
+        </div>`).join("");
+    }
+
+    async function loadCertifications() {
+      try {
+        const res = await fetch("data/certifications.json");
+        if (!res.ok) throw new Error("certifications.json not found");
+        const certs = await res.json();
+        const el = document.getElementById("certificationsContainer");
+        if (!el) return;
+        el.innerHTML = certs.map((cert, i) => `
+          <article class="min-w-[320px] sm:min-w-[360px] snap-center rounded-3xl bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl p-6 shadow-xl shadow-slate-200/30 dark:shadow-black/40 border border-white/50 dark:border-slate-700/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 group">
+            <div class="relative aspect-video rounded-xl bg-slate-100 dark:bg-slate-800 bg-cover bg-center mb-5 overflow-hidden border border-slate-100 dark:border-slate-800" style="background-image:url('${cert.image}')">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">${cert.title}</h3>
+            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">${cert.issuer} <span class="mx-1">•</span> ${cert.date}</p>
+            <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 line-clamp-2">${cert.description}</p>
+            <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
+              ${cert.tags.map(t => `<span class="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] uppercase tracking-wider font-bold">${t}</span>`).join("")}
+            </div>
+          </article>`).join("");
+      } catch (e) {
+        console.error("Certifications load failed:", e);
+        const el = document.getElementById("certificationsContainer");
+        if (el) el.innerHTML = `<span class="text-sm text-rose-500 col-span-2 p-4">Could not load certifications. Check data/certifications.json.</span>`;
+      }
+    }
+
+    async function initSkillsPage() {
+      try {
+        const repos = await ENGINE.getRepos();
+        const skills = ENGINE.detectSkills(repos);
+        const tools  = ENGINE.detectTools(repos);
+        renderLanguages(skills);
+        renderChart(skills);
+        renderTools(tools);
+      } catch (e) {
+        console.error("Skills page init failed:", e);
+        const l = document.getElementById("languagesList");
+        const t = document.getElementById("toolsGrid");
+        if (l) l.innerHTML = `<span class="text-rose-500 text-sm">Failed to load GitHub data.</span>`;
+        if (t) t.innerHTML = `<span class="text-rose-500 text-sm col-span-2">Failed to load tools.</span>`;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initSkillsPage();
+      loadCertifications();
+    });
+  </script>
+
+  <script src="animations.js" defer></script>
+  <script src="js/includes.js"></script>
+</body>
+<script src="animations.js" defer></script>
+
+</html>

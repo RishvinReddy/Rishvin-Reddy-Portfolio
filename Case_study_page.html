@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="animations.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Case Study</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f20d33",
+            "background-light": "#f8f5f6",
+            "background-dark": "#221013",
+            "text-light": "#1c0d10",
+            "text-dark": "#f8f5f6",
+            "subtle-light": "#f4e7e9",
+            "subtle-dark": "#3a1a20",
+          },
+          fontFamily: {
+            display: ["Times New Roman", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .prose-custom {
+      --tw-prose-body: #1c0d10;
+      --tw-prose-headings: #1c0d10;
+      --tw-prose-lead: #9c4957;
+      --tw-prose-links: #1c0d10;
+      --tw-prose-bold: #1c0d10;
+      --tw-prose-counters: #9c4957;
+      --tw-prose-bullets: #f20d33;
+      --tw-prose-hr: #f4e7e9;
+      --tw-prose-quotes: #1c0d10;
+      --tw-prose-quote-borders: #f4e7e9;
+      --tw-prose-captions: #9c4957;
+      --tw-prose-code: #1c0d10;
+      --tw-prose-pre-code: #f4e7e9;
+      --tw-prose-pre-bg: #1c0d10;
+      --tw-prose-invert-body: #f8f5f6;
+      --tw-prose-invert-headings: #f8f5f6;
+      --tw-prose-invert-lead: #e8cdd1;
+      --tw-prose-invert-links: #f8f5f6;
+      --tw-prose-invert-bold: #f8f5f6;
+      --tw-prose-invert-counters: #e8cdd1;
+      --tw-prose-invert-bullets: #f20d33;
+      --tw-prose-invert-hr: #3a1a20;
+      --tw-prose-invert-quotes: #f8f5f6;
+      --tw-prose-invert-quote-borders: #3a1a20;
+      --tw-prose-invert-captions: #e8cdd1;
+      --tw-prose-invert-code: #f8f5f6;
+      --tw-prose-invert-pre-code: #3a1a20;
+      --tw-prose-invert-pre-bg: #f8f5f6;
+    }
+  </style>
+  
+</head>
+
+<body class="bg-slate-50 selection:bg-primary/20 font-serif text-slate-800 relative overflow-x-hidden">
+  <!-- Ambient Background -->
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-slate-50 to-emerald-50/40 opacity-70"></div>
+  <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+      <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-purple-200/20 blur-3xl animate-blob"></div>
+      <div class="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-emerald-200/20 blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-[20%] left-[20%] w-[40%] h-[40%] rounded-full bg-blue-200/20 blur-3xl animate-blob animation-delay-4000"></div>
+  </div>
+
+  <div class="flex min-h-screen w-full flex-col">
+    <!-- Top Utility Bar (Premium Dark) -->
+  <div id="site-header-placeholder"></div>
+    <main class="flex-1">
+      <div class="container mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div class="flex flex-col gap-8 scroll-reveal">
+          <div>
+            <p class="text-sm font-medium text-primary">Case Study</p>
+            <h1 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">Redesigning a Mobile Banking App</h1>
+            <p class="mt-4 text-lg text-text-light/70 dark:text-text-dark/70">A deep dive into improving the user
+              experience and accessibility of a mobile banking application.</p>
+          </div>
+          <div class="w-full overflow-hidden rounded-3xl scroll-reveal">
+            <img alt="Mobile Banking App Showcase" class="h-auto w-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgoO66IyHmvCr6Hh2ay2NHImCLsxnDjjeuacGLcJxAcLA0Up9-9J8egGae0nKgAWuSiTtyuMIz5yFfSMufAiL-vUYPU3Kft9359o3IbXCjM_v0GYAN6wMZCuHj-yMMXWHcfMFxzdDQ4Shkqb7ZKQQ9GM4u5tqXzkmuCziY4O8fVmGk5WFsRCIJnVZLkVqOZT4WktmjTXcgePXT-YaDneFztWy2niBssPODDMkeTOnGX2R-b5zOWA8yrPOkr3vFN18dyOeenZQkljA" />
+          </div>
+          <article class="prose prose-custom dark:prose-invert max-w-none space-y-8 text-base leading-relaxed">
+            <div>
+              <h2 class="text-2xl font-bold">Overview</h2>
+              <p>
+                This project involved a comprehensive redesign of a mobile banking application aimed at enhancing user
+                experience, improving accessibility, and increasing user engagement. The existing app suffered from
+                usability issues, outdated design, and poor navigation, leading to user frustration and low adoption
+                rates.
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">Problem Statement</h2>
+              <p>
+                The primary challenge was to create a user-friendly and intuitive mobile banking experience that caters
+                to a diverse user base, including those with varying levels of technical proficiency. Key issues
+                included confusing navigation, a cluttered interface, and a lack of essential accessibility features.
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">Design Process</h2>
+              <p>Our design process followed a user-centered approach, incorporating these stages:</p>
+              <ol>
+                <li><strong>Research:</strong> Conducted user interviews, surveys, and usability testing of the existing
+                  app to identify pain points and user needs.</li>
+                <li><strong>Ideation:</strong> Brainstormed potential solutions and created user personas and journey
+                  maps to guide the design process.</li>
+                <li><strong>Wireframing:</strong> Developed low-fidelity wireframes to outline the app's structure and
+                  navigation flow.</li>
+                <li><strong>Prototyping:</strong> Created interactive prototypes to test and refine the user interface
+                  and interactions.</li>
+                <li><strong>Testing:</strong> Conducted usability testing with target users to gather feedback and
+                  iterate on the design.</li>
+                <li><strong>Visual Design:</strong> Applied a modern and accessible visual design language,
+                  incorporating the brand's color palette and typography.</li>
+              </ol>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">Challenges</h2>
+              <p>We encountered several challenges during the redesign:</p>
+              <ul>
+                <li><strong>Balancing simplicity and functionality:</strong> Ensuring the app remained easy to use while
+                  providing a comprehensive set of banking features.</li>
+                <li><strong>Accessibility:</strong> Designing for users with disabilities, including visual and motor
+                  impairments.</li>
+                <li><strong>Integration with existing systems:</strong> Ensuring seamless integration with the bank's
+                  backend systems and security protocols.</li>
+                <li><strong>User adoption:</strong> Encouraging existing users to transition to the redesigned app and
+                  attracting new users.</li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">Solutions</h2>
+              <p>To address the identified challenges, we implemented the following solutions:</p>
+              <ul>
+                <li><strong>Streamlined Navigation:</strong> Simplified the app's navigation structure, using clear
+                  labels and intuitive icons.</li>
+                <li><strong>Clean and Modern Interface:</strong> Adopted a minimalist design approach with ample white
+                  space and a clear visual hierarchy.</li>
+                <li><strong>Accessibility Features:</strong> Incorporated features such as adjustable font sizes, high
+                  contrast mode, and voice-over support.</li>
+                <li><strong>User Onboarding:</strong> Developed a user-friendly onboarding process to guide new users
+                  through the app's features.</li>
+                <li><strong>Iterative Testing:</strong> Continuously tested and refined the design based on user
+                  feedback, ensuring a user-centered approach.</li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">Outcomes</h2>
+              <p>The redesigned mobile banking app achieved significant improvements:</p>
+              <ul>
+                <li><strong>Increased User Satisfaction:</strong> User feedback indicated a substantial increase in
+                  satisfaction and ease of use.</li>
+                <li><strong>Improved Accessibility:</strong> The app became more accessible to users with disabilities,
+                  expanding the user base.</li>
+                <li><strong>Higher Engagement:</strong> User engagement metrics, such as session duration and feature
+                  usage, increased significantly.</li>
+                <li><strong>Positive App Store Reviews:</strong> The app received positive reviews and ratings,
+                  reflecting the improved user experience.</li>
+              </ul>
+            </div>
+          </article>
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Visuals</h2>
+            <div class="scroll-reveal mt-6 grid grid-cols-2 gap-4 sm:gap-6" data-stagger-list>
+              <div class="col-span-2 overflow-hidden rounded-3xl scroll-reveal">
+                <img alt="App screen 1" class="h-full w-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9OWgiijwz3W0WpnMnnId73jOh-cMe1kwz46MSYCwnViosrzCMp9aSpKEkw9SOy7Fvgd5ChdKcKirY0lSEYnWCdMn2B0g1xy_6u3AWImHBM3rFgnM0RuvhRXy9sYjH9VeHMnTtCNgoIfR2VIwgeagJkTKUjNDQ9fN8oFoFGnBJaHsMFuX-4MLOafxYd68bIyuSd4hcoLtlS529hbc39L995BE1GFt-DyOU6f2gUbLWeCxXgXiDwDGyO-ObcGjqc2Z8JHYt5aDfj9I" />
+              </div>
+              <div class="overflow-hidden rounded-3xl scroll-reveal">
+                <img alt="App screen 2" class="h-full w-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCohWf42k8UM0q7SKfIAZlMYaUIusqVTv3ztzpOFSTMVoLEHICSsjPRF3zUwLx8J58-43mQfEbwfQMJ4hnFKswdufMpFXsbPeOrkX1UwS6tGhRkyGnfsvByBHBhvabVSjEDxmK8zM7xWANaanNtbY0H9v533BEnKXUO8Gh1MjkYHi4KzhZdzUz2I-AEm3wUzrCQCTnBLlVV0bPYTSxmuhzd9A-mbaG3TMy1R63OELZCs0FXZQgm0w-MGcku_veCqA6fWqXm0a8m6AI" />
+              </div>
+              <div class="overflow-hidden rounded-3xl scroll-reveal">
+                <img alt="App screen 3" class="h-full w-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdXwwX-gqEC5kzhp-v-iE4C2BvvI7X_Nd-hnBJABtSCcF9F7gV0sHwrhHnpHIl-03rvX8MV6VaumLhLMFQpeVDFz9_2G4_23nsHcfZI5MMgxmnMNFxGtHR9ierajyJeScbStOxCvxjLT9WqXU06gANNButLjSmQvM0oTIToZbvX-kB6gq8PZoUFc6xX7_lAGBob25FEI9YFe3GF-_nN6SrHU4jqoaPgYihX3pjV1jvCKFo2acWqeGMl7FE9-FNX-XKwqdcf_hcZcg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- === ULTIMATE CTA & NEWSLETTER (Combined Premium Footer Capstone) === -->
+    <section class="relative py-24 sm:py-32 overflow-hidden">
+      <!-- Dynamic Background -->
+      <div class="absolute inset-0 bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
+        <!-- Animated Grain/Pattern -->
+        <div class="absolute inset-0 opacity-20"
+          style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+      </div>
+
+      <!-- Glowing Orbs -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse animation-delay-2000">
+      </div>
+
+      <div class="relative container mx-auto px-6 lg:px-20 z-10 text-center">
+
+        <!-- Main Call to Action -->
+        <div class="max-w-4xl mx-auto mb-20 ">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-8">
+            Ready to build something <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">secure, scalable &
+              future-proof?</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+            From rapid prototyping to production-grade deployment, I help turn complex engineering challenges into
+            polished, robust solutions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="Contact_page.html"
+              class="group relative px-8 py-4 bg-white text-slate-900 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <span class="relative z-10 flex items-center gap-2">
+                Start a Project
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </span>
+            </a>
+            <a href="Resume_page.html"
+              class="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Glass Newsletter Strip -->
+        <div class="max-w-3xl mx-auto  delay-200">
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 sm:p-3 flex flex-col sm:flex-row gap-2 shadow-2xl">
+            <div class="flex-grow flex items-center px-4">
+              <svg class="w-6 h-6 text-slate-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <input type="email" placeholder="Subscribe to newsletter for updates..."
+                class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full outline-none h-12"
+                required />
+            </div>
+            <button
+              class="px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-colors shadow-lg shadow-primary/20 whitespace-nowrap btn-shine">
+              Join Now
+            </button>
+          </div>
+          <p class="text-slate-400 text-xs mt-4">
+            Join 500+ engineers. No spam, unsubscribe anytime.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    </main>
+    <!-- ============================================================
+     UPGRADED FOOTER — Canonical Template
+     Features:
+       • 4-column: Brand | Explore | Resources | Connect
+       • Full social icons with brand hover colors in Connect column
+       • Back-to-top button (appears after 300px scroll)
+       • Auto-updating copyright year via JS
+       • Ambient glow orbs & scroll-reveal
+     ============================================================ -->
+
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top"
+  class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-slate-900 text-white shadow-2xl shadow-slate-900/30 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-primary hover:scale-110 hover:shadow-primary/30 dark:bg-slate-800 dark:hover:bg-primary">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+</button>
+
+<!-- ============================================================
+     FOOTER v2 — Ultra-Premium Canonical Template
+     New features over v1:
+       • Full-width CTA pre-footer strip with animated gradient
+       • Animated tech/tool scrolling marquee tape
+       • Newsletter signup with shake validation
+       • "Currently building" live status block
+       • Footer social icons with brand-glow hover rings
+       • Shimmer divider between sections
+       • Staggered reveal columns (CSS transitions)
+       • Back-to-top button with progress-arc ring
+       • Location pin with time zone live clock
+     ============================================================ -->
+  <div id="site-footer-placeholder"></div>
+<!-- Footer & Back-to-Top Scripts -->
+<script>
+  // Auto copyright year
+  var fy = document.getElementById('footerYear');
+  if (fy) fy.textContent = new Date().getFullYear();
+
+  // Back to top
+  var backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.remove('opacity-100', 'translate-y-0');
+      }
+    }, { passive: true });
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
+
+
+  </div>
+
+    <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis for Smooth Scrolling -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="animations.js" defer></script>
+  <script src="js/includes.js"></script>
+</body>
+<script src="animations.js" defer></script>
+
+</html>

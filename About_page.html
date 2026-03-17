@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="animations.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishvin Reddy About Page</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#f20d46",
+            "background-light": "#f8f5f6",
+            "background-dark": "#221014",
+          },
+          fontFamily: {
+            display: ["Times New Roman", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .active-link {
+      color: #f20d46;
+      font-weight: 700;
+    }
+  </style>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .mermaid { background: transparent !important; max-width:100%; overflow-x:auto; }
+    .mermaid svg { max-width:100%; }
+  </style>
+</head>
+
+<body class="bg-slate-50 selection:bg-primary/20 font-serif text-slate-800 relative overflow-x-hidden">
+  <div class="cursor-dot hidden md:block"></div>
+  <div class="cursor-outline hidden md:block"></div>
+
+  <!-- Ambient Background -->
+  <div
+    class="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-slate-50 to-emerald-50/40 opacity-70">
+  </div>
+  <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+    <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-purple-200/20 blur-3xl animate-blob">
+    </div>
+    <div
+      class="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-emerald-200/20 blur-3xl animate-blob animation-delay-2000">
+    </div>
+    <div
+      class="absolute -bottom-[20%] left-[20%] w-[40%] h-[40%] rounded-full bg-blue-200/20 blur-3xl animate-blob animation-delay-4000">
+    </div>
+  </div>
+
+  <div class="flex min-h-screen flex-col pt-12">
+    <!-- Top Utility Bar (Premium Dark) -->
+  <div id="site-header-placeholder"></div>
+    <!-- ===========================
+     ABOUT — The Narrative Flow (Hero -> Stats -> Story -> Tech -> Impact)
+     =========================== -->
+    <main class="flex-grow pt-20">
+      <div class="mx-auto max-w-5xl px-6 py-12 sm:px-8 lg:px-12">
+
+        <!-- 1. Hero Section -->
+        <div class="text-center scroll-reveal mb-16 relative perspective-1000">
+          <div
+            class="hover-card-3d relative w-48 h-48 mx-auto mb-8 rounded-full p-1 bg-gradient-to-tr from-primary to-indigo-500 shadow-2xl shadow-indigo-500/20 animate-blob">
+            <div class="w-full h-full rounded-full overflow-hidden border-4 border-white bg-white">
+              <img src="https://i.postimg.cc/nz2684jj/PHOTO-2025-11-11-12-05-06.jpg" alt="Rishvin Reddy"
+                class="w-full h-full object-cover">
+            </div>
+          </div>
+          <h1
+            class="text-5xl sm:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 mb-4">
+            Rishvin Reddy
+          </h1>
+          <p class="text-xl sm:text-2xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
+            B.Tech Student | IoT Developer | Backend &amp; DSA Enthusiast. Building smart systems using Arduino, ESP32, and Python. Interested in AI, Cybersecurity.
+          </p>
+        </div>
+
+        <!-- 2. The Stats Strip (Glass) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 scroll-reveal" data-stagger-list>
+          <div
+            class="bg-white/60 backdrop-blur-xl border border-white/50 p-6 rounded-3xl text-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl font-bold text-primary mb-1">17+</div>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Public Repos</div>
+          </div>
+          <div
+            class="bg-white/60 backdrop-blur-xl border border-white/50 p-6 rounded-3xl text-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl font-bold text-indigo-600 mb-1">3</div>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Core Domains</div>
+          </div>
+          <div
+            class="bg-white/60 backdrop-blur-xl border border-white/50 p-6 rounded-3xl text-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl font-bold text-emerald-600 mb-1">20+</div>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Workshops Led</div>
+          </div>
+          <div
+            class="bg-white/60 backdrop-blur-xl border border-white/50 p-6 rounded-3xl text-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl font-bold text-purple-600 mb-1">4</div>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Followers</div>
+          </div>
+        </div>
+
+        <!-- 3. My Story (Bio) -->
+        <section class="max-w-3xl mx-auto mb-24 scroll-reveal">
+          <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">My Journey</h2>
+          <div class="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed space-y-6">
+            <p>
+              Technology has always been more than just code to me—it's a tool to solve real-world problems. My journey
+              began with a curiosity for how things work, leading me to dive deep into <strong>Embedded Systems</strong>
+              and IoT prototypes using Arduino and ESP microcontrollers.
+            </p>
+            <p>
+              As I scaled my projects, I realized that connectivity brings vulnerability. This drove my passion for
+              <strong>Cyber Security</strong>, mastering encryption standards (AES/SHA) and secure authentication flows.
+              Today, I bridge the physical and digital worlds by integrating hardware sensors with secure, decentralized
+              <strong>Blockchain</strong> ledgers.
+            </p>
+            <p>
+              I don't just build software; I engineer reliable, secure, and user-centric ecosystems—from the firmware up
+              to the cloud.
+            </p>
+          </div>
+        </section>
+
+        <!-- 4. Technical Arsenal -->
+        <section class="mb-24 scroll-reveal">
+          <div class="flex items-center justify-between mb-10">
+            <h2 class="text-3xl font-bold text-slate-900">Technical Arsenal</h2>
+            <a href="Resume_page.html" class="text-sm font-semibold text-primary hover:underline">View Full Resume →</a>
+          </div>
+
+          <div id="techArsenalGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger-list>
+            <div class="p-6 rounded-3xl bg-white/40 border border-white/60 backdrop-blur-md">
+               <div class="flex items-center justify-center p-8">
+                 <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500"></div>
+                 <span class="ml-3 text-sm text-slate-500 font-medium">Analyzing GitHub Architecture...</span>
+               </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Recognition & Impact -->
+        <section class="mb-24 scroll-reveal">
+          <h2 class="text-3xl font-bold text-slate-900 mb-8">Recognitions & Impact</h2>
+          <div
+            class="bg-gradient-to-br from-indigo-50 to-white rounded-[2.5rem] p-8 sm:p-12 border border-indigo-100 shadow-xl overflow-hidden relative">
+            <!-- decorative bg pattern -->
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+            </div>
+
+            <div id="impactList" class="grid grid-cols-1 md:grid-cols-2 gap-10 relative z-10" data-stagger-list>
+              <div class="col-span-full flex items-center justify-center p-8">
+                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                <span class="ml-3 text-sm text-slate-500 font-medium">Fetching developer impact...</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Featured Work (Brief) -->
+        <section class="mb-24 scroll-reveal">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-slate-900">Selected Work</h2>
+            <p class="text-slate-600 mt-2">Highlights from my recent engineering sprints.</p>
+          </div>
+
+          <div id="featuredWorkGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6" data-stagger-list>
+            <div class="col-span-full flex items-center justify-center p-8">
+              <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-500"></div>
+              <span class="ml-3 text-sm text-slate-500 font-medium">Curating featured repositories...</span>
+            </div>
+          </div>
+
+          <div class="text-center mt-10">
+            <a href="Portfolio_page.html"
+              class="inline-flex items-center gap-2 font-semibold text-primary hover:text-indigo-600 transition-colors">
+              View All Projects <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- 7. Final CTA -->
+        <section class="text-center scroll-reveal">
+          <div class="inline-block p-1 rounded-full bg-gradient-to-r from-primary to-indigo-600 mb-8">
+            <div class="px-8 py-4 bg-white rounded-full">
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600 font-bold text-lg">Looking
+                for a collaborator?</span>
+            </div>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Let's build the inevitable.</h2>
+          <div class="flex gap-4 justify-center">
+            <a href="CTA_page.html"
+              class="px-8 py-4 bg-slate-900 text-white rounded-full font-bold shadow-xl hover:-translate-y-1 transition-transform btn-shine">Contact
+              Me</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+    <section class="relative py-24 sm:py-32 overflow-hidden">
+      <!-- Dynamic Background -->
+      <div class="absolute inset-0 bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
+        <!-- Animated Grain/Pattern -->
+        <div class="absolute inset-0 opacity-20"
+          style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+      </div>
+
+      <!-- Glowing Orbs -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse animation-delay-2000">
+      </div>
+
+      <div class="relative container mx-auto px-6 lg:px-20 z-10 text-center">
+
+        <!-- Main Call to Action -->
+        <div class="max-w-4xl mx-auto mb-20 ">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-8">
+            Ready to build something <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">secure, scalable &
+              future-proof?</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+            From rapid prototyping to production-grade deployment, I help turn complex engineering challenges into
+            polished, robust solutions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="Contact_page.html"
+              class="group relative px-8 py-4 bg-white text-slate-900 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <span class="relative z-10 flex items-center gap-2">
+                Start a Project
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </span>
+            </a>
+            <a href="/Rishvin_Reddy_Resume.pdf"
+              class="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Glass Newsletter Strip -->
+        <div class="max-w-3xl mx-auto  delay-200">
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 sm:p-3 flex flex-col sm:flex-row gap-2 shadow-2xl">
+            <div class="flex-grow flex items-center px-4">
+              <svg class="w-6 h-6 text-slate-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <input type="email" placeholder="Subscribe to newsletter for updates..."
+                class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full outline-none h-12"
+                required />
+            </div>
+            <button
+              class="px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-colors shadow-lg shadow-primary/20 whitespace-nowrap btn-shine">
+              Join Now
+            </button>
+          </div>
+          <p class="text-slate-400 text-xs mt-4">
+            Join 500+ engineers. No spam, unsubscribe anytime.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+<!-- ============================================================
+     FOOTER v2 — Ultra-Premium Canonical Template
+     New features over v1:
+       • Full-width CTA pre-footer strip with animated gradient
+       • Animated tech/tool scrolling marquee tape
+       • Newsletter signup with shake validation
+       • "Currently building" live status block
+       • Footer social icons with brand-glow hover rings
+       • Shimmer divider between sections
+       • Staggered reveal columns (CSS transitions)
+       • Back-to-top button with progress-arc ring
+       • Location pin with time zone live clock
+     ============================================================ -->
+  <div id="site-footer-placeholder"></div>
+    <!-- GSAP Core & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="js/portfolio-engine.js"></script>
+    <script src="animations.js"></script>
+    
+    <!-- GitHub Automation Script for About Page -->
+    <script>
+            function detectProjectType(repo) {
+        const name = repo.name.toLowerCase();
+        const desc = (repo.description || "").toLowerCase();
+        if (name.includes("iot") || desc.includes("iot") || name.includes("hardware")) return { name: "IoT", color: "orange" };
+        if (name.includes("ml") || desc.includes("ml") || name.includes("ai") || name.includes("tensorflow") || name.includes("model")) return { name: "AI & ML", color: "purple" };
+        if (name.includes("security") || name.includes("auth") || name.includes("encryption") || name.includes("crypto")) return { name: "Security", color: "blue" };
+        if (name.includes("web") || desc.includes("web") || desc.includes("site") || desc.includes("app") || repo.language === "JavaScript" || desc.includes("react") || name.includes("portfolio")) return { name: "Web Dev", color: "emerald" };
+        if (name.includes("db") || desc.includes("db")) return { name: "Database", color: "rose" };
+        return { name: "Software", color: "slate" };
+      }
+
+      async function syncAboutPageWithGithub() {
+        const username = "RishvinReddy";
+        let allRepos = [];
+        let page = 1;
+        
+        try {
+          while (true) {
+            const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&page=${page}`);
+            if (!res.ok) break;
+            const data = await res.json();
+            if (data.length === 0) break;
+            allRepos = allRepos.concat(data);
+            page++;
+          }
+          
+          if (allRepos.length === 0) {
+            // Rate limit fallback
+            document.getElementById("techArsenalGrid").innerHTML = "<p>Github data temporarily unavailable.</p>";
+            document.getElementById("impactList").innerHTML = "<p>Data temporarily unavailable.</p>";
+            document.getElementById("featuredWorkGrid").innerHTML = "<p>Please view on GitHub directly.</p>";
+            return;
+          }
+          
+          const filteredRepos = allRepos.filter(r => !r.fork).sort((a,b) => new Date(b.created_at) - new Date(a.created_at));
+          
+          // 1. Calculate Architecture Data for "Technical Arsenal"
+          const techGrid = document.getElementById("techArsenalGrid");
+          const languages = [...new Set(filteredRepos.map(r => r.language).filter(Boolean))];
+          
+          const hardwareWords = ['arduino', 'esp32', 'iot', 'hardware', 'sensor'];
+          const webWords = ['react', 'site', 'web', 'portfolio', 'flask', 'django', 'api'];
+          const secWords = ['security', 'auth', 'fingerprint', 'biometric', 'totp', 'encryption'];
+          
+          let hasIoT = filteredRepos.some(r => hardwareWords.some(w => (r.name+(r.description||"")).toLowerCase().includes(w)));
+          let hasWeb = filteredRepos.some(r => webWords.some(w => (r.name+(r.description||"")).toLowerCase().includes(w)));
+          let hasSec = filteredRepos.some(r => secWords.some(w => (r.name+(r.description||"")).toLowerCase().includes(w)));
+          
+          techGrid.innerHTML = `
+            ${hasIoT ? `
+            <div class="p-6 rounded-3xl bg-white/40 border border-white/60 backdrop-blur-md hover:-translate-y-1 transition-transform duration-300">
+              <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center mb-4"><i class="fa-solid fa-microchip text-xl"></i></div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">IoT & Embedded</h3>
+              <p class="text-sm text-slate-600 mb-4 cursor-default">Bridging physical hardware with digital logic dynamically derived from your C++ / Arduino ecosystem.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-white rounded-md text-xs font-medium text-slate-600 border border-slate-100">Arduino</span>
+                <span class="px-2 py-1 bg-white rounded-md text-xs font-medium text-slate-600 border border-slate-100">C++</span>
+                <span class="px-2 py-1 bg-white rounded-md text-xs font-medium text-slate-600 border border-slate-100">Sensors</span>
+              </div>
+            </div>` : ''}
+            
+            ${hasSec ? `
+            <div class="p-6 rounded-3xl bg-white/40 border border-white/60 backdrop-blur-md hover:-translate-y-1 transition-transform duration-300">
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-4"><i class="fa-solid fa-shield-halved text-xl"></i></div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Security & Identity</h3>
+              <p class="text-sm text-slate-600 mb-4 cursor-default">Building scalable and robust auth solutions actively managed on GitHub.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-white rounded-md text-xs font-medium text-slate-600 border border-slate-100">Auth</span>
+                <span class="px-2 py-1 bg-white rounded-md text-xs font-medium text-slate-600 border border-slate-100">Biometrics</span>
+                <span class="px-2 py-1 bg-white rounded-md text-xs font-medium text-slate-600 border border-slate-100">Encryption</span>
+              </div>
+            </div>` : ''}
+            
+            ${hasWeb ? `
+            <div class="p-6 rounded-3xl bg-white/40 border border-white/60 backdrop-blur-md hover:-translate-y-1 transition-transform duration-300">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4"><i class="fa-solid fa-code text-xl"></i></div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Full-Stack & Data</h3>
+              <p class="text-sm text-slate-600 mb-4 cursor-default">Deploying full-stack applications built predominantly in ${languages.slice(0,3).join(', ')}.</p>
+              <div class="flex flex-wrap gap-2">
+                ${languages.slice(0,4).map(l => `<span class="px-2 py-1 bg-white rounded-md text-xs font-medium text-slate-600 border border-slate-100">${l}</span>`).join('')}
+              </div>
+            </div>` : ''}
+          `;
+          
+          
+          // 2. Generate Impact Highlights based on GitHub Stats
+          const impactList = document.getElementById("impactList");
+          let totalStars = filteredRepos.reduce((sum, r) => sum + r.stargazers_count, 0);
+          let totalForks = filteredRepos.reduce((sum, r) => sum + r.forks_count, 0);
+          
+          impactList.innerHTML = `
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-white rounded-xl shadow-sm text-yellow-500 flex items-center justify-center shrink-0">
+                 <i class="fa-solid fa-code-branch text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Open Source Impact</h3>
+                <p class="text-sm text-slate-600 mt-1 cursor-default">Currently maintaining ${filteredRepos.length} public repositories with ${totalStars} stars and ${totalForks} forks.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-white rounded-xl shadow-sm text-pink-500 flex items-center justify-center shrink-0">
+                 <i class="fa-solid fa-medal text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Consistent Developer</h3>
+                <p class="text-sm text-slate-600 mt-1 cursor-default">Continuously pushing commits and building systems in ${languages.length} distinct programming languages.</p>
+              </div>
+            </div>
+          `;
+          
+          // 3. Render 'Selected Work' -> Maps to Top 3 Complexity Repos
+          const featuredGrid = document.getElementById("featuredWorkGrid");
+          const topRepos = [...filteredRepos].sort((a,b) => {
+            let scoreA = (a.stargazers_count*5) + (a.forks_count*3) + (a.size/50);
+            let scoreB = (b.stargazers_count*5) + (b.forks_count*3) + (b.size/50);
+            return scoreB - scoreA;
+          }).slice(0, 3);
+          
+          featuredGrid.innerHTML = "";
+          
+          topRepos.forEach((repo, index) => {
+            const type = detectProjectType(repo);
+            
+            const card = document.createElement("div");
+            card.className = `project-card group cursor-pointer relative flex flex-col bg-white dark:bg-slate-900 rounded-3xl premium-layered-shadow border border-slate-200/60 dark:border-slate-800 overflow-hidden hover-float scroll-reveal transition-all duration-500 tilt-card hover-card-3d`;
+            card.dataset.category = type.name.toLowerCase();
+            
+            card.onclick = () => openProjectModal(repo.name, repo.html_url, repo.language||'Code', type.name, type.color);
+
+            const colorMap = {
+              orange:  { accent:'#f97316' },
+              purple:  { accent:'#9333ea' },
+              blue:    { accent:'#3b82f6' },
+              emerald: { accent:'#10b981' },
+              rose:    { accent:'#f43f5e' },
+              slate:   { accent:'#64748b' },
+            };
+            const palette = colorMap[type.color] || colorMap.slate;
+
+            const coverUrl = `https://opengraph.githubassets.com/1/RishvinReddy/${repo.name}`;
+
+            card.innerHTML = `
+              <div class="relative h-44 overflow-hidden bg-slate-100 dark:bg-slate-800">
+                <img src="${coverUrl}" alt="${repo.name} cover"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');">
+                <div class="absolute inset-0 hidden items-center justify-center" style="background:linear-gradient(135deg,${palette.accent}22,${palette.accent}55)">
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="${palette.accent}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                <div class="absolute top-3 left-3 z-10">
+                  <span class="flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold backdrop-blur-md border border-white/20 text-white" style="background:${palette.accent}cc">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                    ${type.name}
+                  </span>
+                </div>
+                <div class="absolute top-3 right-3 z-10">
+                  <span class="px-2 py-1 rounded-md text-[10px] font-mono font-bold bg-black/50 text-white backdrop-blur">${repo.language || 'Code'}</span>
+                </div>
+              </div>
+              <div class="flex flex-col flex-1 p-5">
+                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors line-clamp-1 font-display">${repo.name.replace(/-/g,' ').replace(/_/g,' ')}</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2 mb-4">${repo.description || 'No description provided.'}</p>
+                <div class="flex items-center gap-4 text-xs text-slate-400 dark:text-slate-500 mb-4">
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>${repo.stargazers_count}</span>
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12M8 12h12M8 17h12"/></svg>${repo.forks_count} forks</span>
+                  <span class="ml-auto text-[10px]">${new Date(repo.updated_at).toLocaleDateString('en-US',{month:'short',year:'numeric'})}</span>
+                </div>
+                <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                  <span class="text-xs font-semibold text-primary flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Explore
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                  </span>
+                  <span class="text-[10px] font-medium px-2 py-1 rounded-lg" style="background:${palette.accent}15;color:${palette.accent}">${type.name}</span>
+                </div>
+              </div>
+            `;
+            featuredGrid.appendChild(card);
+            
+            // Re-apply 3D hover logic to newly created card
+            card.addEventListener('mousemove', (e) => {
+              const rect = card.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              const centerX = rect.width / 2;
+              const centerY = rect.height / 2;
+              const rotateX = ((y - centerY) / centerY) * -8;
+              const rotateY = ((x - centerX) / centerX) * 8;
+              
+              if (typeof gsap !== 'undefined') {
+                gsap.to(card, { rotationX: rotateX, rotationY: rotateY, duration: 0.5, ease: "power2.out", transformPerspective: 1000 });
+              } else {
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+              }
+            });
+
+            card.addEventListener('mouseleave', () => {
+              if (typeof gsap !== 'undefined') {
+                gsap.to(card, { rotationX: 0, rotationY: 0, duration: 0.8, ease: "power2.out" });
+              } else {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+              }
+            });
+          });
+          
+          if (window.ScrollTrigger) {
+            setTimeout(() => ScrollTrigger.refresh(), 500);
+          }
+        } catch(e) {
+          console.error("Failed to sync GitHub data.", e);
+        }
+      }
+    function switchModalTab(tab, btn) {
+      document.querySelectorAll('.modal-tab-pane').forEach(p => p.classList.remove('pane-active'));
+      const pane = document.getElementById('tab-'+tab);
+      if (pane) pane.classList.add('pane-active');
+      document.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('tab-active'));
+      if (btn) btn.classList.add('tab-active');
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('projectModal');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100');
+      document.body.style.overflow = 'auto';
+    }
+
+    async function openProjectModal(repoName, defaultLink, language, typeName, typeColor) {
+      const modal = document.getElementById('projectModal');
+      const titleEl = document.getElementById('modalTitle');
+      const metaEl = document.getElementById('modalMeta');
+      const linkEl = document.getElementById('modalRepoLink');
+      const readmeEl = document.getElementById('tab-readme');
+      const filesEl = document.getElementById('fileTreeContainer');
+      const fileRepoName = document.getElementById('fileTreeRepoName');
+      const chartsEl = document.getElementById('chartsContainer');
+      const bannerImg = document.getElementById('modalBannerImg');
+
+      // Use GitHub's own Open Graph social preview — always project-relevant, auto-generated by GitHub
+      bannerImg.src = `https://opengraph.githubassets.com/1/RishvinReddy/${repoName}`;
+      bannerImg.style.opacity = '1';
+
+      titleEl.textContent = repoName.replace(/-/g,' ').replace(/_/g,' ');
+      metaEl.innerHTML = `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/20 border border-white/30">${typeName}</span><span>·</span><span>${language||'Code'}</span>`;
+      linkEl.href = defaultLink;
+      fileRepoName.textContent = repoName;
+
+      // Loading state
+      readmeEl.innerHTML = `<div class="flex flex-col justify-center items-center h-52 gap-4"><div class="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-500"></div><p class="text-sm text-slate-400 animate-pulse">Fetching README from GitHub...</p></div>`;
+      filesEl.innerHTML = `<div class="p-8 text-center text-slate-400 text-sm"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500 mx-auto mb-3"></div>Loading file tree...</div>`;
+      chartsEl.innerHTML = `<div class="p-8 text-center text-slate-400 text-sm"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-500 mx-auto mb-3"></div>Generating charts...</div>`;
+
+      // Switch to readme tab by default
+      switchModalTab('readme', document.getElementById('tabBtn-readme'));
+
+      // Open modal
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+
+      // ── Fetch README ──
+      let markdown = '';
+      try {
+        const res = await fetch(`https://api.github.com/repos/RishvinReddy/${repoName}/readme`);
+        if (!res.ok) throw new Error('no readme');
+        const data = await res.json();
+        markdown = decodeURIComponent(escape(atob(data.content)));
+        if (typeof marked !== 'undefined') {
+          // Configure marked with GFM tables + proper renderer
+          marked.setOptions({ gfm: true, breaks: true });
+          const renderer = new marked.Renderer();
+          // Mermaid blocks
+          const origCode = renderer.code.bind(renderer);
+          renderer.code = function(code, lang) {
+            if (lang === 'mermaid') {
+              const id = 'mermaid-' + Math.random().toString(36).slice(2,8);
+              return `<div class="not-prose my-4 rounded-xl border border-slate-200 dark:border-slate-700 p-4 overflow-x-auto bg-white dark:bg-slate-900"><div class="mermaid" id="${id}">${code}</div></div>`;
+            }
+            return origCode(code, lang);
+          };
+          readmeEl.innerHTML = marked.parse(markdown, { renderer });
+          // Render mermaid diagrams
+          if (typeof mermaid !== 'undefined') {
+            mermaid.initialize({ startOnLoad: false, theme: document.documentElement.classList.contains('dark') ? 'dark' : 'default', securityLevel: 'loose', fontFamily: 'inherit' });
+            mermaid.run({ nodes: readmeEl.querySelectorAll('.mermaid') });
+          }
+        } else {
+          readmeEl.innerHTML = `<pre class="whitespace-pre-wrap text-sm">${markdown}</pre>`;
+        }
+      } catch(e) {
+        readmeEl.innerHTML = `<div class="text-center py-16 flex flex-col items-center"><svg class="w-16 h-16 text-slate-200 dark:text-slate-700 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><h4 class="text-xl font-bold text-slate-600 dark:text-slate-300 mb-2">No README found</h4><p class="text-slate-400 mb-6 max-w-sm mx-auto">This repo doesn't have a README.md yet.</p><a href="${defaultLink}" target="_blank" class="px-6 py-2.5 bg-primary text-white font-medium rounded-full shadow-lg shadow-primary/25">View on GitHub →</a></div>`;
+      }
+
+      // ── Fetch File Tree ──
+      try {
+        // Try HEAD first, fall back to main, then master
+        let treeRes = await fetch(`https://api.github.com/repos/RishvinReddy/${repoName}/git/trees/HEAD?recursive=1`);
+        if (!treeRes.ok) treeRes = await fetch(`https://api.github.com/repos/RishvinReddy/${repoName}/git/trees/main?recursive=1`);
+        if (!treeRes.ok) throw new Error('no tree');
+        const treeData = await treeRes.json();
+        const items = (treeData.tree || []).filter(i => !i.path.includes('node_modules') && !i.path.startsWith('.git'));
+
+        // Build nested folder tree
+        let html = '';
+        const renderTree = (parentPath, depth) => {
+          const dirs = items.filter(i => i.type === 'tree' && i.path.split('/').slice(0,-1).join('/') === parentPath);
+          const files = items.filter(i => i.type === 'blob' && i.path.split('/').slice(0,-1).join('/') === parentPath);
+          const indent = depth * 16;
+          dirs.forEach(d => {
+            const name = d.path.split('/').pop();
+            html += `<div class="file-tree-item is-dir" style="padding-left:${12+indent}px" onclick="this.nextElementSibling&&(this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none')">
+              <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+              <span class="text-slate-700 dark:text-slate-300 font-semibold text-[13px]">${name}</span>
+            </div>`;
+            // Render children inline (up to 2 levels deep for performance)
+            if (depth < 2) {
+              html += `<div class="nested-${d.path.replace(/[^a-z0-9]/gi,'_')}">`;
+              renderTree(d.path, depth + 1);
+              html += `</div>`;
+            }
+          });
+          files.slice(0, depth === 0 ? 30 : 15).forEach(f => {
+            const name = f.path.split('/').pop();
+            const ext = name.split('.').pop().toLowerCase();
+            const clr = {md:'#3b82f6',py:'#eab308',js:'#f59e0b',ts:'#3b82f6',json:'#22c55e',yml:'#ef4444',yaml:'#ef4444',css:'#a855f7',html:'#f97316',cpp:'#3b82f6',c:'#3b82f6',sh:'#22c55e',txt:'#94a3b8',env:'#f43f5e',gitignore:'#64748b'}[ext] || '#94a3b8';
+            const size = f.size < 1024 ? f.size+'B' : (f.size/1024).toFixed(1)+'KB';
+            html += `<div class="file-tree-item is-file" style="padding-left:${12+indent+16}px" onclick="window.open('${defaultLink}/blob/HEAD/${f.path}','_blank')">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:${clr}"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+              <span class="text-slate-600 dark:text-slate-400 text-[13px]">${name}</span>
+              <span class="ml-auto text-[10px] text-slate-300 dark:text-slate-600 font-mono">${size}</span>
+            </div>`;
+          });
+        };
+        renderTree('', 0);
+        filesEl.innerHTML = html || '<div class="p-6 text-center text-slate-400 text-sm">No files found.</div>';
+        // Update stat bar
+        const statsBar = document.getElementById('modalStatsBar');
+        if (statsBar) { statsBar.textContent = `${items.filter(i=>i.type==='blob').length} files · ${items.filter(i=>i.type==='tree').length} folders`; statsBar.classList.remove('hidden'); }
+      } catch(e) {
+        filesEl.innerHTML = `<div class="p-6 text-center text-slate-400 text-sm">Could not load file tree. <a href="${defaultLink}" target="_blank" class="text-indigo-500 underline">View on GitHub →</a></div>`;
+      }
+
+      // ── Generate Charts from README content ──
+      buildReadmeCharts(chartsEl, repoName, markdown, language, typeName);
+    }
+
+    function buildReadmeCharts(container, repoName, markdown, language, typeName) {
+      container.innerHTML = '';
+      if (!markdown) {
+        container.innerHTML = '<div class="text-center py-16 text-slate-400"><p class="text-lg font-bold mb-2">No README</p><p class="text-sm">Charts are generated from README content.</p></div>';
+        return;
+      }
+
+      // ── Parse README tables into Chart.js bar charts ──
+      const tableRegex = /\|(.+)\|\n\|[-| :]+\|\n((?:\|.+\|\n?)+)/g;
+      let tableMatch;
+      let tableIndex = 0;
+      while ((tableMatch = tableRegex.exec(markdown)) !== null && tableIndex < 4) {
+        const headers = tableMatch[1].split('|').map(h => h.trim()).filter(Boolean);
+        const rows = tableMatch[2].trim().split('\n').map(r => r.split('|').filter(Boolean).map(c => c.trim()));
+        // Try to extract numeric data: first col = label, rest = numbers
+        const numericCols = headers.slice(1).filter((_,i) => rows.some(r => !isNaN(parseFloat(r[i+1]))));
+        if (numericCols.length > 0 && rows.length > 1) {
+          const labels = rows.map(r => r[0]).filter(Boolean);
+          const colors = ['#6366f1','#10b981','#f59e0b','#ef4444','#8b5cf6','#06b6d4'];
+          const datasets = numericCols.map((col, ci) => ({
+            label: col,
+            data: rows.map(r => parseFloat(r[ci+1]) || 0),
+            backgroundColor: colors[ci % colors.length] + 'cc',
+            borderRadius: 8, borderSkipped: false
+          }));
+          const card = document.createElement('div');
+          card.className = 'readme-chart-card';
+          const cid = 'chartTable' + tableIndex;
+          card.innerHTML = `<h4 class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-4 flex items-center gap-2"><span>📊</span> ${headers[0]} — Data from README</h4><canvas id="${cid}" height="220"></canvas>`;
+          container.appendChild(card);
+          requestAnimationFrame(() => {
+            if (typeof Chart !== 'undefined') {
+              new Chart(document.getElementById(cid), {
+                type: labels.length <= 3 ? 'bar' : 'bar',
+                data: { labels, datasets },
+                options: { responsive: true, plugins: { legend: { position:'top', labels:{ font:{size:11}, boxWidth:12 } } }, scales: { y: { beginAtZero:true }, x: { grid:{ display:false } } } }
+              });
+            }
+          });
+          tableIndex++;
+        }
+      }
+
+      // ── Section word-count doughnut ──
+      const headings = (markdown.match(/^#{1,3} .+/gm) || []).map(h => h.replace(/^#+\s*/,'').slice(0,28));
+      if (headings.length > 1) {
+        const lines = markdown.split('\n');
+        const sections = {};
+        let cur = 'Intro';
+        lines.forEach(l => {
+          if (/^#{1,3} /.test(l)) { cur = l.replace(/^#+\s*/,'').slice(0,22); sections[cur] = 0; }
+          else { sections[cur] = (sections[cur]||0) + l.trim().split(/\s+/).length; }
+        });
+        const sKeys = Object.keys(sections).filter(k => sections[k] > 2).slice(0,9);
+        if (sKeys.length > 1) {
+          const c1 = document.createElement('div');
+          c1.className = 'readme-chart-card';
+          c1.innerHTML = `<h4 class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-4 flex items-center gap-2"><span>📑</span> README Section Breakdown (word count)</h4><canvas id="chartSections" height="240"></canvas>`;
+          container.appendChild(c1);
+          requestAnimationFrame(() => {
+            if (typeof Chart !== 'undefined') {
+              new Chart(document.getElementById('chartSections'), {
+                type: 'doughnut',
+                data: { labels: sKeys, datasets: [{ data: sKeys.map(k=>sections[k]||1), backgroundColor: ['#6366f1','#10b981','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#f43f5e','#84cc16','#64748b'], borderWidth: 2, borderColor: document.documentElement.classList.contains('dark') ? '#0d1117':'#fff' }] },
+                options: { responsive:true, plugins:{ legend:{ position:'right', labels:{ font:{size:11}, boxWidth:12, padding:10 } } } }
+              });
+            }
+          });
+        }
+      }
+
+      // ── Code language distribution ──
+      const codeBlocks = (markdown.match(/```(\w+)/g)||[]).map(m=>m.replace('```','')).filter(l=>l&&l.toLowerCase()!=='text'&&l.toLowerCase()!=='none'&&l.length<20);
+      const langCount = {};
+      codeBlocks.forEach(l => { langCount[l.toLowerCase()] = (langCount[l.toLowerCase()]||0)+1; });
+      if (Object.keys(langCount).length > 0) {
+        const c2 = document.createElement('div');
+        c2.className = 'readme-chart-card';
+        c2.innerHTML = `<h4 class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-4 flex items-center gap-2"><span>💻</span> Code Block Languages in README</h4><canvas id="chartLangs" height="180"></canvas>`;
+        container.appendChild(c2);
+        requestAnimationFrame(() => {
+          if (typeof Chart !== 'undefined') {
+            const lks = Object.keys(langCount); const lvals = Object.values(langCount);
+            new Chart(document.getElementById('chartLangs'), {
+              type: 'bar',
+              data: { labels: lks, datasets: [{ label:'Code blocks', data: lvals, backgroundColor: lks.map((_,i) => ['#6366f1','#10b981','#f59e0b','#ef4444','#8b5cf6','#06b6d4'][i%6]+'cc'), borderRadius:8, borderSkipped:false }] },
+              options: { responsive:true, plugins:{legend:{display:false}}, scales:{ y:{beginAtZero:true,ticks:{stepSize:1}}, x:{grid:{display:false}} } }
+            });
+          }
+        });
+      }
+
+      // ── Auto Architecture Flowchart (Mermaid) ──
+      const c3 = document.createElement('div');
+      c3.className = 'readme-chart-card';
+      const flowSrc = generateArchFlow(typeName, repoName);
+      const archId = 'archDiagram-' + Date.now();
+      c3.innerHTML = `<h4 class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-4 flex items-center gap-2"><span>🔀</span> Auto-Generated Architecture Flow</h4><div class="mermaid" id="${archId}">${flowSrc}</div>`;
+      container.appendChild(c3);
+      requestAnimationFrame(() => {
+        if (typeof mermaid !== 'undefined') {
+          try { mermaid.run({ nodes: [document.getElementById(archId)] }); } catch(e){}
+        }
+      });
+
+      if (container.children.length === 0) {
+        container.innerHTML = '<div class="text-center py-16 text-slate-400">No charts could be generated from this README.</div>';
+      }
+    }
+
+    function generateArchFlow(typeName, repoName) {
+      const name = repoName.replace(/-/g,'_').replace(/ /g,'_');
+      if (typeName === 'IoT') return `flowchart LR\n  A["🌡️ Sensor"] --> B["📡 ESP32/Arduino"]\n  B --> |MQTT| C["☁️ Cloud Broker"]\n  C --> D["📊 Dashboard"]\n  D --> E["📱 User"]\n  B --> F["💡 Actuator"]`;
+      if (typeName === 'Security') return `flowchart TD\n  A["👤 User"] --> B["🔐 Auth Layer"]\n  B --> |JWT/MFA| C["🛡️ API Gateway"]\n  C --> D["📦 Encrypted DB"]\n  C --> E["🪵 Audit Logs"]\n  B --> |Fail| F["🚫 Blocked"]`;
+      if (typeName === 'AI & ML') return `flowchart LR\n  A["📂 Dataset"] --> B["🔧 Preprocessing"]\n  B --> C["🧠 Model Training"]\n  C --> D["📈 Evaluation"]\n  D --> |Good| E["🚀 Deployment"]\n  D --> |Poor| B`;
+      if (typeName === 'Web Dev') return `flowchart LR\n  A["👤 Browser"] --> B["⚛️ Frontend"]\n  B --> |REST/GraphQL| C["🖥️ Backend API"]\n  C --> D["🗄️ Database"]\n  C --> E["🔑 Auth Service"]\n  B --> F["📦 CDN/Cache"]`;
+      return `flowchart TD\n  A["📥 Input"] --> B["⚙️ ${name}"]\n  B --> C["🔄 Processing"]\n  C --> D["📤 Output"]\n  B --> E["📋 Logging"]`;
+    }
+
+syncAboutPageWithGithub();
+    </script>
+    <style>
+      /* ── README tables ── */
+      #tab-readme table { width:100%; border-collapse:collapse; font-size:0.875rem; margin:1.25em 0; border-radius:12px; overflow:hidden; }
+      #tab-readme th { background:#f1f5f9; color:#334155; font-weight:700; text-align:left; padding:10px 14px; border-bottom:2px solid #e2e8f0; }
+      #tab-readme td { padding:9px 14px; border-bottom:1px solid #f1f5f9; color:#475569; }
+      #tab-readme tr:last-child td { border-bottom:none; }
+      #tab-readme tr:hover td { background:#f8fafc; }
+      .dark #tab-readme th { background:#1e293b; color:#94a3b8; border-color:#334155; }
+      .dark #tab-readme td { color:#94a3b8; border-color:#1e293b; }
+      .dark #tab-readme tr:hover td { background:#1e293b55; }
+
+      /* ── Mermaid ── */
+      .mermaid { background: transparent !important; max-width:100%; overflow-x:auto; }
+      .mermaid svg { max-width:100%; }
+
+      /* ── Charts containers ── */
+      .readme-chart-card { border:1px solid #e2e8f0; border-radius:16px; padding:20px; margin-bottom:20px; background:#f8fafc; }
+      .dark .readme-chart-card { background:#0f172a; border-color:#1e293b; }
+
+      /* ── Custom scrollbar ── */
+      .modal-tab-pane::-webkit-scrollbar { width:6px; }
+      .modal-tab-pane::-webkit-scrollbar-track { background:transparent; }
+      .modal-tab-pane::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:99px; }
+      .dark .modal-tab-pane::-webkit-scrollbar-thumb { background:#334155; }
+    </style>
+
+    <div id="projectModal"
+      class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300"
+      role="dialog" aria-modal="true">
+      <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-md" onclick="closeProjectModal()"></div>
+      <div class="relative w-full max-w-5xl flex flex-col bg-white dark:bg-[#0d1117] rounded-2xl shadow-2xl m-3 md:m-6 border border-slate-200 dark:border-slate-800"
+           style="height:92vh; max-height:92vh;">
+
+        <!-- Modal Hero Banner -->
+        <div id="modalBanner" class="relative flex-shrink-0 overflow-hidden rounded-t-2xl" style="height:140px;">
+          <img id="modalBannerImg" src="" alt="" class="w-full h-full object-cover"
+            onerror="this.style.opacity='0'">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/85"></div>
+          <div class="absolute bottom-0 left-0 right-0 px-5 pb-3 flex items-end justify-between">
+            <div class="flex-1 min-w-0 pr-4">
+              <h3 id="modalTitle" class="text-lg sm:text-xl font-black text-white font-display drop-shadow truncate"></h3>
+              <div id="modalMeta" class="flex items-center gap-2 mt-1 text-xs text-white/75 flex-wrap"></div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <a id="modalRepoLink" href="#" target="_blank"
+                class="flex items-center gap-1.5 px-3 py-1.5 bg-white/20 hover:bg-white/30 backdrop-blur border border-white/30 text-white text-xs font-semibold rounded-full transition-all">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.699-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                GitHub
+              </a>
+              <button onclick="closeProjectModal()" class="w-8 h-8 flex items-center justify-center bg-white/20 hover:bg-red-500/80 backdrop-blur border border-white/30 text-white rounded-full transition-all">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs bar -->
+        <div class="flex items-center gap-2 px-5 py-2.5 border-b border-slate-100 dark:border-slate-800 bg-slate-50/90 dark:bg-slate-900/70 backdrop-blur-md flex-shrink-0">
+          <button id="tabBtn-readme" class="modal-tab-btn tab-active px-4 py-1.5 rounded-full text-xs font-bold" onclick="switchModalTab('readme',this)">📄 README</button>
+          <button id="tabBtn-files" class="modal-tab-btn px-4 py-1.5 rounded-full text-xs font-bold text-slate-500 hover:text-slate-800 dark:hover:text-white" onclick="switchModalTab('files',this)">📁 Files</button>
+          <button id="tabBtn-charts" class="modal-tab-btn px-4 py-1.5 rounded-full text-xs font-bold text-slate-500 hover:text-slate-800 dark:hover:text-white" onclick="switchModalTab('charts',this)">📊 Charts</button>
+          <span id="modalStatsBar" class="ml-auto text-[11px] text-slate-400 font-mono hidden"></span>
+        </div>
+
+        <!-- Scrollable tab panes wrapper -->
+        <div id="modal-tab-wrap" class="flex-1 overflow-hidden">
+
+          <!-- README Tab -->
+          <div id="tab-readme" class="modal-tab-pane pane-active prose prose-slate prose-base dark:prose-invert max-w-none
+            prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight
+            prose-h1:text-2xl prose-h2:text-xl prose-h2:border-b prose-h2:border-slate-100 dark:prose-h2:border-slate-800 prose-h2:pb-1.5
+            prose-a:text-indigo-500 prose-a:underline-offset-4
+            prose-img:rounded-xl prose-img:shadow-lg prose-img:border prose-img:border-slate-200 dark:prose-img:border-slate-800
+            prose-pre:bg-[#0d1117] prose-pre:border prose-pre:border-slate-800 prose-pre:rounded-xl
+            prose-code:text-indigo-500 prose-code:bg-indigo-50 dark:prose-code:bg-indigo-950/30 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+            prose-blockquote:border-l-4 prose-blockquote:border-indigo-400 prose-blockquote:bg-indigo-50/50 dark:prose-blockquote:bg-indigo-950/20 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg">
+            <!-- README content injected here -->
+          </div>
+
+          <!-- Files Tab -->
+          <div id="tab-files" class="modal-tab-pane" style="height:100%;">
+            <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+              <div class="flex items-center gap-3 px-4 py-3 bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-700">
+                <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+                <span class="text-sm font-semibold text-slate-700 dark:text-slate-300" id="fileTreeRepoName"></span>
+                <span class="ml-auto text-xs text-slate-400 font-mono">main</span>
+              </div>
+              <div id="fileTreeContainer" class="divide-y divide-slate-100 dark:divide-slate-800/50"></div>
+            </div>
+          </div>
+
+          <!-- Charts Tab -->
+          <div id="tab-charts" class="modal-tab-pane" style="height:100%;">
+            <div id="chartsContainer"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     GITHUB API AUTOMATION ENGINE
+     Self-updating: Technical Arsenal · Impact · Selected Work
+     ══════════════════════════════════════════════════════ -->
+<script>
+(function () {
+
+  /* ─────────────── CONFIG ─────────────── */
+  const GH_USER   = "RishvinReddy";
+  const API_URL   = `https://api.github.com/users/${GH_USER}/repos?per_page=100&sort=updated`;
+  const CACHE_KEY = "ghRepos_v3";
+  const CACHE_TTL = 30 * 60 * 1000; // 30 min
+
+  /* ─────────────── LANGUAGE ICON MAP ─────────────── */
+  const LANG_META = {
+    "Python":     { icon: "python",      color: "#3572A5", bg: "#e8f0fe"  },
+    "JavaScript": { icon: "javascript",  color: "#f1e05a", bg: "#fefce8"  },
+    "TypeScript": { icon: "typescript",  color: "#3178c6", bg: "#eff6ff"  },
+    "C++":        { icon: "cplusplus",   color: "#f34b7d", bg: "#fdf2f8"  },
+    "C":          { icon: "c",           color: "#555555", bg: "#f8f8f8"  },
+    "HTML":       { icon: "html5",       color: "#e34c26", bg: "#fff7ed"  },
+    "CSS":        { icon: "css3",        color: "#563d7c", bg: "#f5f3ff"  },
+    "Java":       { icon: "java",        color: "#b07219", bg: "#fef9c3"  },
+    "Rust":       { icon: "rust",        color: "#dea584", bg: "#fff7ed"  },
+    "Go":         { icon: "go",          color: "#00ADD8", bg: "#ecfeff"  },
+    "Shell":      { icon: "bash",        color: "#89e051", bg: "#f0fdf4"  },
+    "Kotlin":     { icon: "kotlin",      color: "#A97BFF", bg: "#f5f3ff"  },
+    "Swift":      { icon: "swift",       color: "#F05138", bg: "#fff1f2"  },
+    "Ruby":       { icon: "ruby",        color: "#701516", bg: "#fdf2f2"  },
+    "PHP":        { icon: "php",         color: "#4F5D95", bg: "#eef2ff"  },
+    "Dart":       { icon: "dart",        color: "#00B4AB", bg: "#ecfdf5"  },
+    "R":          { icon: "r",           color: "#276DC3", bg: "#eff6ff"  },
+    "Jupyter Notebook": { icon: "jupyter", color: "#DA5B0B", bg: "#fff7ed" },
+    "MATLAB":     { icon: "matlab",      color: "#0076A8", bg: "#eff6ff"  },
+  };
+
+  function getLangMeta(lang) {
+    return LANG_META[lang] || { icon: null, color: "#6b7280", bg: "#f3f4f6" };
+  }
+
+  /* ─────────────── FETCH + CACHE (delegates to central ENGINE) ─────────────── */
+  async function fetchRepos() {
+    // ENGINE.getRepos() handles caching with a shared 1-hour localStorage key.
+    // This avoids duplicate API calls when the user navigates between pages.
+    if (typeof ENGINE !== 'undefined') {
+      return ENGINE.getRepos();
+    }
+    // Fallback if engine script fails to load
+    const res = await fetch(`https://api.github.com/users/${GH_USER}/repos?per_page=100&sort=updated`, { headers: { "Accept": "application/vnd.github.v3+json" } });
+    if (!res.ok) throw new Error("GitHub API " + res.status);
+    return res.json();
+  }
+
+  /* ─────────────── ANIMATED COUNTER ─────────────── */
+  function animateCount(el, target, suffix = "") {
+    const duration = 1400;
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(ease * target) + suffix;
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ─────────────── POPULATE IMPACT ─────────────── */
+  function populateImpact(repos) {
+    const container = document.getElementById("impactList");
+    if (!container) return;
+
+    let stars = 0, forks = 0;
+    const languages = new Set();
+    repos.forEach(r => {
+      stars += r.stargazers_count || 0;
+      forks += r.forks_count || 0;
+      if (r.language) languages.add(r.language);
+    });
+
+    const ownRepos = repos.filter(r => !r.fork).length;
+
+    const metrics = [
+      { value: stars,          label: "GitHub Stars",     icon: "⭐", color: "text-amber-500"   },
+      { value: forks,          label: "Total Forks",      icon: "🍴", color: "text-indigo-500"  },
+      { value: ownRepos,       label: "Original Projects",icon: "🚀", color: "text-primary"     },
+      { value: languages.size, label: "Languages Mastered",icon: "💻", color: "text-emerald-500" },
+    ];
+
+    container.innerHTML = metrics.map(m => `
+      <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-white/50 backdrop-blur border border-white/60 shadow hover:-translate-y-1 transition-transform duration-300">
+        <div class="text-3xl mb-2">${m.icon}</div>
+        <div class="text-4xl font-black ${m.color} mb-1 tabular-nums" data-target="${m.value}">0</div>
+        <div class="text-sm font-semibold text-slate-500 uppercase tracking-wide">${m.label}</div>
+      </div>
+    `).join("");
+
+    // Animate all counters when visible
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        container.querySelectorAll("[data-target]").forEach(el => {
+          animateCount(el, parseInt(el.dataset.target));
+        });
+        obs.disconnect();
+      });
+    }, { threshold: 0.3 });
+    obs.observe(container);
+  }
+
+  /* ─────────────── POPULATE TECH ARSENAL ─────────────── */
+  function populateTechStack(repos) {
+    const container = document.getElementById("techArsenalGrid");
+    if (!container) return;
+
+    // Count & sort languages
+    const tech = new Map();
+    repos.forEach(r => { if (r.language) tech.set(r.language, (tech.get(r.language) || 0) + 1); });
+    const sorted = [...tech.entries()].sort((a, b) => b[1] - a[1]);
+    const maxCount = sorted[0]?.[1] || 1;
+
+    if (!sorted.length) {
+      container.innerHTML = `<div class="col-span-full text-center text-slate-400 py-8">No language data found.</div>`;
+      return;
+    }
+
+    container.innerHTML = sorted.map(([lang, count]) => {
+      const meta = getLangMeta(lang);
+      const pct  = Math.round((count / maxCount) * 100);
+      const iconTag = meta.icon
+        ? `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${meta.icon}/${meta.icon}-original.svg"
+               onerror="this.style.display='none'"
+               class="w-8 h-8 object-contain flex-shrink-0" alt="${lang}">`
+        : `<div class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                style="background:${meta.color}">${lang.slice(0,2)}</div>`;
+      return `
+        <div class="group p-5 rounded-2xl bg-white/50 backdrop-blur border border-white/60 shadow hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default">
+          <div class="flex items-center gap-3 mb-3">
+            ${iconTag}
+            <div class="flex-1 min-w-0">
+              <p class="font-bold text-slate-800 truncate">${lang}</p>
+              <p class="text-xs text-slate-400">${count} repo${count !== 1 ? 's' : ''}</p>
+            </div>
+          </div>
+          <!-- Usage bar -->
+          <div class="h-1.5 rounded-full bg-slate-100 overflow-hidden">
+            <div class="h-full rounded-full transition-all duration-700"
+                 style="width:0%; background:${meta.color}"
+                 data-width="${pct}%">
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+
+    // Animate bars on scroll
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        container.querySelectorAll("[data-width]").forEach((bar, i) => {
+          setTimeout(() => { bar.style.width = bar.dataset.width; }, i * 60);
+        });
+        obs.disconnect();
+      });
+    }, { threshold: 0.2 });
+    obs.observe(container);
+  }
+
+  /* ─────────────── POPULATE FEATURED WORK ─────────────── */
+  function populateFeaturedWork(repos) {
+    const container = document.getElementById("featuredWorkGrid");
+    if (!container) return;
+
+    const featured = repos.filter(r => !r.fork).slice(0, 6);
+
+    if (!featured.length) {
+      container.innerHTML = `<div class="col-span-full text-center text-slate-400 py-8">No repositories found.</div>`;
+      return;
+    }
+
+    // Language colour dots
+    const DOT_COLORS = {
+      Python:"#3572A5",JavaScript:"#f1e05a",TypeScript:"#3178c6","C++":"#f34b7d",
+      HTML:"#e34c26",CSS:"#563d7c",Java:"#b07219",Go:"#00ADD8",Shell:"#89e051",
+      Rust:"#dea584",Kotlin:"#A97BFF",Swift:"#F05138",Ruby:"#701516",PHP:"#4F5D95",
+    };
+
+    container.innerHTML = featured.map((repo, idx) => {
+      const dot   = DOT_COLORS[repo.language] || "#6b7280";
+      const desc  = repo.description || "No description provided.";
+      const lang  = repo.language    || "Other";
+      const topics = (repo.topics || []).slice(0, 3);
+      const updatedDays = Math.floor((Date.now() - new Date(repo.updated_at)) / 86400000);
+      const freshness   = updatedDays < 7 ? "🟢 Active" : updatedDays < 60 ? "🟡 Recent" : "⚪ Archival";
+
+      const topicBadges = topics.map(t =>
+        `<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-50 text-indigo-600 border border-indigo-100">${t}</span>`
+      ).join("");
+
+      return `
+        <div class="group flex flex-col rounded-2xl bg-white/60 backdrop-blur-md border border-white/70 shadow hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden cursor-pointer"
+             onclick="openAboutModal('${repo.full_name}', '${repo.html_url}', ${JSON.stringify(lang)}, ${repo.stargazers_count}, ${repo.forks_count})"
+             style="animation-delay:${idx * 80}ms">
+          <!-- Card top accent -->
+          <div class="h-1 w-full" style="background: linear-gradient(90deg, ${dot}, ${dot}88)"></div>
+
+          <div class="flex-1 flex flex-col p-5">
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2 min-w-0">
+                <svg class="w-4 h-4 flex-shrink-0 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.699-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                </svg>
+                <h3 class="font-bold text-slate-800 truncate group-hover:text-primary transition-colors">${repo.name}</h3>
+              </div>
+              <span class="text-[10px] text-slate-400 flex-shrink-0 font-mono">${freshness}</span>
+            </div>
+
+            <!-- Description -->
+            <p class="text-sm text-slate-500 leading-relaxed mb-3 flex-1 line-clamp-2">${desc}</p>
+
+            <!-- Topics -->
+            ${topicBadges ? `<div class="flex flex-wrap gap-1 mb-3">${topicBadges}</div>` : ""}
+
+            <!-- Footer stats -->
+            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+              <div class="flex items-center gap-3 text-xs text-slate-400">
+                <span class="flex items-center gap-1">
+                  <span class="inline-block w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:${dot}"></span>
+                  ${lang}
+                </span>
+                <span class="flex items-center gap-1">⭐ ${repo.stargazers_count}</span>
+                <span class="flex items-center gap-1">🍴 ${repo.forks_count}</span>
+              </div>
+              <span class="text-[10px] text-indigo-500 font-semibold group-hover:underline">View →</span>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+  }
+
+  /* ─────────────── ABOUT-PAGE MODAL BRIDGE ─────────────── */
+  // Triggers the existing modal system (openProjectModal) if available,
+  // otherwise falls back to a direct GitHub link.
+  window.openAboutModal = function(fullName, htmlUrl, lang, stars, forks) {
+    if (typeof openProjectModal === "function") {
+      // Construct a minimal repo-like object the modal expects
+      openProjectModal({ full_name: fullName, html_url: htmlUrl, language: lang,
+                         stargazers_count: stars, forks_count: forks,
+                         name: fullName.split("/")[1] });
+    } else {
+      window.open(htmlUrl, "_blank", "noopener,noreferrer");
+    }
+  };
+
+  /* ─────────────── ALSO UPDATE STATS STRIP ─────────────── */
+  function updateStatsStrip(repos) {
+    // The glass stats strip at the top uses hardcoded values — let's live-update them
+    const ownRepos = repos.filter(r => !r.fork).length;
+    const allNums  = document.querySelectorAll(".text-3xl.font-bold.text-primary");
+    // First stat card = "Public Repos"
+    if (allNums[0]) {
+      allNums[0].textContent = ownRepos + "+";
+    }
+    // Fourth stat card = "Followers" — we leave that alone since the API for followers
+    // requires a separate call; only update repos count.
+  }
+
+  /* ─────────────── MAIN ENTRY ─────────────── */
+  async function syncAboutPage() {
+    try {
+      const repos = await fetchRepos();
+      populateImpact(repos);
+      populateTechStack(repos);
+      populateFeaturedWork(repos);
+      updateStatsStrip(repos);
+    } catch (err) {
+      console.warn("GitHub sync failed:", err);
+      // Graceful degradation — show error state in each section
+      ["techArsenalGrid", "impactList", "featuredWorkGrid"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.querySelector(".animate-spin")) {
+          el.innerHTML = `<div class="col-span-full text-center py-6 text-slate-400 text-sm">
+            <span class="text-2xl block mb-2">🔌</span>
+            Could not load live GitHub data. <a href="https://github.com/${GH_USER}" target="_blank" class="text-indigo-500 underline">View on GitHub →</a>
+          </div>`;
+        }
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", syncAboutPage);
+  } else {
+    syncAboutPage();
+  }
+
+})();
+</script>
+
+  <script src="js/includes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Rishvin Reddy Testimonials</title>
+  <link rel="stylesheet" href="animations.css">
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#f20d46",
+            "background-light": "#f8f5f6",
+            "background-dark": "#221014",
+          },
+          fontFamily: {
+            display: ["Times New Roman", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .testimonial-card:not(:first-child) {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 selection:bg-primary/20 font-serif text-slate-800 relative overflow-x-hidden">
+  <!-- Ambient Background -->
+  <div
+    class="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-slate-50 to-emerald-50/40 opacity-70">
+  </div>
+  <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+    <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-purple-200/20 blur-3xl animate-blob">
+    </div>
+    <div
+      class="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-emerald-200/20 blur-3xl animate-blob animation-delay-2000">
+    </div>
+    <div
+      class="absolute -bottom-[20%] left-[20%] w-[40%] h-[40%] rounded-full bg-blue-200/20 blur-3xl animate-blob animation-delay-4000">
+    </div>
+  </div>
+
+  <div class="flex min-h-screen w-full flex-col">
+    <!-- Top Utility Bar (Premium Dark) -->
+  <div id="site-header-placeholder"></div>
+    <main class="flex-grow">
+      <section class="py-16 sm:py-24">
+        <div class="container mx-auto px-6">
+          <div class="mx-auto max-w-2xl text-center scroll-reveal">
+            <h1
+              class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+              What My Clients Say
+            </h1>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Here's what clients have to say about working with
+              me.</p>
+          </div>
+          <div class="mx-auto mt-16 max-w-4xl space-y-8">
+            <div
+              class="testimonial-card grid grid-cols-1 items-center gap-8 rounded-3xl bg-white/50 p-8 shadow-sm dark:bg-black/20 md:grid-cols-3 md:gap-12 hover-float scroll-reveal"
+              data-stagger-list>
+              <div class="h-48 w-full overflow-hidden rounded bg-cover bg-center md:h-full"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxgxaNgBriSVixI9oWCGxrs8_x7ohbTqVPRSplYTsglfM1MrQc6mj3q5VGb-e62ZBZiAaEq8KDdXHrzBsY9_cYdV-Xbm5XtNPaxN95vn8p7K03_6tJMl_YUQ9erFl0MPsh_fv7vswXRbRLe94sJbiHaUpnN7vFuJOnGGSQeyHO5N0mjpWGhg6XdH1OsBLXK85Ikae9pkF4QY7E2o7AoAjmjceakNjJ5VYKMW5YTa5Bw4J0eWHcx33vzHZu8Z3IqfylLjHOz8MlR-k");'>
+              </div>
+              <div class="md:col-span-2">
+                <blockquote class="text-lg italic text-gray-700 dark:text-gray-300">
+                  <p>"Working with Sarah on our app redesign was a game-changer. Her designs are not only visually
+                    stunning but also incredibly user-friendly. She was responsive, collaborative, and truly understood
+                    our vision. Highly recommend!"</p>
+                </blockquote>
+                <cite class="mt-4 block">
+                  <p class="font-bold text-gray-900 dark:text-white">Emily Carter</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">CEO of Tech Innovators</p>
+                </cite>
+              </div>
+            </div>
+            <div
+              class="testimonial-card grid grid-cols-1 items-center gap-8 rounded-3xl bg-white/50 p-8 shadow-sm dark:bg-black/20 md:grid-cols-3 md:gap-12 hover-float scroll-reveal"
+              data-stagger-list>
+              <div class="order-last h-48 w-full overflow-hidden rounded bg-cover bg-center md:order-first md:h-full"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPFEYHArjxho-lTCpO-cB0Cg8ihDdAF9YJA4yv1e9qi_TxCMpOzqHXOB3m41fX9-D5vs8MkpuG1PS91wPA2QHTmnvZEkwQpLk9jyt2IAmWGULWQgweepKe9MTnw4gGaXw0rzyHChaToqHM8ZuEZ6dteZG0ccsniCPoF8H_tGbljpwZ0-Aue0ijCSZFHcWi2w8zDMUVF3tFCHVsQhGUokmMnzlRelixHlHWS1SL1W4s1HUEtwFQOGWB_PWmWJDsaWMB0jWcDwGpJZQ");'>
+              </div>
+              <div class="md:col-span-2">
+                <blockquote class="text-lg italic text-gray-700 dark:text-gray-300">
+                  <p>"Sarah's creativity and professionalism are unmatched. She delivered a beautiful and functional
+                    website design for our startup, exceeding our expectations. Her efficient workflow and clear
+                    communication made the entire process smooth and enjoyable."</p>
+                </blockquote>
+                <cite class="mt-4 block">
+                  <p class="font-bold text-gray-900 dark:text-white">David Lee</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Founder of Green Solutions</p>
+                </cite>
+              </div>
+            </div>
+            <div
+              class="testimonial-card grid grid-cols-1 items-center gap-8 rounded-3xl bg-white/50 p-8 shadow-sm dark:bg-black/20 md:grid-cols-3 md:gap-12 hover-float scroll-reveal"
+              data-stagger-list>
+              <div class="h-48 w-full overflow-hidden rounded bg-cover bg-center md:h-full"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBteD4phPnFOXgC6SXkHofbFqSWqrd_dXTWcc9kOR95lmhpBzjOnr6QEjWahkoiVuOXeJkgpOQKHAMeVKohC2rJx8FsBjwDg3tsGqBYJyKWzIAI257bgoXFysYpsRHLy6Y3tftOLZq5CI82k7TWSfF3xK55Mzyk6sD1mbPdvfUAYlSMn3txPSViY_bxfTWEcD1QT_lEjx0KkbwKc3_-i6IS-McqQMnBy4gnt1NZsLYw7wNNjo4syMUffAx00TLtpjExhbki-2hOYHM");'>
+              </div>
+              <div class="md:col-span-2">
+                <blockquote class="text-lg italic text-gray-700 dark:text-gray-300">
+                  <p>"Sarah is more than just a Rishvin Reddy; she's a true partner. She took the time to understand our
+                    brand and target audience, resulting in a design that perfectly captures our essence. Her attention
+                    to detail and commitment to quality are truly impressive."</p>
+                </blockquote>
+                <cite class="mt-4 block">
+                  <p class="font-bold text-gray-900 dark:text-white">Jessica Chen</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Marketing Director at Global Foods</p>
+                </cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- === ULTIMATE CTA & NEWSLETTER (Combined Premium Footer Capstone) === -->
+    <section class="relative py-24 sm:py-32 overflow-hidden">
+      <!-- Dynamic Background -->
+      <div class="absolute inset-0 bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
+        <!-- Animated Grain/Pattern -->
+        <div class="absolute inset-0 opacity-20"
+          style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+      </div>
+
+      <!-- Glowing Orbs -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse animation-delay-2000">
+      </div>
+
+      <div class="relative container mx-auto px-6 lg:px-20 z-10 text-center">
+
+        <!-- Main Call to Action -->
+        <div class="max-w-4xl mx-auto mb-20 ">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-8">
+            Ready to build something <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">secure, scalable &
+              future-proof?</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+            From rapid prototyping to production-grade deployment, I help turn complex engineering challenges into
+            polished, robust solutions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="Contact_page.html"
+              class="group relative px-8 py-4 bg-white text-slate-900 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <span class="relative z-10 flex items-center gap-2">
+                Start a Project
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </span>
+            </a>
+            <a href="/Rishvin_Reddy_Resume.pdf"
+              class="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Glass Newsletter Strip -->
+        <div class="max-w-3xl mx-auto  delay-200">
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 sm:p-3 flex flex-col sm:flex-row gap-2 shadow-2xl">
+            <div class="flex-grow flex items-center px-4">
+              <svg class="w-6 h-6 text-slate-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <input type="email" placeholder="Subscribe to newsletter for updates..."
+                class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full outline-none h-12"
+                required />
+            </div>
+            <button
+              class="px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-colors shadow-lg shadow-primary/20 whitespace-nowrap btn-shine">
+              Join Now
+            </button>
+          </div>
+          <p class="text-slate-400 text-xs mt-4">
+            Join 500+ engineers. No spam, unsubscribe anytime.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    </main>
+    <!-- ============================================================
+     UPGRADED FOOTER — Canonical Template
+     Features:
+       • 4-column: Brand | Explore | Resources | Connect
+       • Full social icons with brand hover colors in Connect column
+       • Back-to-top button (appears after 300px scroll)
+       • Auto-updating copyright year via JS
+       • Ambient glow orbs & scroll-reveal
+     ============================================================ -->
+
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top"
+  class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-slate-900 text-white shadow-2xl shadow-slate-900/30 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-primary hover:scale-110 hover:shadow-primary/30 dark:bg-slate-800 dark:hover:bg-primary">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+</button>
+
+<!-- ============================================================
+     FOOTER v2 — Ultra-Premium Canonical Template
+     New features over v1:
+       • Full-width CTA pre-footer strip with animated gradient
+       • Animated tech/tool scrolling marquee tape
+       • Newsletter signup with shake validation
+       • "Currently building" live status block
+       • Footer social icons with brand-glow hover rings
+       • Shimmer divider between sections
+       • Staggered reveal columns (CSS transitions)
+       • Back-to-top button with progress-arc ring
+       • Location pin with time zone live clock
+     ============================================================ -->
+  <div id="site-footer-placeholder"></div>
+<!-- Footer & Back-to-Top Scripts -->
+<script>
+  // Auto copyright year
+  var fy = document.getElementById('footerYear');
+  if (fy) fy.textContent = new Date().getFullYear();
+
+  // Back to top
+  var backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.remove('opacity-100', 'translate-y-0');
+      }
+    }, { passive: true });
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
+
+
+  </div>
+
+  <script src="js/includes.js"></script>
+</body>
+<script src="animations.js" defer></script>
+
+</html>

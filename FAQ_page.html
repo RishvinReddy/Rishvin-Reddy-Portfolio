@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="animations.css">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Rishvin Reddy FAQ</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f20d33",
+            "background-light": "#f8f5f6",
+            "background-dark": "#221013",
+            "text-light": "#1c0d10",
+            "text-dark": "#f8f5f6",
+            "border-light": "#e8ced3",
+            "border-dark": "#442026",
+            "subtle-light": "#fcf8f9",
+            "subtle-dark": "#2b1418"
+          },
+          fontFamily: {
+            "display": ["Times New Roman", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .group summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body class="bg-slate-50 selection:bg-primary/20 font-serif text-slate-800 relative overflow-x-hidden">
+  <!-- Ambient Background -->
+  <div
+    class="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-slate-50 to-emerald-50/40 opacity-70">
+  </div>
+  <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+    <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-purple-200/20 blur-3xl animate-blob">
+    </div>
+    <div
+      class="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-emerald-200/20 blur-3xl animate-blob animation-delay-2000">
+    </div>
+    <div
+      class="absolute -bottom-[20%] left-[20%] w-[40%] h-[40%] rounded-full bg-blue-200/20 blur-3xl animate-blob animation-delay-4000">
+    </div>
+  </div>
+
+  <div class="flex flex-col min-h-screen">
+    <!-- Top Utility Bar (Premium Dark) -->
+  <div id="site-header-placeholder"></div>
+        <!-- Quick help row -->
+        <div class="scroll-reveal mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4" data-stagger-list>
+          <div class="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-gray-100 scroll-reveal">
+            <svg class="w-6 h-6 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">Specialisations</div>
+              <div class="text-xs text-gray-500">IoT, Blockchain, Cyber Security & Product Engineering</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-gray-100 scroll-reveal">
+            <svg class="w-6 h-6 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                d="M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">Typical Response</div>
+              <div class="text-xs text-gray-500">I reply to new inquiries within 1–2 business days.</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-gray-100 scroll-reveal">
+            <svg class="w-6 h-6 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 7h18M3 12h18M3 17h18" />
+            </svg>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">Ready to start?</div>
+              <div class="text-xs text-gray-500">Share a brief on the contact page and I’ll schedule a discovery call.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion -->
+        <div class="space-y-4">
+
+          <!-- Q1 -->
+          <details
+            class="group rounded-3xl border border-gray-100 bg-white p-5 transition-shadow duration-200 scroll-reveal"
+            open>
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                    d="M12 2a7 7 0 00-7 7c0 7 7 11 7 11s7-4 7-11a7 7 0 00-7-7z" />
+                </svg>
+                <h3 class="text-base font-medium text-gray-900">What services do you provide?</h3>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <div class="mt-4 text-sm text-gray-700 leading-relaxed">
+              I deliver end-to-end product work across design and engineering: user research, UX/UI design, interaction
+              & visual design, prototyping, usability testing, and production handoff. I also build full-stack
+              proofs-of-concept for IoT and embedded systems, implement secure authentication flows (biometric, OTP,
+              TOTP) and design blockchain-backed transaction flows where needed. Projects are scoped to combine product
+              thinking with engineering feasibility.
+            </div>
+          </details>
+
+          <!-- Q2 -->
+          <details
+            class="group rounded-3xl border border-gray-100 bg-white p-5 transition-shadow duration-200 scroll-reveal">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 7h18M3 12h18M3 17h18" />
+                </svg>
+                <h3 class="text-base font-medium text-gray-900">How does your process work?</h3>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <div class="mt-4 text-sm text-gray-700 leading-relaxed">
+              My approach is collaborative and measurable:
+              <ul class="mt-3 ml-4 list-disc space-y-2">
+                <li><strong>Discover:</strong> Stakeholder alignment, problem framing and user research.</li>
+                <li><strong>Prototype:</strong> Wireframes → interactive prototypes (Figma / HTML) to validate flows.
+                </li>
+                <li><strong>Validate:</strong> Usability tests, analytics tracking & iteration.</li>
+                <li><strong>Deliver:</strong> Developer-ready assets, documentation, handoff & post-launch checks.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Q3 -->
+          <details
+            class="group rounded-3xl border border-gray-100 bg-white p-5 transition-shadow duration-200 scroll-reveal">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 4v4M12 16v4M4 12h16" />
+                </svg>
+                <h3 class="text-base font-medium text-gray-900">What does a typical engagement cost?</h3>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <div class="mt-4 text-sm text-gray-700 leading-relaxed">
+              Pricing depends on scope and deliverables. I offer:
+              <ul class="mt-3 ml-4 list-disc space-y-2">
+                <li>Small product work / audit — fixed fee.</li>
+                <li>Feature / redesign work — milestone-based or fixed scope.</li>
+                <li>Long-term collaborations — monthly retainer.</li>
+              </ul>
+              I’ll propose the best model after an initial discovery call and a brief scoping conversation.
+            </div>
+          </details>
+
+          <!-- Q4 -->
+          <details
+            class="group rounded-3xl border border-gray-100 bg-white p-5 transition-shadow duration-200 scroll-reveal">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                    d="M3 10h18M3 6h18M3 14h18M3 18h18" />
+                </svg>
+                <h3 class="text-base font-medium text-gray-900">How long will the project take?</h3>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <div class="mt-4 text-sm text-gray-700 leading-relaxed">
+              Timelines vary by complexity:
+              <ul class="mt-3 ml-4 list-disc space-y-2">
+                <li>Micro tasks (audit, small UI updates): 1–3 weeks.</li>
+                <li>Feature designs & prototype validation: 4–8 weeks.</li>
+                <li>End-to-end product design with research & testing: 2–4+ months.</li>
+              </ul>
+              Every proposal includes a timeline with milestones and review points.
+            </div>
+          </details>
+
+          <!-- Q5 -->
+          <details
+            class="group rounded-3xl border border-gray-100 bg-white p-5 transition-shadow duration-200 scroll-reveal">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                    d="M12 2l3 6 6 .5-5 4 1.5 6L12 16l-5.5 3.5L8 12 3 8.5 9 8z" />
+                </svg>
+                <h3 class="text-base font-medium text-gray-900">What deliverables will I receive?</h3>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <div class="mt-4 text-sm text-gray-700 leading-relaxed">
+              Deliverables are tailored to the engagement and commonly include:
+              <ul class="mt-3 ml-4 list-disc space-y-2">
+                <li>Research summaries & personas</li>
+                <li>Wireframes, interactive prototypes (Figma/HTML) and design specs</li>
+                <li>Accessibility checklist & usability test reports</li>
+                <li>Developer handoff assets (components, tokens, documentation)</li>
+                <li>Optional: Proof-of-concept code for IoT/embedded or blockchain flows</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Q6 -->
+          <details
+            class="group rounded-3xl border border-gray-100 bg-white p-5 transition-shadow duration-200 scroll-reveal">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 1v22M1 12h22" />
+                </svg>
+                <h3 class="text-base font-medium text-gray-900">How do you handle security & privacy?</h3>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <div class="mt-4 text-sm text-gray-700 leading-relaxed">
+              Security is integral to my work. Depending on the project I follow secure-by-design principles, threat
+              modeling, and best-practice authentication (e.g., AES/SHA, TOTP, secure biometric flows). I also advise on
+              data minimization, encryption (in transit & at rest) and safe cloud configuration. For sensitive work we
+              can sign an NDA prior to any data exchange.
+            </div>
+          </details>
+
+          <!-- Q7 -->
+          <details
+            class="group rounded-3xl border border-gray-100 bg-white p-5 transition-shadow duration-200 scroll-reveal">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                    d="M12 2a10 10 0 100 20 10 10 0 000-20zM8 12l2 2 4-4" />
+                </svg>
+                <h3 class="text-base font-medium text-gray-900">Can you build prototypes or hardware proofs-of-concept?
+                </h3>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <div class="mt-4 text-sm text-gray-700 leading-relaxed">
+              Yes. I build interactive prototypes and simple embedded proofs-of-concept (e.g., Arduino / ESP8266/ESP32,
+              RFID, load-cells, sensors) and integrate them with cloud backends for demos. For production hardware I
+              collaborate with manufacturing/embedded partners and provide the system architecture and firmware handoff.
+            </div>
+          </details>
+
+          <!-- Q8 -->
+          <details
+            class="group rounded-3xl border border-gray-100 bg-white p-5 transition-shadow duration-200 scroll-reveal">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 5h18M3 12h18M3 19h18" />
+                </svg>
+                <h3 class="text-base font-medium text-gray-900">What are the next steps to start a project?</h3>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+
+            <div class="mt-4 text-sm text-gray-700 leading-relaxed">
+              Send a short brief via the <a class="text-primary underline" href="Contact_page.html">Contact page</a>
+              (project goals, timeline, budget range). I’ll review and propose a 15–30 minute discovery call to align
+              expectations and scope. After that you’ll receive a written proposal with milestones and costs.
+            </div>
+          </details>
+
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="mt-12 pt-8 border-t border-gray-100 text-center">
+          <p class="text-sm text-gray-600">Still have a question that's not answered here?</p>
+          <a href="Contact_page.html"
+            class="mt-4 inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary text-white font-semibold hover:shadow-lg transition btn-shine">
+            Contact Me
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </main>
+    <!-- === ULTIMATE CTA & NEWSLETTER (Combined Premium Footer Capstone) === -->
+    <section class="relative py-24 sm:py-32 overflow-hidden">
+      <!-- Dynamic Background -->
+      <div class="absolute inset-0 bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
+        <!-- Animated Grain/Pattern -->
+        <div class="absolute inset-0 opacity-20"
+          style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+      </div>
+
+      <!-- Glowing Orbs -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse animation-delay-2000">
+      </div>
+
+      <div class="relative container mx-auto px-6 lg:px-20 z-10 text-center">
+
+        <!-- Main Call to Action -->
+        <div class="max-w-4xl mx-auto mb-20 ">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-8">
+            Ready to build something <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">secure, scalable &
+              future-proof?</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+            From rapid prototyping to production-grade deployment, I help turn complex engineering challenges into
+            polished, robust solutions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="Contact_page.html"
+              class="group relative px-8 py-4 bg-white text-slate-900 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <span class="relative z-10 flex items-center gap-2">
+                Start a Project
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </span>
+            </a>
+            <a href="/Rishvin_Reddy_Resume.pdf"
+              class="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Glass Newsletter Strip -->
+        <div class="max-w-3xl mx-auto  delay-200">
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 sm:p-3 flex flex-col sm:flex-row gap-2 shadow-2xl">
+            <div class="flex-grow flex items-center px-4">
+              <svg class="w-6 h-6 text-slate-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <input type="email" placeholder="Subscribe to newsletter for updates..."
+                class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full outline-none h-12"
+                required />
+            </div>
+            <button
+              class="px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-colors shadow-lg shadow-primary/20 whitespace-nowrap btn-shine">
+              Join Now
+            </button>
+          </div>
+          <p class="text-slate-400 text-xs mt-4">
+            Join 500+ engineers. No spam, unsubscribe anytime.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    </main>
+    <!-- ============================================================
+     UPGRADED FOOTER — Canonical Template
+     Features:
+       • 4-column: Brand | Explore | Resources | Connect
+       • Full social icons with brand hover colors in Connect column
+       • Back-to-top button (appears after 300px scroll)
+       • Auto-updating copyright year via JS
+       • Ambient glow orbs & scroll-reveal
+     ============================================================ -->
+
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top"
+  class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-slate-900 text-white shadow-2xl shadow-slate-900/30 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-primary hover:scale-110 hover:shadow-primary/30 dark:bg-slate-800 dark:hover:bg-primary">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+</button>
+
+<!-- ============================================================
+     FOOTER v2 — Ultra-Premium Canonical Template
+     New features over v1:
+       • Full-width CTA pre-footer strip with animated gradient
+       • Animated tech/tool scrolling marquee tape
+       • Newsletter signup with shake validation
+       • "Currently building" live status block
+       • Footer social icons with brand-glow hover rings
+       • Shimmer divider between sections
+       • Staggered reveal columns (CSS transitions)
+       • Back-to-top button with progress-arc ring
+       • Location pin with time zone live clock
+     ============================================================ -->
+  <div id="site-footer-placeholder"></div>
+<!-- Footer & Back-to-Top Scripts -->
+<script>
+  // Auto copyright year
+  var fy = document.getElementById('footerYear');
+  if (fy) fy.textContent = new Date().getFullYear();
+
+  // Back to top
+  var backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.remove('opacity-100', 'translate-y-0');
+      }
+    }, { passive: true });
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
+
+
+  </div>
+
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis for Smooth Scrolling -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="animations.js" defer></script>
+  <script src="js/includes.js"></script>
+</body>
+<script src="animations.js" defer></script>
+
+</html>

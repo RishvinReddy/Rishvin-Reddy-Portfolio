@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="animations.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishvin Reddy Contact Form</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#f20d46",
+            "background-light": "#f8f5f6",
+            "background-dark": "#221014",
+          },
+          fontFamily: {
+            display: ["Times New Roman", "serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    /* Fade and Slide Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes blurIn {
+            from {
+                filter: blur(10px);
+                opacity: 0;
+            }
+            to {
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        /* Animation Classes */
+        . { animation: fadeIn 0.5s ease-out forwards; }
+        . { animation: slideDown 0.5s ease-out forwards; }
+        . { animation: blurIn 0.8s ease-out forwards; }
+        . { animation: scaleIn 0.6s ease-out forwards; }
+        
+        /* Delay Classes */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        /* Hover Effects */
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .hover-lift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(242, 13, 70, 0.15);
+        }
+        
+        .form-submitted .form-content {
+            display: none;
+        }
+        .form-submitted .success-message {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+        .success-message {
+            display: none;
+        }
+        .-form {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+    </style>
+
+</head>
+
+<body class="bg-slate-50 selection:bg-primary/20 font-serif text-slate-800 relative overflow-x-hidden">
+  <!-- Ambient Background -->
+  <div
+    class="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-slate-50 to-emerald-50/40 opacity-70">
+  </div>
+  <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+    <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-purple-200/20 blur-3xl animate-blob">
+    </div>
+    <div
+      class="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-emerald-200/20 blur-3xl animate-blob animation-delay-2000">
+    </div>
+    <div
+      class="absolute -bottom-[20%] left-[20%] w-[40%] h-[40%] rounded-full bg-blue-200/20 blur-3xl animate-blob animation-delay-4000">
+    </div>
+  </div>
+
+  <div class="flex min-h-screen flex-col pt-12">
+    <!-- Top Utility Bar (Premium Dark) -->
+  <div id="site-header-placeholder"></div>
+    <main class="flex-grow">
+      <!-- ===========================
+     CONTACT — Upgraded, Spacious & Accessible
+     Replace your current contact section with this block.
+     Assumes Tailwind CSS + your animation utilities are available.
+     JS below handles client validation + UX (no backend).
+     =========================== -->
+      <section id="contact" class="py-20 sm:py-28 bg-background-light">
+        <div class="container mx-auto px-6 lg:px-20">
+          <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start" data-stagger-list>
+
+            <!-- LEFT COLUMN: Info, Map, FAQ -->
+            <div class="space-y-10">
+
+              <!-- Heading -->
+              <div class="scroll-reveal">
+                <h1
+                  class="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+                  Get in Touch</h1>
+                <p class="mt-4 text-lg text-gray-600 max-w-xl">I'm open to new opportunities and collaborations. Tell me
+                  about your project — I’ll reply within 1–2 business days.</p>
+              </div>
+
+              <!-- Contact Information -->
+              <div class="glass-card p-8 spotlight-card scroll-reveal">
+                <h3 class="text-2xl font-semibold text-gray-900">Contact Information</h3>
+                <div class="mt-5 space-y-4 text-gray-700">
+                  <p class="flex items-center gap-3">
+                    <!-- email -->
+                    <svg class="h-5 w-5 text-primary shrink-0" viewBox="0 0 24 24" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v1.5l-10 6-10-6V4z"></path>
+                      <path d="M2 7.5V20a2 2 0 002 2h16a2 2 0 002-2V7.5l-10 6-10-6z"></path>
+                    </svg>
+                    <a href="mailto:rishvinreddy@gmail.com" class="hover:text-primary transition-colors"
+                      aria-label="Email rishvinreddy@gmail.com">rishvinreddy@gmail.com</a>
+                  </p>
+
+                  <p class="flex items-center gap-3">
+                    <!-- phone -->
+                    <svg class="h-5 w-5 text-primary shrink-0" viewBox="0 0 24 24" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path
+                        d="M6.6 10.2a14.9 14.9 0 006.2 6.2l2-2a1 1 0 011-.2 11.7 11.7 0 003.7.6 1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 015 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.2 2.4.6 3.7a1 1 0 01-.2 1l-2 2z">
+                      </path>
+                    </svg>
+                    <a href="tel:+919848723235" class="hover:text-primary transition-colors"
+                      aria-label="Call +91 98487 23235">+91 98487 23235</a>
+                  </p>
+
+                  <p class="flex items-center gap-3">
+                    <!-- meeting / booking -->
+                    <svg class="h-5 w-5 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                      <path d="M16 2v4M8 2v4"></path>
+                      <path d="M3 10h18"></path>
+                    </svg>
+                    <a href="index.html" class="hover:text-primary transition-colors">Book a meeting</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Map -->
+              <div class="rounded-3xl overflow-hidden border border-gray-100 shadow-sm scroll-reveal">
+                <h3 class="sr-only">My Location</h3>
+                <div class="w-full h-64 md:h-72">
+                  <iframe class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.850123456789!2d78.11944183674599!3d18.69865706504396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91a0b5b5b5b5%3A0x0!2sRishvin%20Location!5e0!3m2!1sen!2sin!4v1700000000000"
+                    style="border:0;" title="Rishvin's location on Google Maps" aria-hidden="false"></iframe>
+                </div>
+              </div>
+
+              <!-- FAQ -->
+              <div class="glass-card p-6 scroll-reveal">
+                <h3 class="text-2xl font-semibold text-gray-900">Frequently Asked Questions</h3>
+                <div class="mt-4 space-y-3">
+                  <details class="group rounded-lg bg-gray-50 p-4 transition-colors duration-200">
+                    <summary class="flex items-center justify-between cursor-pointer font-medium text-gray-900">
+                      What's your design process?
+                      <svg class="h-5 w-5 text-gray-500 transition-transform duration-200 group-open:rotate-180"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600">I follow a collaborative and iterative process: research → wireframes
+                      → prototypes → testing → handoff. I prioritize accessibility and measurable outcomes.</p>
+                  </details>
+
+                  <details class="group rounded-lg bg-gray-50 p-4 transition-colors duration-200">
+                    <summary class="flex items-center justify-between cursor-pointer font-medium text-gray-900">
+                      What tools do you use?
+                      <svg class="h-5 w-5 text-gray-500 transition-transform duration-200 group-open:rotate-180"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <p class="mt-3 text-gray-600">I use Python, Arduino/ESP toolchains, Flask, Figma, Git, and common
+                      data-analysis libraries. I also work with MySQL, Firebase and small-scale cloud deployments.</p>
+                  </details>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Contact Form -->
+            <div>
+              <div class="glass-card p-8 spotlight-card transition-all duration-500 scroll-reveal">
+                <form id="contact-form" class="space-y-6" novalidate>
+                  <h3 class="text-2xl font-semibold text-gray-900">Send a Message</h3>
+                  <p class="text-sm text-gray-600">Tell me about your project, timeline and how I can help.</p>
+
+                  <!-- name -->
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name"
+                      class="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/50 backdrop-blur-sm focus:border-primary focus:ring-primary"
+                      placeholder="Your full name">
+                    <p class="mt-1 text-xs text-red-600 hidden" id="err-name" role="alert"></p>
+                  </div>
+
+                  <!-- email -->
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email"
+                      class="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/50 backdrop-blur-sm focus:border-primary focus:ring-primary"
+                      placeholder="you@example.com">
+                    <p class="mt-1 text-xs text-red-600 hidden" id="err-email" role="alert"></p>
+                  </div>
+
+                  <!-- subject -->
+                  <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-700">Subject <span
+                        class="text-primary">*</span></label>
+                    <input id="subject" name="subject" type="text" required
+                      class="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/50 backdrop-blur-sm focus:border-primary focus:ring-primary"
+                      placeholder="What's this about?">
+                    <p class="mt-1 text-xs text-red-600 hidden" id="err-subject" role="alert"></p>
+                  </div>
+
+                  <!-- inquiry type -->
+                  <div>
+                    <label for="inquiry-type" class="block text-sm font-medium text-gray-700">Inquiry Type <span
+                        class="text-primary">*</span></label>
+                    <select id="inquiry-type" name="inquiry-type" required
+                      class="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/50 backdrop-blur-sm focus:border-primary focus:ring-primary">
+                      <option value="">Select an option</option>
+                      <option>Project Inquiry</option>
+                      <option>Job Opportunity</option>
+                      <option>Collaboration</option>
+                      <option>General Question</option>
+                    </select>
+                    <p class="mt-1 text-xs text-red-600 hidden" id="err-type" role="alert"></p>
+                  </div>
+
+                  <!-- message -->
+                  <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="5"
+                      class="mt-1 block w-full rounded-lg border border-gray-200 px-4 py-3 bg-background-light focus:border-primary focus:ring-primary"
+                      placeholder="Describe your project or question"></textarea>
+                    <p class="mt-1 text-xs text-red-600 hidden" id="err-message" role="alert"></p>
+                  </div>
+
+                  <!-- honeypot (hidden) -->
+                  <div class="hidden">
+                    <label for="company" class="sr-only">Company (leave blank)</label>
+                    <input id="company" name="company" type="text" autocomplete="off" tabindex="-1" />
+                  </div>
+
+                  <!-- Anti-spam CAPTCHA -->
+                  <div class="rounded-lg bg-gray-50 p-4 border border-gray-100">
+                    <label for="captcha" class="block text-sm font-medium text-gray-700">Anti-spam: What is <strong>3 +
+                        4</strong>?</label>
+                    <input id="captcha" name="captcha" type="text" required
+                      class="mt-2 block w-full rounded-lg border border-gray-200 px-4 py-3 bg-background-light focus:border-primary focus:ring-primary"
+                      placeholder="Your answer">
+                    <p class="mt-1 text-xs text-red-600 hidden" id="err-captcha" role="alert"></p>
+                  </div>
+
+                  <!-- submit -->
+                  <div>
+                    <button id="submitBtn" type="submit"
+                      class="w-full inline-flex items-center justify-center gap-3 rounded-full bg-primary py-3 px-6 text-base font-bold text-white shadow-lg hover:scale-105 transition btn-shine">
+                      <svg id="btnSpinner" class="hidden animate-spin h-5 w-5 text-white" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" opacity="0.25" />
+                        <path d="M22 12a10 10 0 00-10-10" stroke="currentColor" stroke-width="4"></path>
+                      </svg>
+                      <span id="btnText">Send Message</span>
+                    </button>
+                  </div>
+
+                  <p class="text-xs text-center text-gray-500">Estimated response time: 1–2 business days. By submitting
+                    you agree to our <a href="index.html" class="text-primary hover:underline">Privacy Policy</a>.</p>
+
+                  <!-- live region for status -->
+                  <div aria-live="polite" class="sr-only" id="formStatus" role="status"></div>
+                </form>
+
+                <!-- success state (hidden by default) -->
+                <div id="successBox" class="hidden mt-6 text-center">
+                  <svg class="mx-auto h-14 w-14 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  <h4 class="mt-4 text-xl font-semibold text-gray-900">Message Sent!</h4>
+                  <p class="mt-2 text-gray-600">Thanks for reaching out — I'll reply within 1–2 business days.</p>
+                  <div class="mt-4">
+                    <a id="backToForm" href="#"
+                      class="inline-flex items-center gap-2 px-5 py-2 rounded-lg border border-gray-200 bg-white text-black hover:shadow">Send
+                      another message</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- small footer note -->
+        <div class="container mx-auto px-6 lg:px-20 mt-8 text-center">
+          <p class="text-xs text-gray-500">Prefer email? <a class="text-primary underline"
+              href="mailto:rishvinreddy@gmail.com">rishvinreddy@gmail.com</a></p>
+        </div>
+      </section>
+
+      <!-- ===========================
+     Client-side form JS (validation + anti-spam + UX)
+     =========================== -->
+      <script>
+        (function () {
+          const form = document.getElementById('contact-form');
+          const submitBtn = document.getElementById('submitBtn');
+          const btnSpinner = document.getElementById('btnSpinner');
+          const btnText = document.getElementById('btnText');
+          const statusLive = document.getElementById('formStatus');
+          const successBox = document.getElementById('successBox');
+          const backToForm = document.getElementById('backToForm');
+
+          // input references
+          const nameEl = document.getElementById('name');
+          const emailEl = document.getElementById('email');
+          const subjectEl = document.getElementById('subject');
+          const typeEl = document.getElementById('inquiry-type');
+          const messageEl = document.getElementById('message');
+          const captchaEl = document.getElementById('captcha');
+          const honeypot = document.getElementById('company'); // hidden field
+
+          // error nodes
+          const errName = document.getElementById('err-name');
+          const errEmail = document.getElementById('err-email');
+          const errSubject = document.getElementById('err-subject');
+          const errType = document.getElementById('err-type');
+          const errMessage = document.getElementById('err-message');
+          const errCaptcha = document.getElementById('err-captcha');
+
+          const cleanErrors = () => {
+            [errName, errEmail, errSubject, errType, errMessage, errCaptcha].forEach(el => {
+              if (!el) return;
+              el.textContent = '';
+              el.classList.add('hidden');
+            });
+          };
+
+          const setError = (el, msg) => {
+            if (!el) return;
+            el.textContent = msg;
+            el.classList.remove('hidden');
+          };
+
+          const isValidEmail = (v) => {
+            // simple email regex
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+          };
+
+          const validate = () => {
+            cleanErrors();
+            let ok = true;
+            if (!nameEl.value.trim()) { setError(errName, 'Please enter your name.'); ok = false; }
+            if (!emailEl.value.trim() || !isValidEmail(emailEl.value.trim())) { setError(errEmail, 'Please enter a valid email.'); ok = false; }
+            if (!subjectEl.value.trim()) { setError(errSubject, 'Please enter a subject.'); ok = false; }
+            if (!typeEl.value.trim()) { setError(errType, 'Please select an inquiry type.'); ok = false; }
+            if (!messageEl.value.trim()) { setError(errMessage, 'Please include a message.'); ok = false; }
+            // captcha: expected 7 for "3 + 4"
+            const val = (captchaEl.value || '').trim();
+            if (val === '') { setError(errCaptcha, 'Please answer the anti-spam question.'); ok = false; }
+            else if (String(val) !== '7') { setError(errCaptcha, 'Incorrect answer to anti-spam question.'); ok = false; }
+            // honeypot must be empty
+            if (honeypot && honeypot.value.trim() !== '') { ok = false; } // silently fail for bots
+            return ok;
+          };
+
+          const setSending = (sending) => {
+            if (sending) {
+              submitBtn.setAttribute('disabled', 'disabled');
+              btnSpinner.classList.remove('hidden');
+              btnText.textContent = 'Sending...';
+            } else {
+              submitBtn.removeAttribute('disabled');
+              btnSpinner.classList.add('hidden');
+              btnText.textContent = 'Send Message';
+            }
+          };
+
+          // Simulated submit handler (replace with actual fetch() to your server)
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            statusLive.textContent = '';
+            if (!validate()) {
+              statusLive.textContent = 'Please correct highlighted fields.';
+              return;
+            }
+
+            setSending(true);
+            // fake network delay
+            setTimeout(() => {
+              setSending(false);
+              // show success
+              form.classList.add('hidden');
+              successBox.classList.remove('hidden');
+              statusLive.textContent = 'Message sent successfully.';
+              // optionally clear form fields
+              form.reset();
+            }, 900);
+          });
+
+          // Allow "Send another message" to return to the form
+          if (backToForm) {
+            backToForm.addEventListener('click', function (ev) {
+              ev.preventDefault();
+              successBox.classList.add('hidden');
+              form.classList.remove('hidden');
+              nameEl.focus();
+              statusLive.textContent = '';
+            });
+          }
+
+          // Accessibility: live-update errors as user types (light)
+          [nameEl, emailEl, subjectEl, typeEl, messageEl, captchaEl].forEach(input => {
+            if (!input) return;
+            input.addEventListener('input', () => {
+              cleanErrors();
+              statusLive.textContent = '';
+            });
+          });
+
+        })();
+      </script>
+
+    </main>
+    <!-- === ULTIMATE CTA & NEWSLETTER (Combined Premium Footer Capstone) === -->
+    <section class="relative py-24 sm:py-32 overflow-hidden">
+      <!-- Dynamic Background -->
+      <div class="absolute inset-0 bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950"></div>
+        <!-- Animated Grain/Pattern -->
+        <div class="absolute inset-0 opacity-20"
+          style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+      </div>
+
+      <!-- Glowing Orbs -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen animate-pulse animation-delay-2000">
+      </div>
+
+      <div class="relative container mx-auto px-6 lg:px-20 z-10 text-center">
+
+        <!-- Main Call to Action -->
+        <div class="max-w-4xl mx-auto mb-20 ">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-8">
+            Ready to build something <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">secure, scalable &
+              future-proof?</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+            From rapid prototyping to production-grade deployment, I help turn complex engineering challenges into
+            polished, robust solutions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="Contact_page.html"
+              class="group relative px-8 py-4 bg-white text-slate-900 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-slate-50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <span class="relative z-10 flex items-center gap-2">
+                Start a Project
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </span>
+            </a>
+            <a href="/Rishvin_Reddy_Resume.pdf"
+              class="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Glass Newsletter Strip -->
+        <div class="max-w-3xl mx-auto  delay-200">
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 sm:p-3 flex flex-col sm:flex-row gap-2 shadow-2xl">
+            <div class="flex-grow flex items-center px-4">
+              <svg class="w-6 h-6 text-slate-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <input type="email" placeholder="Subscribe to newsletter for updates..."
+                class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full outline-none h-12"
+                required />
+            </div>
+            <button
+              class="px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-colors shadow-lg shadow-primary/20 whitespace-nowrap btn-shine">
+              Join Now
+            </button>
+          </div>
+          <p class="text-slate-400 text-xs mt-4">
+            Join 500+ engineers. No spam, unsubscribe anytime.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    </main>
+    <!-- ============================================================
+     UPGRADED FOOTER — Canonical Template
+     Features:
+       • 4-column: Brand | Explore | Resources | Connect
+       • Full social icons with brand hover colors in Connect column
+       • Back-to-top button (appears after 300px scroll)
+       • Auto-updating copyright year via JS
+       • Ambient glow orbs & scroll-reveal
+     ============================================================ -->
+
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top"
+  class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-slate-900 text-white shadow-2xl shadow-slate-900/30 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-primary hover:scale-110 hover:shadow-primary/30 dark:bg-slate-800 dark:hover:bg-primary">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+</button>
+
+<!-- ============================================================
+     FOOTER v2 — Ultra-Premium Canonical Template
+     New features over v1:
+       • Full-width CTA pre-footer strip with animated gradient
+       • Animated tech/tool scrolling marquee tape
+       • Newsletter signup with shake validation
+       • "Currently building" live status block
+       • Footer social icons with brand-glow hover rings
+       • Shimmer divider between sections
+       • Staggered reveal columns (CSS transitions)
+       • Back-to-top button with progress-arc ring
+       • Location pin with time zone live clock
+     ============================================================ -->
+  <div id="site-footer-placeholder"></div>
+<!-- Footer & Back-to-Top Scripts -->
+<script>
+  // Auto copyright year
+  var fy = document.getElementById('footerYear');
+  if (fy) fy.textContent = new Date().getFullYear();
+
+  // Back to top
+  var backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        backToTop.classList.remove('opacity-100', 'translate-y-0');
+      }
+    }, { passive: true });
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
+
+
+  </div>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Simple captcha check
+      const captchaInput = document.getElementById('captcha');
+      if (captchaInput.value.trim() !== '7') {
+        alert('Incorrect CAPTCHA answer. Please try again.');
+        captchaInput.focus();
+        return;
+      }
+      document.getElementById('b776932338e5487dbe4a7f0b69fa8fde').classList.add('form-submitted');
+    });
+  </script>
+
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis for Smooth Scrolling -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="animations.js" defer></script>
+  <script src="animations.js" defer></script>
+  <script src="js/includes.js"></script>
+</body>
+
+</html>
