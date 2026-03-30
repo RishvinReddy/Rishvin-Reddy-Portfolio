@@ -490,8 +490,13 @@ body.hovering .cursor-outline {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
+}
+
+/* Allow the tsParticles canvas to receive mouse events */
+#network-background canvas {
+  pointer-events: auto;
 }
 
 /* 2. Global Floating Card System & Border Glow & Soft Motion */

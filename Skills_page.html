@@ -150,7 +150,7 @@
         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.055 1.8.24 2.222.403.55.21.945.462 1.36.876.415.415.667.81.877 1.36.163.422.348 1.053.403 2.223.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.24 1.8-.403 2.222-.21.55-.462.945-.876 1.36-.415.415-.667.81-.877 1.36-.163.422-.348 1.053-.403 2.223C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.055-1.17.24-1.8.403-2.222.21-.55.462-.945.876-1.36.415-.415.81-.667 1.36-.877.422-.163 1.053-.348 2.223-.403C8.416 2.175 8.796 2.163 12 2.163zm0 1.838c-3.162 0-3.534.012-4.78.069-1 .05-1.54.216-1.896.36-.48.19-.822.415-1.183.776-.36.36-.587.703-.776 1.183-.144.356-.31.896-.36 1.896-.057 1.246-.069 1.618-.069 4.78s.012 3.534.069 4.78c.05 1 .216 1.54.36 1.896.19.48.415.822.776 1.183.36.36.703.587 1.183.776.356.144.896.31 1.896.36 1.246.057 1.618.069 4.78.069s3.534-.012 4.78-.069c1-.05 1.54-.216 1.896-.36.48-.19.822-.415 1.183-.776.36-.36.587-.703.776-1.183.144-.356.31-.896.36-1.896.057-1.246.069-1.618.069-4.78s-.012-3.534-.069-4.78c-.05-1-.216-1.54-.36-1.896-.19-.48-.415-.822-.776-1.183-.36-.36-.703-.587-1.183-.776-.356-.144-.896-.31-1.896-.36-1.246-.057-1.618-.069-4.78-.069zM12 6.838a5.162 5.162 0 100 10.324 5.162 5.162 0 000-10.324zm0 8.324a3.162 3.162 0 110-6.324 3.162 3.162 0 010 6.324zm6.406-9.844a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg>
       </a>
       <a class="w-7 h-7 flex items-center justify-center rounded-full text-slate-400 hover:text-[#0077b5] hover:bg-white/10 transition-all duration-200"
-        href="https://www.linkedin.com/in/rishvin-reddy-a6a8a5317" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        href="https://www.linkedin.com/in/rishvinreddy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.025-3.037-1.853-3.037-1.854 0-2.137 1.447-2.137 2.943v5.663H8.352V9h3.414v1.561h.049c.476-.9 1.637-1.853 3.369-1.853 3.602 0 4.268 2.37 4.268 5.455v6.289zM5.337 7.433a2.064 2.064 0 110-4.128 2.064 2.064 0 010 4.128zM7.119 20.452H3.554V9h3.565v11.452z"/></svg>
       </a>
       <a class="hidden sm:flex w-7 h-7 items-center justify-center rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all duration-200"
@@ -554,50 +554,6 @@
 
 
 
-      <!-- Certifications carousel / cards (Dynamic) -->
-      <section id="certifications" class="mb-16">
-        <div class="flex items-center justify-between mb-8 scroll-reveal">
-          <div>
-            <h2 class="text-3xl font-bold text-slate-900">Certifications</h2>
-            <p class="mt-1 text-sm text-slate-500">Verified achievements & continuous learning.</p>
-          </div>
-          <div class="hidden sm:flex items-center gap-2">
-            <div class="flex gap-1" id="certArrows">
-              <button
-                class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-slate-50 transition-colors"
-                onclick="document.getElementById('certificationsContainer').scrollBy({left: -300, behavior: 'smooth'})">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-              </button>
-              <button
-                class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-slate-50 transition-colors"
-                onclick="document.getElementById('certificationsContainer').scrollBy({left: 300, behavior: 'smooth'})">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div id="certificationsContainer"
-          class="no-scrollbar -mx-4 flex gap-6 overflow-x-auto px-4 pb-8 snap-x snap-mandatory scroll-smooth">
-          <!-- Certifications will be injected here by JS -->
-
-          <!-- Placeholder / Loading State -->
-          <article
-            class="min-w-[320px] sm:min-w-[360px] snap-center rounded-3xl bg-white/50 p-6 shadow-xl shadow-slate-200/30 border border-slate-100 animate-pulse">
-            <div class="aspect-video rounded-xl bg-slate-200 mb-5"></div>
-            <div class="h-6 w-3/4 bg-slate-200 rounded mb-2"></div>
-            <div class="h-4 w-1/2 bg-slate-200 rounded mb-5"></div>
-            <div class="flex gap-2">
-              <div class="h-6 w-16 bg-slate-200 rounded-full"></div>
-              <div class="h-6 w-20 bg-slate-200 rounded-full"></div>
-            </div>
-          </article>
-        </div>
-      </section>
 
       <!-- HERO SECTION -->
       <main class="flex-grow pt-32 pb-20 relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -754,6 +710,138 @@
             </div>
           </aside>
         </section>
+
+        <!-- Certifications Grid (Dynamic) -->
+        <section id="certifications" class="mb-20">
+          <div class="mb-12 scroll-reveal text-center">
+            <h2 class="text-3xl font-bold text-slate-900">Certifications</h2>
+            <p class="mt-2 text-slate-500">Verified achievements & continuous learning.</p>
+          </div>
+
+          <div id="certificationsContainer"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
+            <!-- Dynamically loaded from data/certifications.json -->
+            <!-- Loading skeleton -->
+            <article id="certLoadingSkeleton"
+              class="rounded-3xl bg-white/50 p-6 shadow-xl shadow-slate-200/30 border border-slate-100 animate-pulse">
+              <div class="aspect-video rounded-xl bg-slate-200 mb-5"></div>
+              <div class="h-6 w-3/4 bg-slate-200 rounded mb-2"></div>
+              <div class="h-4 w-1/2 bg-slate-200 rounded mb-5"></div>
+              <div class="flex gap-2">
+                <div class="h-6 w-16 bg-slate-200 rounded-full"></div>
+                <div class="h-6 w-20 bg-slate-200 rounded-full"></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <script>
+        (function loadCertifications() {
+          fetch('data/certifications.json')
+            .then(function(r){ return r.json(); })
+            .then(function(certs) {
+              var container = document.getElementById('certificationsContainer');
+              if (!container) return;
+              // Remove skeleton
+              var sk = document.getElementById('certLoadingSkeleton');
+              if (sk) sk.remove();
+
+              var tagColors = [
+                'bg-indigo-100 text-indigo-700',
+                'bg-emerald-100 text-emerald-700',
+                'bg-amber-100 text-amber-700',
+                'bg-rose-100 text-rose-700',
+                'bg-violet-100 text-violet-700',
+                'bg-sky-100 text-sky-700'
+              ];
+
+                var article = document.createElement('article');
+                article.className = 'rounded-3xl bg-white/80 backdrop-blur-md flex flex-col shadow-xl shadow-slate-200/30 border border-slate-100 overflow-hidden hover:-translate-y-1 transition-transform duration-300';
+
+                // Cover image
+                var imgWrap = document.createElement('div');
+                imgWrap.className = 'relative aspect-video bg-slate-100 overflow-hidden';
+                var img = document.createElement('img');
+                img.src = cert.image || '';
+                img.alt = cert.title;
+                img.className = 'w-full h-full object-cover transition-transform duration-500 hover:scale-105';
+                img.onerror = function() {
+                  // Fallback gradient
+                  imgWrap.style.background = 'linear-gradient(135deg,#e0e7ff,#f0fdf4)';
+                  img.style.display = 'none';
+                  var fallback = document.createElement('div');
+                  fallback.className = 'absolute inset-0 flex items-center justify-center';
+                  fallback.innerHTML = '<svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>';
+                  imgWrap.appendChild(fallback);
+                };
+                imgWrap.appendChild(img);
+
+                // Issuer badge overlay
+                var badge = document.createElement('div');
+                badge.className = 'absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-slate-700 border border-slate-200 shadow-sm';
+                badge.textContent = cert.issuer || 'Certified';
+                imgWrap.appendChild(badge);
+
+                // Date badge
+                var dateBadge = document.createElement('div');
+                dateBadge.className = 'absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-semibold bg-slate-900/80 backdrop-blur-sm text-white';
+                dateBadge.textContent = cert.date || '';
+                imgWrap.appendChild(dateBadge);
+
+                article.appendChild(imgWrap);
+
+                // Body
+                var body = document.createElement('div');
+                body.className = 'p-6 flex flex-col flex-1';
+
+                var title = document.createElement('h3');
+                title.className = 'font-bold text-slate-900 text-base leading-snug mb-2';
+                title.textContent = cert.title;
+                body.appendChild(title);
+
+                if (cert.description) {
+                  var desc = document.createElement('p');
+                  desc.className = 'text-sm text-slate-500 leading-relaxed mb-4 flex-1';
+                  desc.textContent = cert.description;
+                  body.appendChild(desc);
+                }
+
+                // Tags
+                if (cert.tags && cert.tags.length) {
+                  var tagsDiv = document.createElement('div');
+                  tagsDiv.className = 'flex flex-wrap gap-2 mb-4';
+                  cert.tags.forEach(function(tag, ti) {
+                    var t = document.createElement('span');
+                    t.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-semibold ' + (tagColors[ti % tagColors.length]);
+                    t.textContent = tag;
+                    tagsDiv.appendChild(t);
+                  });
+                  body.appendChild(tagsDiv);
+                }
+
+                // PDF button
+                if (cert.pdf) {
+                  var btnWrap = document.createElement('div');
+                  btnWrap.className = 'mt-auto pt-4 border-t border-slate-100';
+                  var btn = document.createElement('a');
+                  btn.href = cert.pdf;
+                  btn.target = '_blank';
+                  btn.rel = 'noopener';
+                  btn.className = 'inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-primary hover:-translate-y-0.5 transition-all duration-200 shadow-md';
+                  btn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> View Certificate';
+                  btnWrap.appendChild(btn);
+                  body.appendChild(btnWrap);
+                }
+
+                article.appendChild(body);
+                container.appendChild(article);
+              });
+            })
+            .catch(function(err) {
+              console.warn('Certifications could not be loaded:', err);
+            });
+        })();
+        </script>
 
         <!-- Short Projects / Evidence -->
         <section class="mb-12">
@@ -1175,7 +1263,7 @@
           </a>
 
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/rishvin-reddy-a6a8a5317" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/rishvinreddy" target="_blank" rel="noopener noreferrer"
             class="social-link flex items-center gap-3 text-sm text-slate-400 hover:text-white group transition-all duration-200 rounded-xl p-2 -mx-2 hover:bg-slate-800/60">
             <span class="w-9 h-9 rounded-xl bg-slate-800 border border-slate-700/50 flex items-center justify-center group-hover:bg-[#0077b5] group-hover:border-[#0077b5] group-hover:shadow-lg group-hover:shadow-[#0077b5]/40 transition-all duration-300 flex-shrink-0">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>

@@ -380,80 +380,27 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${Math.floor(diff/86400)}d ago`;
   }
 
-  // 5. AI Explainer UI Simulation
+  // 5. AI Explainer UI Simulation -> Upgraded to REAL Vector Brain
   window.simulateAIExplanation = function(repoName) {
     if (window.logToTerminal) {
-      window.logToTerminal(`Initiated AI Code Analysis for architecture of ${repoName}...`, 'info');
+      window.logToTerminal(`Initiated Deep AI Context Analysis for ${repoName}...`, 'system');
     }
     
-    // Check if the AI AI chat panel exists
-    const chatPanel = document.getElementById('ai-chat-history');
-    if (!chatPanel) return;
-
     // Open chat sidebar if it's hidden on mobile
-    const aiSidebar = chatPanel.closest('aside');
-    if (aiSidebar) {
-      aiSidebar.classList.remove('hidden');
-      aiSidebar.classList.add('flex'); // Ensure it's showing if they manually toggle it normally
+    const chatPanel = document.getElementById('ai-chat-history');
+    if (chatPanel) {
+      const aiSidebar = chatPanel.closest('aside');
+      if (aiSidebar) {
+        aiSidebar.classList.remove('hidden');
+        aiSidebar.classList.add('flex'); // Ensure it's showing if they manually toggle it normally
+      }
     }
     
-    // Add User Message
-    const userMsg = document.createElement('div');
-    userMsg.className = "flex gap-3 items-start justify-end group animate-fadeIn";
-    userMsg.innerHTML = `
-      <div class="bg-primary text-white border border-primary/20 p-3 rounded-2xl rounded-tr-sm text-[13px] shadow-sm font-sans max-w-[85%]">
-        <p class="leading-relaxed">Please explain the architecture for <strong>${repoName}</strong>.</p>
-      </div>
-      <div class="w-7 h-7 rounded-lg bg-slate-200 text-slate-500 flex items-center justify-center shrink-0 shadow-sm">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-      </div>
-    `;
-    chatPanel.appendChild(userMsg);
-    chatPanel.scrollTop = chatPanel.scrollHeight;
-
-    // Add Thinking Bubble
-    const aiMsgId = 'ai-msg-' + Date.now();
-    const aiThinking = document.createElement('div');
-    aiThinking.id = aiMsgId;
-    aiThinking.className = "flex gap-3 items-start group mt-4";
-    aiThinking.innerHTML = `
-      <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-primary to-rose-500 text-white flex items-center justify-center shrink-0 shadow-md">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-      </div>
-      <div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-sm text-[13px] text-slate-700 shadow-sm font-sans flex items-center gap-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce"></span>
-        <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style="animation-delay: 150ms;"></span>
-        <span class="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style="animation-delay: 300ms;"></span>
-      </div>
-    `;
-    chatPanel.appendChild(aiThinking);
-    chatPanel.scrollTop = chatPanel.scrollHeight;
-
-    // Simulate Network/Thinking delay
-    setTimeout(() => {
-      const el = document.getElementById(aiMsgId);
-      if (el) {
-        el.innerHTML = `
-          <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-primary to-rose-500 text-white flex items-center justify-center shrink-0 shadow-md">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-          </div>
-          <div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-sm text-[13px] text-slate-700 shadow-sm font-sans flex flex-col gap-2 w-[85%]">
-            <p>Based on static analysis of <strong>${repoName}</strong>, the repository is structured into distinct modular components. It uses automated CI/CD pipelines, separates the business logic from presentation, and implements strong typing schemas.</p>
-            <div class="p-2 mt-2 bg-slate-50 border border-slate-200 rounded-md">
-               <pre class="text-[10px] text-emerald-600 m-0 font-mono overflow-x-auto">
-// Analysis Complete
-status: 200 OK
-language: auto-detected
-architecture: modular-monolith
-confidence: 0.94</pre>
-            </div>
-          </div>
-        `;
-        chatPanel.scrollTop = chatPanel.scrollHeight;
-        if (window.logToTerminal) {
-          window.logToTerminal(`AI Analysis returned for ${repoName}.`, 'success');
-        }
-      }
-    }, 1800);
+    // Call the actual AI Chat RAG Brain
+    if (window.sendAIChatMessage) {
+        window.sendAIChatMessage(`Explain the architectural design and system logic behind ${repoName}.`);
+    } else {
+        if (window.logToTerminal) window.logToTerminal(`Error: AI Brain offline.`, 'error');
+    }
   };
 });
