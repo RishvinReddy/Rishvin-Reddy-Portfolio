@@ -164,9 +164,17 @@ body {
   animation: pageFadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* 2. Scroll Reveal (Handled by GSAP) */
-.scroll-reveal {
+/* 2. Scroll Reveal (Native CSS) */
+.scroll-reveal, .scroll-reveal-native {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
   will-change: opacity, transform;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.is-visible, .scroll-reveal-native.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* --- PREMIUM SHADOW EFFECTS --- */
@@ -186,11 +194,6 @@ body {
     0 20px 25px -5px rgba(0, 0, 0, 0.15),
     0 25px 50px -12px rgba(0, 0, 0, 0.2),
     0 40px 60px -15px rgba(8, 112, 184, 0.35);
-}
-
-.scroll-reveal.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
 
 /* Stagger delays for groups */
@@ -402,48 +405,6 @@ body {
 /* Magnetic Button (Optional utility) */
 .magnetic-btn {
   transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* --- PRO UPGRADE: Custom Cursor --- */
-@media (pointer: fine) {
-  body {
-    cursor: none; /* Hide default cursor on desktop */
-  }
-}
-
-.cursor-dot,
-.cursor-outline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  z-index: 10000;
-  pointer-events: none;
-  mix-blend-mode: difference;
-}
-
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: white;
-  transform: translate(-50%, -50%);
-}
-
-.cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 1px solid white;
-  transform: translate(-50%, -50%);
-}
-
-body.hovering .cursor-dot {
-  transform: translate(-50%, -50%) scale(0.5);
-}
-
-body.hovering .cursor-outline {
-  width: 60px;
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* --- PRO UPGRADE: Marquee --- */

@@ -153,7 +153,7 @@
   </script>
   <link rel="stylesheet" href="animations.css">
   <!-- Markdown Parser for GitHub READMEs -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body class="bg-background-light font-serif text-gray-800">
@@ -168,7 +168,7 @@
     He is a co-inventor of a Government of India registered design patent for an IoT Connectivity Device.
   </div>
 
-  <div id="network-background"></div>
+
   <div class="relative min-h-screen pt-12">
     <!-- Top Utility Bar (Premium Dark) -->
     <!-- ============================================================
@@ -1192,8 +1192,9 @@
                 <div
                   class="float-icon-fast bg-white/80 backdrop-blur-md p-2.5 rounded-xl shadow-md border border-white/30 hover:scale-110 transition-transform cursor-default"
                   title="Docker">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                    class="w-7 h-7" alt="Docker">
+                  <img loading="lazy"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-7 h-7"
+                    alt="Docker">
                 </div>
               </div>
 
@@ -1228,7 +1229,7 @@
                 <!-- Layer 4: Photo -->
                 <div class="absolute inset-[3px] bg-white rounded-full overflow-hidden group cursor-pointer z-10"
                   id="profileThumb" data-src="icon.png">
-                  <img src="icon.png"
+                  <img loading="lazy" src="icon.png"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     alt="Rishvin Reddy">
                   <div
@@ -1299,7 +1300,8 @@
         </div>
 
         <div class="p-6 flex items-center justify-center">
-          <img id="modalImg" src="" alt="Profile full view" class="max-w-full max-h-[80vh] rounded-md object-contain" />
+          <img loading="lazy" id="modalImg" src="" alt="Profile full view"
+            class="max-w-full max-h-[80vh] rounded-md object-contain" />
         </div>
       </div>
     </div>
@@ -1482,62 +1484,111 @@
   <!-- End of upgraded header / hero / modal -->
 
   <!-- ===========================
-     ABOUT — Spacious, Attractive & Modern
-     Replace your existing #about with this block.
-     Assumes Tailwind + your animation utilities are available.
+     ABOUT — Premium Upgrade (performance-optimised, no GPU blur)
      =========================== -->
-  <!-- ===========================
-     ABOUT SUMMARY — Narrative & Arsenal (Premium Glass Upgrade)
-     =========================== -->
-  <section id="about" class="relative py-24 sm:py-32 overflow-hidden section-surface">
-    <!-- Background Elements -->
-    <div class="absolute inset-0 bg-slate-50/50"></div>
-    <div
-      class="absolute top-1/4 -left-64 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] mix-blend-multiply pointer-events-none">
-    </div>
-    <div
-      class="absolute bottom-1/4 -right-64 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[100px] mix-blend-multiply pointer-events-none">
-    </div>
+  <section id="about" class="py-20 sm:py-28 bg-slate-50/60">
+    <div class="mx-auto max-w-screen-2xl px-6 lg:px-12">
 
-    <div class="container mx-auto px-6 lg:px-20 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- ── Section intro header ── -->
+      <div class="max-w-3xl mb-16 scroll-reveal">
+        <div class="mb-5">
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 text-[11px] font-black uppercase tracking-widest text-indigo-600 bg-white border border-indigo-100 rounded-full shadow-sm">
+            <span class="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-pulse"></span>
+            The Origin
+          </span>
+        </div>
+        <h2 class="text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.05] mb-5">
+          Building systems that<br class="hidden sm:block">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-violet-500 to-indigo-400">connect &amp; secure.</span>
+        </h2>
+        <p class="text-lg text-slate-500 font-medium leading-relaxed max-w-2xl">
+          From hardware circuits to blockchain ledgers — engineering the full stack of trust.
+        </p>
+      </div>
 
-        <!-- Left: The Narrative Card -->
-        <div class="scroll-reveal">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8">The Engineer's Story
-          </h2>
+      <!-- ── Stats strip ── -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16 scroll-reveal">
+        <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm group hover:border-indigo-200 hover:shadow-md transition-all duration-200">
+          <div class="text-3xl font-black text-slate-900 tabular-nums mb-1">15<span class="text-indigo-500">+</span></div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Projects Built</div>
+        </div>
+        <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm group hover:border-violet-200 hover:shadow-md transition-all duration-200">
+          <div class="text-3xl font-black text-slate-900 tabular-nums mb-1">3<span class="text-violet-500">+</span></div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Years Engineering</div>
+        </div>
+        <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm group hover:border-amber-200 hover:shadow-md transition-all duration-200">
+          <div class="text-3xl font-black text-slate-900 tabular-nums mb-1">1<span class="text-amber-500">×</span></div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Govt. Patent</div>
+        </div>
+        <div class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm group hover:border-teal-200 hover:shadow-md transition-all duration-200">
+          <div class="text-3xl font-black text-slate-900 tabular-nums mb-1">8<span class="text-teal-500">+</span></div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Technologies</div>
+        </div>
+      </div>
 
-          <div
-            class="bg-white/80 backdrop-blur-xl border border-white/50 p-8 sm:p-10 rounded-[2.5rem] premium-layered-shadow transition-all duration-500 hover:-translate-y-1 relative overflow-hidden group">
-            <!-- Decorative gradient overlay -->
-            <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent pointer-events-none"></div>
+      <!-- ── Main 12-col grid ── -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 
-            <div class="relative z-10">
-              <p class="text-lg text-slate-600 leading-relaxed mb-6">
-                Technology is a bridge. My journey started with <strong class="text-slate-900">hardware
-                  mechanics</strong>—understanding the pulse of machines. It evolved into <strong
-                  class="text-slate-900">software logic</strong>, building brains for those machines.
+        <!-- LEFT: Narrative card -->
+        <div class="lg:col-span-7 scroll-reveal">
+
+          <!-- Card — relative + overflow-hidden, gradient left accent bar -->
+          <div class="relative bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group">
+
+            <!-- Left accent bar (CSS gradient, zero GPU cost) -->
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-400 via-violet-400 to-teal-400 rounded-l-3xl"></div>
+
+            <!-- Decorative quote mark — anchored inside relative parent -->
+            <div class="absolute top-6 right-7 text-slate-100 pointer-events-none select-none" aria-hidden="true">
+              <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+
+            <div class="relative z-10 p-8 sm:p-10 pl-10 sm:pl-12">
+
+              <!-- Mini section label inside card -->
+              <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-5">Engineer's Narrative</p>
+
+              <p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-5 font-medium">
+                Technology is a bridge. My journey started with
+                <span class="text-slate-900 font-extrabold border-b-2 border-indigo-200 group-hover:border-indigo-400 transition-colors duration-200">hardware mechanics</span>—understanding the pulse of machines. It evolved into
+                <span class="text-slate-900 font-extrabold border-b-2 border-violet-200 group-hover:border-violet-400 transition-colors duration-200">software logic</span>, building intelligence.
               </p>
-              <p class="text-lg text-slate-600 leading-relaxed mb-8">
-                Today, I secure that bridge. Integrating <strong class="text-primary">IoT sensors</strong> with
-                <strong class="text-indigo-600">Blockchain ledgers</strong> to create systems that are not just smart,
-                but verifiable and impenetrable.
+
+              <p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8 font-medium">
+                Today, I secure that bridge. Integrating
+                <strong class="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent font-black">IoT sensors</strong> with
+                <strong class="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent font-black">Blockchain ledgers</strong>
+                to create systems that are not just smart, but verifiable and impenetrable.
               </p>
 
-              <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
-                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm">
-                  <img src="icon.png" alt="Rishvin" class="w-full h-full object-cover">
+              <!-- Skill tags -->
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="px-3 py-1 text-xs font-bold text-indigo-700 bg-indigo-50 border border-indigo-100 rounded-full">IoT Systems</span>
+                <span class="px-3 py-1 text-xs font-bold text-violet-700 bg-violet-50 border border-violet-100 rounded-full">Blockchain</span>
+                <span class="px-3 py-1 text-xs font-bold text-teal-700 bg-teal-50 border border-teal-100 rounded-full">Full-Stack</span>
+                <span class="px-3 py-1 text-xs font-bold text-slate-600 bg-slate-50 border border-slate-200 rounded-full">Embedded C</span>
+                <span class="px-3 py-1 text-xs font-bold text-slate-600 bg-slate-50 border border-slate-200 rounded-full">Python</span>
+              </div>
+
+              <!-- Profile + CTA -->
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-6 border-t border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-slate-100 bg-slate-50 flex-shrink-0">
+                    <img loading="lazy" src="icon.png" alt="Rishvin Reddy" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <div class="font-black text-slate-900">Rishvin Reddy</div>
+                    <div class="text-[11px] text-slate-400 font-bold tracking-widest uppercase">Full-Stack Engineer</div>
+                  </div>
                 </div>
-                <div>
-                  <div class="font-bold text-slate-900">Rishvin Reddy</div>
-                  <div class="text-xs text-slate-500 font-medium tracking-wide uppercase">
-                    Full-Stack Engineer</div>
-                </div>
+
                 <a href="About_page.html"
-                  class="ml-auto flex items-center gap-2 text-sm font-bold text-primary hover:underline decoration-2 underline-offset-4 group-hover:translate-x-1 transition-transform">
-                  Read Full Story <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-bold transition-all duration-200 hover:bg-indigo-600 active:scale-95 group/btn">
+                  Read Full Story
+                  <svg class="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </a>
               </div>
@@ -1545,21 +1596,68 @@
           </div>
         </div>
 
-        <!-- Right: Technical Arsenal Grid -->
-        <div class="scroll-reveal delay-200">
-          <div class="flex items-center justify-between mb-8">
-            <h3 class="text-2xl font-bold text-slate-900">Technical Arsenal</h3>
+        <!-- RIGHT: Skills Chart -->
+        <div class="lg:col-span-5 scroll-reveal delay-200 mt-4 lg:mt-0">
+
+          <!-- Header row -->
+          <div class="flex items-center justify-between mb-4 px-1">
+            <div>
+              <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-0.5">Skill Distribution</p>
+              <h3 class="text-xl font-black text-slate-900 tracking-tight">Technical Arsenal</h3>
+            </div>
             <a href="Resume_page.html"
-              class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">View
-              Resume →</a>
+               class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-slate-400 transition-colors duration-200 hover:text-indigo-600 group/link">
+              View Resume
+              <svg class="w-3 h-3 transition-transform duration-200 group-hover/link:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
           </div>
 
-          <div
-            class="bg-white/60 backdrop-blur-md border border-white/40 p-5 rounded-3xl premium-layered-shadow flex items-center justify-center">
-            <div class="relative w-full max-w-sm aspect-square">
-              <canvas id="skillsChart"></canvas>
+          <!-- Chart card — overflow-hidden clips the decorative rings -->
+          <div class="relative bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 shadow-sm overflow-hidden group">
+
+            <!-- Decorative rings — % based so they scale with card, clipped by overflow-hidden -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+              <div class="w-[88%] aspect-square rounded-full border border-indigo-100/80 opacity-70"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+              <div class="w-[63%] aspect-square rounded-full border border-violet-100/80 opacity-70"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+              <div class="w-[38%] aspect-square rounded-full border border-teal-100/80 opacity-70"></div>
+            </div>
+
+            <!-- Canvas -->
+            <div class="relative flex items-center justify-center z-10">
+              <div class="w-full max-w-xs aspect-square">
+                <canvas id="skillsChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Labels strip -->
+            <div class="flex items-center justify-between mt-5 pt-4 border-t border-slate-50 relative z-10">
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-indigo-400"></div>
+                <div>
+                  <div class="text-[9px] font-black text-slate-300 uppercase tracking-widest">Core</div>
+                  <div class="text-indigo-600 text-xs font-black">Proficiencies</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 text-right">
+                <div>
+                  <div class="text-[9px] font-black text-slate-300 uppercase tracking-widest">Constant</div>
+                  <div class="text-teal-500 text-xs font-black">Evolution</div>
+                </div>
+                <div class="w-2 h-2 rounded-full bg-teal-400"></div>
+              </div>
             </div>
           </div>
+
+          <!-- Bottom note -->
+          <p class="text-center text-[11px] text-slate-400 mt-4 font-medium">
+            Hover the chart to explore skill areas ↗
+          </p>
         </div>
 
       </div>
@@ -1574,94 +1672,258 @@
   <!-- ===========================
      PATENT HIGHLIGHT SECTION
      =========================== -->
-  <section id="patent-section" class="max-w-7xl mx-auto px-6 lg:px-8 mt-10 mb-10 relative z-20 scroll-mt-32">
+  <!-- ===========================
+     PATENT HIGHLIGHT SECTION — Elite Certificate Edition
+     =========================== -->
+  <!-- ===========================
+     PATENT HIGHLIGHT SECTION — Elite Full-Width Certificate
+     =========================== -->
+  <section id="patent-section"
+    class="w-full max-w-screen-2xl mx-auto px-6 lg:px-12 mt-16 mb-28 relative z-20 scroll-mt-32">
 
-    <h2 class="text-3xl font-extrabold text-slate-900 mb-8 font-display flex items-center gap-3">
-      <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
-        </path>
-      </svg>
-      Patent & Innovation
-    </h2>
-
-    <div
-      class="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-8 premium-layered-shadow transition-all duration-300 hover:-translate-y-1 relative group overflow-hidden">
-      <!-- Decorative background glow -->
-      <div
-        class="absolute -right-20 -bottom-20 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl group-hover:bg-yellow-400/20 transition-all duration-500 pointer-events-none">
-      </div>
-
-      <!-- Header -->
-      <div class="flex flex-col sm:flex-row sm:items-start justify-between mb-8 gap-4 relative z-10">
-        <div>
-          <h3 class="text-2xl font-bold text-slate-800 mb-2 group-hover:text-primary transition-colors">
-            IoT Connectivity Device
-          </h3>
-          <p class="text-slate-500 font-medium">
-            Government of India – Registered Design Patent
-          </p>
-        </div>
-
-        <span
-          class="text-sm font-bold bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-full border border-emerald-200 inline-flex items-center gap-1.5 self-start">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Registered
-        </span>
-      </div>
-
-      <!-- Meta Info -->
-      <div
-        class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-sm mb-8 bg-slate-50/50 p-6 rounded-2xl border border-slate-100 relative z-10">
-
-        <div class="flex flex-col gap-1">
-          <div class="text-slate-400 uppercase tracking-wider font-semibold text-xs">Design No.</div>
-          <div class="font-bold text-slate-800 text-base">470097-001</div>
-        </div>
-
-        <div class="flex flex-col gap-1">
-          <div class="text-slate-400 uppercase tracking-wider font-semibold text-xs">Category</div>
-          <div class="font-bold text-slate-800 text-base">IoT System Design</div>
-        </div>
-
-        <div class="flex flex-col gap-1">
-          <div class="text-slate-400 uppercase tracking-wider font-semibold text-xs">Registered</div>
-          <div class="font-bold text-slate-800 text-base">Aug 2025</div>
-        </div>
-
-        <div class="flex flex-col gap-1">
-          <div class="text-slate-400 uppercase tracking-wider font-semibold text-xs">Role</div>
-          <div class="font-bold text-slate-800 text-base text-primary">Co-Inventor</div>
-        </div>
-
-      </div>
-
-      <!-- Actions -->
-      <div class="flex flex-wrap gap-4 relative z-10 p-2">
-        <button onclick="openPatent()"
-          class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white bg-primary rounded-xl shadow-lg shadow-primary/30 hover:-translate-y-0.5 hover:shadow-primary/40 transition-all duration-300 gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
-            </path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-            </path>
+    <!-- Section Label + Heading -->
+    <div class="scroll-reveal mb-14 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+      <div>
+        <div
+          class="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200/70 text-amber-700 text-[11px] font-black uppercase tracking-[0.15em] mb-5 shadow-sm">
+          <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M9.664 1.319a.75.75 0 01.672 0 41.059 41.059 0 018.198 5.424.75.75 0 01-.254 1.285 31.372 31.372 0 00-7.86 3.83.75.75 0 01-.84 0 31.508 31.508 0 00-2.08-1.287V9.82a.75.75 0 01.084-.798 27.427 27.427 0 005.005 2.104.75.75 0 00.42-.02 27.336 27.336 0 006.517-3.099.75.75 0 01.786 1.276 28.847 28.847 0 01-6.517 3.234.75.75 0 01-.42.02A28.66 28.66 0 0110 10.584l-.003.002a28.66 28.66 0 01-4.49 2.054.75.75 0 01-.42-.02 28.847 28.847 0 01-6.517-3.234.75.75 0 01.786-1.276 27.336 27.336 0 006.517 3.099.75.75 0 00.42.02 27.427 27.427 0 005.005-2.104.75.75 0 01.084.798v.467a31.508 31.508 0 00-2.08 1.287.75.75 0 01-.84 0 31.372 31.372 0 00-7.86-3.83.75.75 0 01-.254-1.285 41.059 41.059 0 018.198-5.424z"
+              clip-rule="evenodd" />
           </svg>
-          View Patent
-        </button>
-
-        <a href="assets/certificates/CERTIFICATE.pdf" target="_blank"
-          class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-          </svg>
-          Download PDF
-        </a>
+          Original Innovation
+        </div>
+        <h2 class="text-5xl md:text-6xl xl:text-7xl font-black text-slate-900 tracking-tight font-display leading-none">
+          Patent &amp;<br><span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-orange-400 to-yellow-500">Innovation</span>
+        </h2>
       </div>
+      <p class="text-slate-400 text-sm font-semibold max-w-xs leading-relaxed text-right hidden sm:block">One of the few
+        undergrads with a <strong class="text-slate-600">government-registered</strong> hardware patent.</p>
+    </div>
 
+    <!-- Main Patent Card — Wide Split Layout -->
+    <div class="scroll-reveal delay-200">
+      <div class="relative rounded-[3rem] overflow-hidden group transition-all duration-700 hover:-translate-y-2"
+        style="box-shadow: 0 0 0 1px rgba(251,191,36,0.15), 0 20px 60px -10px rgba(0,0,0,0.07), 0 8px 20px -5px rgba(245,158,11,0.08);">
+
+        <!-- Gold Accent Top Strip -->
+        <div
+          class="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-yellow-400 via-amber-400 via-orange-400 to-yellow-500 z-30">
+        </div>
+
+        <!-- Rich layered background -->
+        <div class="absolute inset-0 bg-white"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-amber-50/60 via-white/0 to-orange-50/40 pointer-events-none">
+        </div>
+
+        <!-- Large ambient glow blobs -->
+        <div
+          class="absolute -right-48 -bottom-48 w-[700px] h-[700px] bg-gradient-to-tl from-amber-200/25 to-orange-200/15 rounded-full blur-[120px] pointer-events-none transition-all duration-[1500ms] group-hover:scale-110 group-hover:-right-32 group-hover:-bottom-32">
+        </div>
+        <div
+          class="absolute -left-32 -top-32 w-80 h-80 bg-gradient-to-br from-yellow-100/50 to-amber-100/30 rounded-full blur-[70px] pointer-events-none transition-all duration-1000 group-hover:scale-115">
+        </div>
+
+        <!-- SPLIT GRID: Left content + Right visual panel -->
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-5">
+
+          <!-- LEFT: Main Patent Info (3 cols) -->
+          <div class="lg:col-span-3 p-8 md:p-12 xl:p-16 border-r border-amber-100/0 lg:border-amber-100/60">
+
+            <!-- Header -->
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-6 mb-10">
+              <div class="flex-1">
+                <div
+                  class="text-[10px] font-black text-amber-500/80 uppercase tracking-[0.22em] mb-4 flex items-center gap-3">
+                  <div class="h-px w-8 bg-gradient-to-r from-amber-400 to-transparent"></div>
+                  Government of India · Design Patent Office
+                </div>
+                <h3
+                  class="text-3xl md:text-4xl xl:text-5xl font-black text-slate-900 mb-4 tracking-tight leading-tight group-hover:text-amber-700 transition-colors duration-500">
+                  IoT Connectivity<br>Device
+                </h3>
+                <p class="text-base text-slate-500 font-medium leading-relaxed max-w-sm">
+                  A novel design for an intelligent IoT hardware interface enabling <strong
+                    class="text-slate-700">secure, authenticated</strong> device-to-cloud connectivity with real-time
+                  telemetry.
+                </p>
+              </div>
+
+              <!-- Live status badge -->
+              <div class="flex-shrink-0">
+                <div
+                  class="flex flex-col items-center gap-2.5 px-5 py-5 rounded-2xl bg-gradient-to-b from-emerald-50 to-teal-50/80 border border-emerald-200/70 shadow-md shadow-emerald-100/50">
+                  <span class="relative flex h-3.5 w-3.5">
+                    <span
+                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
+                    <span
+                      class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 shadow-[0_0_8px_2px_rgba(52,211,153,0.4)]"></span>
+                  </span>
+                  <div class="text-[11px] font-black text-emerald-700 uppercase tracking-[0.14em] text-center">
+                    Registered</div>
+                  <div class="text-[9px] font-bold text-emerald-500/60 uppercase tracking-widest">Active</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Elegant divider -->
+            <div class="flex items-center gap-4 mb-10">
+              <div class="h-px flex-1 bg-gradient-to-r from-amber-200/80 to-transparent"></div>
+              <div class="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
+              <div class="h-px flex-1 bg-gradient-to-l from-amber-200/80 to-transparent"></div>
+            </div>
+
+            <!-- Meta Tiles -->
+            <div class="grid grid-cols-2 xl:grid-cols-4 gap-3 mb-10">
+              <div
+                class="group/tile relative flex flex-col gap-2 p-5 rounded-2xl bg-white border border-slate-100/80 shadow-sm hover:shadow-lg hover:border-amber-200/80 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden cursor-default">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-amber-50/80 opacity-0 group-hover/tile:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none">
+                </div>
+                <div class="text-[8.5px] font-black text-slate-400 uppercase tracking-[0.2em] relative z-10">Design No.
+                </div>
+                <div class="font-black text-slate-800 text-lg relative z-10 tabular-nums leading-tight">470097<span
+                    class="text-amber-500">-001</span></div>
+              </div>
+
+              <div
+                class="group/tile relative flex flex-col gap-2 p-5 rounded-2xl bg-white border border-slate-100/80 shadow-sm hover:shadow-lg hover:border-amber-200/80 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden cursor-default">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-amber-50/80 opacity-0 group-hover/tile:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none">
+                </div>
+                <div class="text-[8.5px] font-black text-slate-400 uppercase tracking-[0.2em] relative z-10">Category
+                </div>
+                <div class="font-black text-slate-800 text-lg relative z-10 leading-tight">IoT System</div>
+              </div>
+
+              <div
+                class="group/tile relative flex flex-col gap-2 p-5 rounded-2xl bg-white border border-slate-100/80 shadow-sm hover:shadow-lg hover:border-amber-200/80 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden cursor-default">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-amber-50/80 opacity-0 group-hover/tile:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none">
+                </div>
+                <div class="text-[8.5px] font-black text-slate-400 uppercase tracking-[0.2em] relative z-10">Registered
+                </div>
+                <div class="font-black text-slate-800 text-lg relative z-10 leading-tight">Aug 2025</div>
+              </div>
+
+              <div
+                class="group/tile relative flex flex-col gap-2 p-5 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50/80 border border-amber-200/60 shadow-sm hover:shadow-lg hover:border-amber-300 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden cursor-default">
+                <div
+                  class="absolute bottom-0 right-0 w-16 h-16 bg-amber-300/15 rounded-full blur-lg pointer-events-none">
+                </div>
+                <div class="text-[8.5px] font-black text-amber-600/60 uppercase tracking-[0.2em] relative z-10">My Role
+                </div>
+                <div class="font-black text-amber-600 text-lg relative z-10 leading-tight">Co-Inventor</div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap items-center gap-3">
+              <button onclick="openPatent()"
+                class="group/btn relative inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl text-sm font-black text-white overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-amber-500/30 active:scale-95 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2">
+                <div class="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500"></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-amber-400 to-yellow-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300">
+                </div>
+                <svg class="w-4 h-4 relative z-10 transition-transform duration-300 group-hover/btn:scale-110"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                  </path>
+                </svg>
+                <span class="relative z-10">View Patent</span>
+              </button>
+
+              <a href="assets/certificates/CERTIFICATE.pdf" target="_blank"
+                class="group/pdf inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl text-sm font-black text-slate-600 bg-white border-2 border-slate-200 hover:border-amber-300/80 hover:bg-amber-50/60 hover:text-amber-700 hover:shadow-lg hover:shadow-amber-100 hover:-translate-y-1 transition-all duration-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-amber-200 focus:ring-offset-2">
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover/pdf:-translate-y-0.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                Download PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT: Visual Certificate Panel (2 cols) -->
+          <div
+            class="lg:col-span-2 relative flex flex-col items-center justify-center p-8 xl:p-12 bg-gradient-to-br from-amber-50/80 via-orange-50/50 to-white overflow-hidden min-h-[400px] lg:min-h-0">
+
+            <!-- Concentric decorative rings behind seal -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+              <div
+                class="w-80 h-80 rounded-full border border-amber-200/30 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:scale-105 transition-transform duration-700">
+              </div>
+              <div
+                class="w-64 h-64 rounded-full border border-amber-300/25 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700 delay-75">
+              </div>
+              <div
+                class="w-48 h-48 rounded-full border border-amber-400/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:scale-115 transition-transform duration-700 delay-150">
+              </div>
+            </div>
+
+            <!-- Central Seal -->
+            <div
+              class="relative z-10 flex flex-col items-center gap-5 group-hover:scale-[1.03] transition-transform duration-700 ease-out">
+              <!-- Seal ring + icon -->
+              <div
+                class="w-36 h-36 rounded-full border-[3px] border-amber-300/60 flex items-center justify-center bg-gradient-to-br from-white to-amber-50/80 shadow-xl shadow-amber-200/30 group-hover:border-amber-400/80 group-hover:shadow-amber-300/40 transition-all duration-700">
+                <div
+                  class="w-28 h-28 rounded-full border-2 border-dashed border-amber-300/50 flex items-center justify-center group-hover:border-amber-400/70 transition-colors duration-700">
+                  <svg class="w-14 h-14 text-amber-400/90 group-hover:text-amber-500 transition-colors duration-500"
+                    fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Certificate text -->
+              <div class="text-center">
+                <div class="text-[9px] font-black text-amber-500/70 uppercase tracking-[0.25em] mb-2">Certificate of
+                  Registration</div>
+                <div class="text-2xl font-black text-slate-800 tracking-tight mb-1">470097-001</div>
+                <div class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Design Patent</div>
+              </div>
+
+              <!-- Mini stat strip -->
+              <div
+                class="flex items-stretch gap-px bg-amber-200/40 rounded-2xl overflow-hidden border border-amber-200/50 shadow-sm">
+                <div class="flex flex-col items-center px-5 py-3 bg-white/90 gap-0.5">
+                  <div class="text-[9px] font-black text-amber-500/70 uppercase tracking-widest">Filed</div>
+                  <div class="text-base font-black text-slate-800">2025</div>
+                </div>
+                <div class="flex flex-col items-center px-5 py-3 bg-white/90 gap-0.5 border-x border-amber-200/40">
+                  <div class="text-[9px] font-black text-amber-500/70 uppercase tracking-widest">Class</div>
+                  <div class="text-base font-black text-slate-800">IoT</div>
+                </div>
+                <div class="flex flex-col items-center px-5 py-3 bg-white/90 gap-0.5">
+                  <div class="text-[9px] font-black text-amber-500/70 uppercase tracking-widest">Status</div>
+                  <div class="text-base font-black text-emerald-500">Live</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom attribution -->
+            <div class="absolute bottom-5 inset-x-0 flex justify-center">
+              <div class="flex items-center gap-2 text-[9px] font-black text-slate-400 uppercase tracking-[0.15em]">
+                <div class="w-1 h-1 rounded-full bg-amber-400/60"></div>
+                Govt. of India · Patent Office
+                <div class="w-1 h-1 rounded-full bg-amber-400/60"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
+
 
   <!-- ─ Section Divider ─ -->
   <div class="section-divider" aria-hidden="true"><span class="divider-gem"></span></div>
@@ -1669,56 +1931,62 @@
 
 
   <!-- Featured Projects (Premium UI Upgrade) -->
-  <section class="py-24 sm:py-32 bg-slate-50 relative overflow-hidden" id="projects">
+  <section class="py-24 sm:py-32 bg-[#F8FAFC] relative overflow-hidden" id="projects">
     <!-- Dynamic Background Elements -->
     <div class="absolute inset-0 pointer-events-none">
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">
         <div
-          class="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse mix-blend-multiply">
+          class="absolute top-0 left-0 w-[800px] h-[800px] bg-slate-200/50 rounded-full blur-[120px] mix-blend-multiply opacity-50">
         </div>
         <div
-          class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-3xl animate-pulse delay-700 mix-blend-multiply">
+          class="absolute bottom-20 right-10 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[100px] animate-pulse delay-700 mix-blend-multiply">
         </div>
       </div>
     </div>
 
     <div class="relative z-10 mx-auto max-w-screen-2xl px-6 lg:px-12">
       <!-- Section Header -->
-      <div class="mx-auto max-w-2xl text-center mb-16 scroll-reveal">
-        <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 font-display">
-          Featured Projects
+      <div class="mx-auto max-w-2xl text-center mb-16 scroll-reveal flex flex-col items-center">
+        <div
+          class="inline-flex items-center gap-2 px-3 pl-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[11px] font-black uppercase tracking-widest mb-6">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          Selected Works
+        </div>
+        <h2 class="text-5xl md:text-6xl font-black tracking-tight text-slate-900 mb-6 font-display">
+          Featured <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">Projects</span>
         </h2>
-        <p class="text-lg text-slate-600 leading-relaxed">
+        <p class="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
           A selection of engineering challenges solved with
-          <span class="font-semibold text-primary">IoT</span>,
-          <span class="font-semibold text-indigo-600">Blockchain</span>, and
-          <span class="font-semibold text-slate-900">Secure Systems</span>.
+          <span class="font-extrabold text-teal-600">IoT</span>,
+          <span class="font-extrabold text-indigo-600">Blockchain</span>, and
+          <span class="font-extrabold text-slate-800">Secure Systems</span>.
         </p>
       </div>
 
       <!-- Filter Buttons (Premium Pill Design) -->
-      <div class="flex flex-wrap justify-center gap-3 mb-16 delay-100" id="projectFilters">
+      <div class="flex flex-wrap justify-center gap-4 mb-20 delay-100 scroll-reveal" id="projectFilters">
         <button
-          class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border border-transparent shadow-sm"
+          class="filter-btn active px-7 py-3 rounded-2xl text-[13px] font-black tracking-wide uppercase transition-all duration-300 border border-transparent shadow-sm"
           data-filter="all">All Projects</button>
         <button
-          class="filter-btn px-6 py-2.5 rounded-full bg-white text-slate-600 border border-slate-200 text-sm font-medium transition-all duration-300 hover:border-slate-300 hover:shadow-md"
+          class="filter-btn px-7 py-3 rounded-2xl bg-white/80 backdrop-blur text-slate-500 border border-slate-200 text-[13px] font-black tracking-wide uppercase transition-all duration-300 hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5"
           data-filter="iot">IoT & Embedded</button>
         <button
-          class="filter-btn px-6 py-2.5 rounded-full bg-white text-slate-600 border border-slate-200 text-sm font-medium transition-all duration-300 hover:border-slate-300 hover:shadow-md"
+          class="filter-btn px-7 py-3 rounded-2xl bg-white/80 backdrop-blur text-slate-500 border border-slate-200 text-[13px] font-black tracking-wide uppercase transition-all duration-300 hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5"
           data-filter="security">Security</button>
         <button
-          class="filter-btn px-6 py-2.5 rounded-full bg-white text-slate-600 border border-slate-200 text-sm font-medium transition-all duration-300 hover:border-slate-300 hover:shadow-md"
+          class="filter-btn px-7 py-3 rounded-2xl bg-white/80 backdrop-blur text-slate-500 border border-slate-200 text-[13px] font-black tracking-wide uppercase transition-all duration-300 hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5"
           data-filter="web">Web & AI</button>
 
         <style>
           /* Custom active state for filters */
           .filter-btn.active {
-            background-color: #0f172a;
-            /* slate-900 */
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
-            transform: translateY(-1px);
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3), 0 8px 10px -6px rgba(15, 23, 42, 0.2);
+            transform: translateY(-2px);
+            border-bottom: 2px solid #334155;
           }
         </style>
       </div>
@@ -1785,24 +2053,30 @@
       </div>
 
       <!-- ── AI Insights Panel (Phase 3B) ── -->
-      <div class="mt-16 mb-8 max-w-7xl mx-auto scroll-reveal">
-        <div id="aiInsightsPanel" class="card-premium p-6">
-          <!-- Loading skeleton -->
-          <div class="animate-pulse space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-slate-200 rounded-xl"></div>
-              <div class="flex-1 space-y-2">
-                <div class="h-4 bg-slate-200 rounded w-1/3"></div>
-                <div class="h-3 bg-slate-100 rounded w-1/4"></div>
+      <div class="mt-20 mb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-reveal">
+        <div
+          class="relative overflow-hidden rounded-3xl bg-white/80 backdrop-blur-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 hover-card-3d">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-indigo-50/50 via-transparent to-violet-50/50 pointer-events-none">
+          </div>
+          <div id="aiInsightsPanel" class="relative z-10 w-full">
+            <!-- Sleek Loading Skeleton -->
+            <div class="animate-pulse space-y-8">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-gradient-to-br from-violet-100 to-indigo-100 rounded-2xl flex-shrink-0"></div>
+                <div class="flex-1 space-y-3">
+                  <div class="h-5 bg-slate-200 rounded-lg w-1/4"></div>
+                  <div class="h-3 bg-slate-100 rounded-lg w-1/3"></div>
+                </div>
               </div>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="h-32 bg-slate-50 rounded-2xl"></div>
+                <div class="h-32 bg-slate-50 rounded-2xl"></div>
+                <div class="h-32 bg-slate-50 rounded-2xl"></div>
+                <div class="h-32 bg-slate-50 rounded-2xl"></div>
+              </div>
+              <div class="h-24 bg-violet-50/50 rounded-2xl"></div>
             </div>
-            <div class="grid grid-cols-4 gap-3">
-              <div class="h-20 bg-slate-100 rounded-xl"></div>
-              <div class="h-20 bg-slate-100 rounded-xl"></div>
-              <div class="h-20 bg-slate-100 rounded-xl"></div>
-              <div class="h-20 bg-slate-100 rounded-xl"></div>
-            </div>
-            <div class="h-16 bg-violet-50 rounded-xl"></div>
           </div>
         </div>
       </div>
@@ -2389,7 +2663,8 @@
 
       <!-- Modal Hero Banner -->
       <div id="modalBanner" class="relative flex-shrink-0 overflow-hidden rounded-t-2xl" style="height:140px;">
-        <img id="modalBannerImg" src="" alt="" class="w-full h-full object-cover" onerror="this.style.opacity='0'">
+        <img loading="lazy" id="modalBannerImg" src="" alt="" class="w-full h-full object-cover"
+          onerror="this.style.opacity='0'">
         <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/85"></div>
         <div class="absolute bottom-0 left-0 right-0 px-5 pb-3 flex items-end justify-between">
           <div class="flex-1 min-w-0 pr-4">
@@ -2919,7 +3194,7 @@
           <a href="index.html" class="flex items-center gap-3 group w-fit">
             <div
               class="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-slate-800 group-hover:ring-primary/60 transition-all duration-300">
-              <img src="icon.png" alt="Rishvin Reddy" class="w-full h-full object-cover">
+              <img loading="lazy" src="icon.png" alt="Rishvin Reddy" class="w-full h-full object-cover">
             </div>
             <span
               class="text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 group-hover:from-primary group-hover:to-rose-400 transition-all duration-300">Rishvin</span>
@@ -3321,14 +3596,12 @@
   <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 
   <!-- GSAP Core & ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-  <script src="animations.js"></script>
+  <script defer src="animations.js"></script>
   <!-- Central Portfolio Data Engine -->
-  <script src="js/portfolio-engine.js"></script>
+  <script defer src="js/portfolio-engine.js"></script>
 
   <!-- FAANG Features Script -->
   <script>
@@ -4350,71 +4623,98 @@
       }
     }
 
-    // Call the function
-    loadGithubProjects();
-
     // ───────────────────────────────────────────────────────────────────────────
     // PHASE 3B: AI DEVELOPER INSIGHTS PANEL
     // ───────────────────────────────────────────────────────────────────────────
-    (async function initAIInsights() {
+    async function initAIInsights() {
       const container = document.getElementById('aiInsightsPanel');
-      if (!container || typeof ENGINE === 'undefined') return;
+      if (!container || typeof window.ENGINE === 'undefined') return;
 
       try {
-        const repos = await ENGINE.getRepos();
-        const insights = ENGINE.generateInsights(repos);
-        const stats = ENGINE.calculateStats(repos);
-        const skills = ENGINE.detectSkills(repos);
-        const tools = ENGINE.detectTools(repos);
+        const repos = await window.ENGINE.getRepos();
+        const insights = window.ENGINE.generateInsights(repos);
+        const stats = window.ENGINE.calculateStats(repos);
+        const skills = window.ENGINE.detectSkills(repos);
+        const tools = window.ENGINE.detectTools(repos);
 
-        const topLangs = skills.slice(0, 5).map(s => `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/8 border border-primary/15 text-primary text-[11px] font-bold">${s.lang}</span>`).join('');
-        const topTools = tools.slice(0, 5).map(t => `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-600 text-[11px] font-bold">${t.display}</span>`).join('');
+        const topLangs = skills.slice(0, 5).map(s => `
+          <div class="group relative px-3 pl-3.5 py-1.5 rounded-full border border-slate-200/50 bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all cursor-default">
+            <div class="absolute left-1.5 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-violet-500"></div>
+            <span class="text-[11px] font-bold text-slate-700 tracking-wide">${s.lang}</span>
+          </div>`).join('');
+
+        const topTools = tools.slice(0, 5).map(t => `
+          <div class="px-3 py-1.5 rounded-full border border-indigo-100 bg-indigo-50/50 text-indigo-700 text-[11px] font-bold tracking-wide shadow-sm hover:bg-indigo-100 transition-colors">
+            ${t.display}
+          </div>`).join('');
 
         container.innerHTML = `
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-violet-500/25">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          <!-- Header -->
+          <div class="flex items-start gap-5 mb-8">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center flex-shrink-0 shadow-[0_8px_16px_rgba(124,58,237,0.3)] ring-4 ring-violet-50">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
             </div>
-            <div>
-              <h3 class="font-bold text-slate-900 text-base">AI Developer Snapshot</h3>
-              <p class="text-xs text-slate-400 mt-0.5">Auto-generated from ${stats.totalRepos} public repositories</p>
+            <div class="pt-1.5">
+              <h3 class="text-xl font-black text-slate-900 tracking-tight flex items-center gap-2">AI Developer Snapshot <span class="bg-violet-100 text-violet-700 text-[10px] uppercase font-bold px-2 py-0.5 rounded flex items-center gap-1"><span class="w-1.5 h-1.5 bg-violet-500 rounded-full animate-pulse"></span> LIVE</span></h3>
+              <p class="text-sm text-slate-500 font-medium mt-1">Metrics dynamically compiled from ${stats.totalRepos} public GitHub repositories.</p>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            ${[{ v: stats.totalRepos, l: 'Repos', icon: '📦' }, { v: stats.totalStars, l: 'Stars', icon: '⭐' }, { v: stats.totalForks, l: 'Forks', icon: '🍴' }, { v: stats.languageCount, l: 'Languages', icon: '💻' }].map(m => `
-              <div class="text-center p-3 rounded-xl bg-slate-50 border border-slate-100">
-                <div class="text-xl mb-1">${m.icon}</div>
-                <div class="text-2xl font-black text-slate-800">${m.v}</div>
-                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">${m.l}</div>
+          <!-- Quick Stats Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            ${[{ v: stats.totalRepos, l: 'Total Repositories', icon: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4' },
+          { v: stats.totalStars, l: 'Global Stars', icon: 'M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z' },
+          { v: stats.totalForks, l: 'Network Forks', icon: 'M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z' },
+          { v: stats.languageCount, l: 'Code Languages', icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' }].map(m => `
+              <div class="relative bg-white/60 p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all overflow-hidden group">
+                <div class="absolute -right-4 -top-4 w-16 h-16 bg-slate-50 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out z-0"></div>
+                <div class="relative z-10 flex flex-col justify-between h-full">
+                  <svg class="w-6 h-6 text-indigo-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${m.icon}"/></svg>
+                  <div>
+                    <div class="text-3xl font-black text-slate-800 tracking-tight">${m.v}</div>
+                    <div class="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1">${m.l}</div>
+                  </div>
+                </div>
               </div>`).join('')}
           </div>
 
-          <div class="space-y-4 mb-5">
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Top Languages</p>
-              <div class="flex flex-wrap gap-2">${topLangs}</div>
+          <!-- Tech Stack -->
+          <div class="flex flex-col md:flex-row gap-6 mb-8 bg-slate-50/50 p-6 rounded-2xl border border-slate-100/80">
+            <div class="flex-1">
+              <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg> Dominant Languages</p>
+              <div class="flex flex-wrap gap-2.5">${topLangs}</div>
             </div>
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Key Tools & Frameworks</p>
-              <div class="flex flex-wrap gap-2">${topTools || '<span class="text-xs text-slate-400">Scanning repos...</span>'}</div>
+            <div class="w-px bg-slate-200/60 hidden md:block"></div>
+            <div class="flex-1">
+              <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 00-1-1H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1v1z"></path></svg> Tooling & Frameworks</p>
+              <div class="flex flex-wrap gap-2.5">${topTools || '<span class="text-xs text-slate-400 italic">Compiling data...</span>'}</div>
             </div>
           </div>
 
-          <div class="p-4 rounded-xl bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-100">
-            <p class="text-[10px] font-bold uppercase tracking-widest text-violet-500 mb-2">🤖 AI Summary</p>
-            <p class="text-sm text-slate-700 leading-relaxed">${insights.summary}</p>
+          <!-- AI Executive Summary -->
+          <div class="relative overflow-hidden p-6 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-700 text-white shadow-lg shadow-indigo-500/20">
+            <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+              <svg class="w-32 h-32 transform rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            </div>
+            <div class="relative z-10">
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-3 border-b border-white/20 pb-3">
+                <p class="text-[10px] font-black uppercase tracking-widest text-indigo-200 flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg> AI Executive Summary</p>
+                <div class="bg-indigo-900/50 text-indigo-100 px-2 py-1 rounded text-[9px] font-bold tracking-wider mt-2 sm:mt-0">CONFIDENCE: HIGH</div>
+              </div>
+              <p class="text-[15px] text-white/90 leading-relaxed font-medium">"${insights.summary}"</p>
+            </div>
           </div>
         `;
       } catch (e) {
-        container.innerHTML = '<p class="text-sm text-slate-400 text-center py-4">Could not load insights.</p>';
+        console.error("Insights Error:", e);
+        container.innerHTML = '<div class="text-sm text-slate-500 bg-slate-50 p-4 rounded-xl text-center border border-slate-100">AI compilation temporarily unavailable. Please reload the dashboard.</div>';
       }
-    })();
+    }
 
     // ───────────────────────────────────────────────────────────────────────────
     // PHASE 3C: GITHUB ACTIVITY GRAPH (contribution heatmap)
     // ───────────────────────────────────────────────────────────────────────────
-    (async function initActivityGraph() {
+    async function initActivityGraph() {
       const wrap = document.getElementById('activityGraphWrap');
       if (!wrap) return;
 
@@ -4529,14 +4829,24 @@
 
       // Re-render on theme change
       document.addEventListener('themeChanged', () => initActivityGraph());
-    })();
+    }
+
+    // ───────────────────────────────────────────────────────────────────────────
+    // INITIALIZATION ROOT: WAIT FOR SCRIPTS TO LOAD BEFORE EXECUTING
+    // ───────────────────────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      // Defer slightly to ensure portfolio-engine.js completes execution
+      setTimeout(() => {
+        if (typeof loadGithubProjects === 'function') loadGithubProjects();
+        if (typeof initAIInsights === 'function') initAIInsights();
+        if (typeof initActivityGraph === 'function') initActivityGraph();
+      }, 50);
+    });
   </script>
 
-  <!-- tsParticles Interaction Network Background -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-  <script src="js/background-network.js"></script>
 
-  <script src="js/cursor-spotlight.js"></script>
+
+  <script defer src="js/cursor-spotlight.js"></script>
 
   <!-- 2. FULLSCREEN PATENT VIEWER (IMPRESSIVE) -->
   <div id="patentModal"
