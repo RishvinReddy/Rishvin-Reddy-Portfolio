@@ -44,6 +44,17 @@
     tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#f20d46" }, fontFamily: { mono: ["'Fira Code'", "monospace"], sans: ["'Space Grotesk'", "sans-serif"] } } } };
   </script>
   <link rel="stylesheet" href="animations.css">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      if(typeof emailjs !== "undefined") {
+        emailjs.init("mUWYYaTiZhAWgB0TH"); 
+      }
+    })();
+  </script>
+
 </head>
 
 <body

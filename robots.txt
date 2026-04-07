@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /_footer.html
+Disallow: /_header.html
+Disallow: /new_cta.html
+Disallow: /cta_fixed.html
+Disallow: /animations.html
 
 Sitemap: https://rishvinreddy.github.io/sitemap.xml

@@ -386,5 +386,110 @@
       }
     });
 
+    /* --- APPLE-LEVEL TOAST NOTIFICATION SYSTEM --- */
+    function showToast(message, type = 'success') {
+      const toastId = 'premium-toast-container';
+      let container = document.getElementById(toastId);
+      
+      // Create container if it doesn't exist
+      if (!container) {
+        container = document.createElement('div');
+        container.id = toastId;
+        container.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 z-[99999] flex flex-col gap-3 items-center pointer-events-none';
+        document.body.appendChild(container);
+      }
+
+      // Create toast element
+      const toast = document.createElement('div');
+      
+      // Icons
+      const icons = {
+        success: `<svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
+        error: `<svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
+        warning: `<svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>`
+      };
+
+      // Toast Styling (Glassmorphism + Apple aesthetic)
+      toast.className = `flex items-center gap-3 px-5 py-3 rounded-full shadow-2xl backdrop-blur-xl border border-white/10 transition-all duration-500 ease-out transform translate-y-8 opacity-0 scale-95
+        ${type === 'success' ? 'bg-emerald-950/80 shadow-emerald-900/20' : 
+          type === 'error' ? 'bg-red-950/80 shadow-red-900/20' : 
+          'bg-amber-950/80 shadow-amber-900/20'}`;
+      
+      toast.innerHTML = `
+        ${icons[type] || icons.success}
+        <span class="text-sm font-medium text-slate-100">${message}</span>
+      `;
+      
+      container.appendChild(toast);
+
+      // Trigger entrance animation
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-8', 'opacity-0', 'scale-95');
+        toast.classList.add('translate-y-0', 'opacity-100', 'scale-100');
+      });
+
+      // Exit animation and removal
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100', 'scale-100');
+        toast.classList.add('translate-y-4', 'opacity-0', 'scale-95');
+        setTimeout(() => toast.remove(), 500);
+      }, 4000);
+    }
+
+    /* --- NEWSLETTER SUBSCRIPTION (EmailJS) + SPAM PROTECTION --- */
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const btn = document.getElementById('newsletter-submit-btn');
+        const emailInput = document.getElementById('newsletter-email');
+        const originalBtnText = btn.innerHTML;
+        
+        // Spam Protection (Cooldown)
+        const lastSubTime = localStorage.getItem('last_newsletter_sub');
+        if (lastSubTime && (Date.now() - parseInt(lastSubTime)) < 60000) { // 60s cooldown
+          showToast("You're doing that too fast. Please wait a minute.", 'warning');
+          return;
+        }
+
+        btn.innerText = "Subscribing...";
+        btn.disabled = true;
+        btn.classList.add('opacity-70', 'cursor-not-allowed');
+        
+        if (typeof emailjs !== 'undefined') {
+          emailjs.send(
+            "service_vap0e7b",
+            "template_0d7egxw",
+            {
+              from_name: "Newsletter Subscriber",
+              from_email: emailInput.value,
+              message: "Subscribed to newsletter updates from the portfolio site."
+            }
+          )
+          .then(() => {
+            showToast("Welcome aboard! Successfully subscribed.", "success");
+            localStorage.setItem('last_newsletter_sub', Date.now().toString());
+            btn.innerHTML = originalBtnText;
+            btn.disabled = false;
+            btn.classList.remove('opacity-70', 'cursor-not-allowed');
+            newsletterForm.reset();
+          })
+          .catch((error) => {
+            console.error('EmailJS Error:', error);
+            showToast("Failed to subscribe. Please try again later.", "error");
+            btn.innerHTML = originalBtnText;
+            btn.disabled = false;
+            btn.classList.remove('opacity-70', 'cursor-not-allowed');
+          });
+        } else {
+          showToast("Email service offline.", "error");
+          btn.innerHTML = originalBtnText;
+          btn.disabled = false;
+          btn.classList.remove('opacity-70', 'cursor-not-allowed');
+        }
+      });
+    }
+
   });
 })();

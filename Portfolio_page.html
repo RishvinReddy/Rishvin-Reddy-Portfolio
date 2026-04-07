@@ -174,6 +174,17 @@
         }
     </style>
 
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      if(typeof emailjs !== "undefined") {
+        emailjs.init("mUWYYaTiZhAWgB0TH"); 
+      }
+    })();
+  </script>
+
 </head>
 
 <body class="bg-slate-50 selection:bg-primary/20 font-serif text-slate-800 relative overflow-x-hidden">
@@ -1009,7 +1020,7 @@
     </script>
 
     <!-- ===== Header Spacer (since header is fixed) ===== -->
-    <div class="h-32 shrink-0"></div>
+    <div class="h-12 shrink-0"></div>
 
 
 
@@ -1282,31 +1293,31 @@
               Live from GitHub
             </div>
             <h1
-              class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter hero-gradient-text leading-none mb-6">
+              class="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tighter hero-gradient-text leading-none mb-6">
               Portfolio<br class="hidden sm:block"> Projects</h1>
-            <p class="max-w-2xl mx-auto text-lg text-slate-500 leading-relaxed mb-4">End-to-end highlights — hardware
+            <p class="mx-auto text-xl text-slate-500 leading-relaxed mb-4 max-w-4xl">End-to-end highlights — hardware
               prototypes, web &amp; mobile apps, security and system design. Every card is fetched live from GitHub.</p>
-            <p class="text-sm text-slate-400">Erolla Rishvin Reddy &mdash; Hyderabad &middot; <a
+            <p class="text-base text-slate-400">Erolla Rishvin Reddy &mdash; Hyderabad &middot; <a
                 class="text-primary hover:underline" href="mailto:rishvinreddy@gmail.com">rishvinreddy@gmail.com</a>
               &middot; <a class="text-primary hover:underline" href="https://github.com/RishvinReddy" target="_blank"
                 rel="noopener">GitHub ↗</a></p>
             <!-- Stats Bar -->
-            <div id="githubStatsBar" class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto stagger">
+            <div id="githubStatsBar" class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-5xl mx-auto stagger">
               <div class="gh-stat rounded-2xl px-5 py-4 text-center backdrop-blur-sm shadow-sm">
-                <p id="statRepos" class="text-3xl font-black text-slate-900 stat-num">—</p>
-                <p class="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wider">Repositories</p>
+                <p id="statRepos" class="text-4xl font-black text-slate-900 stat-num">—</p>
+                <p class="text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">Repositories</p>
               </div>
               <div class="gh-stat rounded-2xl px-5 py-4 text-center backdrop-blur-sm shadow-sm">
-                <p id="statStars" class="text-3xl font-black text-slate-900 stat-num">—</p>
-                <p class="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wider">Total Stars</p>
+                <p id="statStars" class="text-4xl font-black text-slate-900 stat-num">—</p>
+                <p class="text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">Total Stars</p>
               </div>
               <div class="gh-stat rounded-2xl px-5 py-4 text-center backdrop-blur-sm shadow-sm">
-                <p id="statForks" class="text-3xl font-black text-slate-900 stat-num">—</p>
-                <p class="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wider">Forks</p>
+                <p id="statForks" class="text-4xl font-black text-slate-900 stat-num">—</p>
+                <p class="text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">Forks</p>
               </div>
               <div class="gh-stat rounded-2xl px-5 py-4 text-center backdrop-blur-sm shadow-sm">
-                <p id="statLangs" class="text-3xl font-black text-slate-900 stat-num">—</p>
-                <p class="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wider">Languages</p>
+                <p id="statLangs" class="text-4xl font-black text-slate-900 stat-num">—</p>
+                <p class="text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">Languages</p>
               </div>
             </div>
           </div>
@@ -1403,28 +1414,72 @@
 
 
 
-        <!-- ── Projects Grid ── -->
-        <section class="container mx-auto px-6 lg:px-16 py-16">
-          <div id="loadingProjects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
-            <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
-            <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
-            <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
-            <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
-            <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
-          </div>
-          <div id="projectsGrid" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-          <div id="emptyState" class="hidden py-24 text-center">
-            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/8 flex items-center justify-center">
-              <svg class="w-10 h-10 text-primary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M9.172 16.172a4 4 0 015.656 0M9 12h.01M15 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+        <!-- ── Projects Grid (Premium Styled) ── -->
+        <section class="py-24 bg-[#F8FAFC] relative overflow-hidden">
+          <!-- Dynamic Background Elements -->
+          <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">
+              <div class="absolute top-0 left-0 w-[800px] h-[800px] bg-slate-200/50 rounded-full blur-[120px] mix-blend-multiply opacity-50"></div>
+              <div class="absolute bottom-20 right-10 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[100px] animate-pulse delay-700 mix-blend-multiply"></div>
             </div>
-            <h3 class="text-xl font-bold text-slate-700 mb-2">No projects found</h3>
-            <p class="text-slate-500 text-sm">Try a different search term or filter.</p>
           </div>
-          <p id="resultCount" class="hidden mt-8 text-center text-sm text-slate-400 font-medium"></p>
+
+          <div class="relative z-10 mx-auto max-w-screen-2xl px-6 lg:px-16">
+            <!-- Section Header -->
+            <div class="mx-auto max-w-3xl flex flex-col items-center text-center mb-16 reveal">
+              <!-- Badge -->
+              <div class="mb-6 flex items-center justify-center gap-3 w-full">
+                <div class="flex-1 h-px bg-gradient-to-l from-slate-300/60 to-transparent max-w-[120px]"></div>
+                <span class="inline-flex items-center gap-2 px-4 py-2 text-[11px] font-black uppercase tracking-widest text-slate-700 bg-slate-100 border border-slate-200/70 rounded-full shadow-sm">
+                  <span class="w-1.5 h-1.5 bg-slate-500 rounded-full animate-pulse"></span>
+                  All Projects
+                </span>
+                <div class="flex-1 h-px bg-gradient-to-r from-slate-300/60 to-transparent max-w-[120px]"></div>
+              </div>
+              <!-- Headline -->
+              <h2 class="text-5xl md:text-6xl font-black tracking-tight text-slate-900 mb-6 font-display leading-[1.05]">
+                Full
+                <span class="relative inline-block mt-2 sm:mt-0">
+                  <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(120deg, #334155 0%, #0f172a 100%);">
+                    Repository
+                  </span>
+                  <span class="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full opacity-30" style="background: linear-gradient(90deg, #64748b, #334155);"></span>
+                </span>
+              </h2>
+              <p class="text-lg md:text-xl text-slate-500 leading-relaxed font-medium max-w-2xl">
+                A selection of engineering challenges solved with
+                <strong class="text-teal-600 font-black">IoT</strong>,
+                <strong class="text-indigo-600 font-black">Blockchain</strong>, and
+                <strong class="text-slate-800 font-black">Secure Systems</strong>.
+              </p>
+            </div>
+
+            <!-- Loading skeleton -->
+            <div id="loadingProjects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+              <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
+              <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
+              <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
+              <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
+              <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
+              <div class="rounded-3xl animate-pulse bg-slate-100 h-80"></div>
+            </div>
+
+            <!-- Dynamic grid populated by JS -->
+            <div id="projectsGrid" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12"></div>
+
+            <!-- Empty state -->
+            <div id="emptyState" class="hidden py-24 text-center">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/8 flex items-center justify-center">
+                <svg class="w-10 h-10 text-primary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M9.172 16.172a4 4 0 015.656 0M9 12h.01M15 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-slate-700 mb-2">No projects found</h3>
+              <p class="text-slate-500 text-sm">Try a different search term or filter.</p>
+            </div>
+            <p id="resultCount" class="hidden mt-8 text-center text-sm text-slate-400 font-medium"></p>
+          </div>
         </section>
 
     <!-- ─ Section Divider ─ -->
@@ -1640,6 +1695,7 @@
             async function loadProjects() {
               try {
                 let repos = [];
+                let apiFailed = false;
 
                 // ── Use the central engine if available (shared 1h cache) ──
                 if (typeof ENGINE !== 'undefined') {
@@ -1649,11 +1705,32 @@
                   let page = 1;
                   while (true) {
                     const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&page=${page}&sort=updated`);
-                    if (!res.ok) break;
+                    if (!res.ok) {
+                      // 403 = rate limit, 404 = not found, etc.
+                      apiFailed = true;
+                      break;
+                    }
                     const data = await res.json();
                     if (!Array.isArray(data) || !data.length) break;
                     repos = repos.concat(data); page++;
                   }
+                }
+
+                // If API failed and no repos were fetched, show a proper message
+                if (apiFailed && repos.length === 0) {
+                  if (loadingEl) loadingEl.innerHTML = `
+                    <div class="col-span-full py-20 text-center">
+                      <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-amber-50 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      </div>
+                      <h3 class="text-lg font-bold text-slate-700 mb-2">GitHub API rate limit reached</h3>
+                      <p class="text-slate-500 text-sm max-w-md mx-auto mb-4">Too many requests from this browser session. This resolves after ~1 hour, or view the projects live on the deployed site.</p>
+                      <a href="https://github.com/RishvinReddy?tab=repositories" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold hover:bg-primary transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" clip-rule="evenodd"/></svg>
+                        View on GitHub
+                      </a>
+                    </div>`;
+                  return;
                 }
 
                 globalRepos = repos.filter(r => !r.fork);
@@ -1744,94 +1821,261 @@
   </svg>
 </button>
 
-<!-- ── Pre-footer CTA Banner ── -->
-<div class="relative overflow-hidden bg-gradient-to-r from-slate-950 via-primary/20 to-indigo-950">
-  <!-- Animated gradient sweep -->
-  <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-indigo-500/10 animate-pulse"></div>
-  <!-- Grid overlay texture -->
-  <div class="absolute inset-0 opacity-5"
-    style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+  <!-- === ULTIMATE CTA & NEWSLETTER (Combined Premium Footer Capstone) === -->
+  <section class="bg-slate-900 relative py-32 overflow-hidden border-t border-slate-800/50">
+    <!-- Ambient glow orbs -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute -top-40 left-1/5 w-[600px] h-[400px] bg-primary/4 rounded-full blur-[140px]"></div>
+      <div class="absolute -bottom-20 right-1/5 w-[500px] h-[400px] bg-indigo-500/4 rounded-full blur-[140px]"></div>
+    </div>
+    <!-- Inline Styles for Custom Keyframes -->
+    <style>
+      @keyframes float-slow {
 
-  <div class="container mx-auto px-6 lg:px-20 py-16 relative z-10">
-    <div class="max-w-3xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-6">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-        </span>
-        Open for Collaboration
-      </div>
+        0%,
+        100% {
+          transform: translateY(0) rotate(-2deg);
+        }
 
-      <h2 class="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight">
-        Have an idea? Let's build<br>
-        <span class="bg-gradient-to-r from-primary via-rose-400 to-indigo-400 bg-clip-text text-transparent">
-          something great together.
-        </span>
-      </h2>
-      <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-        From IoT systems to full-stack web apps — I turn complex ideas into polished, production-ready solutions.
-      </p>
+        50% {
+          transform: translateY(-15px) rotate(2deg);
+        }
+      }
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="CTA_page.html"
-          class="inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold text-white rounded-full bg-gradient-to-r from-primary to-rose-500 shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 hover:-translate-y-0.5 hover:scale-105 transition-all duration-300 relative overflow-hidden group">
-          <span class="absolute inset-0 -translate-x-full skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent group-hover:translate-x-full transition-transform duration-700"></span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Start a Conversation
-        </a>
-        <a href="Portfolio_page.html"
-          class="inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold text-white rounded-full border border-white/20 hover:border-white/40 hover:bg-white/5 transition-all duration-300">
-          View My Work
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      @keyframes float-slow-reverse {
+
+        0%,
+        100% {
+          transform: translateY(0) rotate(2deg);
+        }
+
+        50% {
+          transform: translateY(-15px) rotate(-2deg);
+        }
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes blink {
+
+        0%,
+        100% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+
+    <!-- Floating UI Elements (Parallax/Float effect) -->
+    <!-- Mini Terminal -->
+    <div class="absolute top-24 left-[5%] xl:left-[10%] w-56 hidden lg:block"
+      style="animation: float-slow 6s ease-in-out infinite;">
+      <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-700/50 backdrop-blur-xl shadow-2xl">
+        <div class="flex items-center gap-1.5 mb-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-primary/80"></div>
+        </div>
+        <div class="font-mono text-[10px] text-primary">
+          <span class="text-slate-500">➜</span> ~ ./deploy.sh<br>
+          <span class="text-slate-300">Deploying to production</span><span
+            class="inline-block w-1.5 h-2.5 bg-primary ml-1 translate-y-[2px]"
+            style="animation: blink 1s step-end infinite;"></span>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- ── Tech Marquee Tape ── -->
-<div class="bg-slate-950 border-y border-slate-800/60 py-4 overflow-hidden">
-  <div class="flex items-center gap-8 animate-marquee whitespace-nowrap" style="animation: marquee 22s linear infinite;">
-    <template id="marqueeTpl">
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block"></span>
-        IoT Engineering
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/50 inline-block"></span>
-        Blockchain
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/50 inline-block"></span>
-        Full-Stack Web
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-amber-400/50 inline-block"></span>
-        Arduino & ESP32
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-rose-400/50 inline-block"></span>
-        Python & C++
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400/50 inline-block"></span>
-        Smart Systems
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-violet-400/50 inline-block"></span>
-        Machine Learning
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block"></span>
-        Cloud & APIs
-      </span>
-    </template>
-  </div>
-  <style>
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .animate-marquee { display: flex; }
-  </style>
-</div>
+    <!-- Mini Analytics Card -->
+    <div class="absolute top-52 right-[5%] xl:right-[10%] w-48 hidden lg:block"
+      style="animation: float-slow-reverse 7s ease-in-out infinite;">
+      <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-700/50 backdrop-blur-xl shadow-2xl">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">System Uptime</span>
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+        </div>
+        <div class="text-2xl font-black text-white mb-2">99.99%</div>
+        <!-- Fake Sparkline SVG -->
+        <svg class="w-full h-6 border-b border-primary/30" viewBox="0 0 100 20" fill="none">
+          <path d="M0 15Q10 5, 20 12T40 8T60 14T80 4T100 10" stroke="#6366f1" stroke-width="2" stroke-linecap="round" />
+          <path d="M0 15Q10 5, 20 12T40 8T60 14T80 4T100 10V20H0V15Z" fill="url(#spark-grad)" />
+          <defs>
+            <linearGradient id="spark-grad" x1="0" y1="0" x2="0" y2="20" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1" stop-opacity="0.3" />
+              <stop offset="1" stop-color="#6366f1" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="relative container mx-auto px-6 lg:px-20 z-10 text-center">
+
+      <!-- Main Call to Action -->
+      <div class="max-w-4xl mx-auto mb-20 reveal">
+        <!-- Availability Badge -->
+        <div class="mb-8 flex items-center justify-center">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full backdrop-blur-sm shadow-xl hover:bg-primary/20 transition-colors cursor-default">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <span class="text-xs font-bold tracking-widest uppercase text-primary">Open for Collaboration</span>
+          </div>
+        </div>
+
+        <!-- Headline -->
+        <h2
+          class="text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-white mb-8 font-display leading-[1.02]">
+          Ready to build <br class="hidden sm:block">
+          <span class="relative inline-block mt-2">
+            <span class="bg-gradient-to-r from-primary via-rose-400 to-indigo-400 bg-clip-text text-transparent">
+              something great together?
+            </span>
+            <span class="absolute -bottom-2 left-0 right-0 h-[6px] rounded-full opacity-30 blur-sm flex"
+              style="background: linear-gradient(90deg, var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to));"></span>
+          </span>
+        </h2>
+
+        <p class="text-xl sm:text-2xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-12 font-medium">
+          From rapid prototyping to production-grade deployment, I help turn complex engineering challenges into
+          polished, <span class="text-white font-bold">robust solutions</span>.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+          <a href="Contact_page.html"
+            class="group relative px-8 py-4 text-white rounded-2xl font-bold text-lg bg-gradient-to-r from-primary to-rose-500 shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 hover:-translate-y-1 overflow-hidden flex items-center gap-3 w-full sm:w-auto justify-center transition-all duration-300">
+            <span class="relative z-10 flex items-center gap-2">
+              Start a Conversation
+              <svg class="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+            </span>
+            <div
+              class="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]">
+            </div>
+          </a>
+          <a href="Portfolio_page.html"
+            class="px-8 py-4 rounded-2xl border border-white/20 text-white font-semibold hover:bg-white/5 hover:border-white/40 transition-all duration-300 backdrop-blur-md w-full sm:w-auto flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+              </path>
+            </svg>
+            View My Work
+          </a>
+        </div>
+      </div>
+
+      <!-- Enhanced Newsletter Strip -->
+      <div class="max-w-3xl mx-auto reveal" style="animation-delay: 200ms;">
+        <form id="newsletter-form"
+          class="bg-slate-800/40 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-2 sm:p-3 flex flex-col sm:flex-row gap-3 shadow-2xl relative shadow-black/50 ring-1 ring-white/5 text-left">
+          <div class="flex-grow flex items-center px-4">
+            <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-3 flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <input type="email" id="newsletter-email" placeholder="Get weekly engineering insights..."
+              class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full outline-none h-12 text-base font-medium"
+              required />
+          </div>
+          <button id="newsletter-submit-btn" type="submit"
+            class="px-8 py-3 bg-gradient-to-r from-primary to-rose-500 shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 text-white font-bold rounded-xl transition-all whitespace-nowrap active:scale-95 transform">
+            Subscribe
+          </button>
+          <div id="newsletter-status"
+            class="absolute -bottom-8 left-0 right-0 text-center text-sm font-medium opacity-0 transition-opacity">
+          </div>
+        </form>
+
+        <!-- Social Proof -->
+        <div class="mt-8 text-center">
+          <p class="text-slate-400 text-sm">
+            Open to internships & collaboration opportunities
+          </p>
+          <p class="text-slate-500 text-xs mt-1">
+            Usually responds within 24 hours
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Infinite Scrolling Tech Marquee -->
+    <div class="mt-20 border-t border-slate-800/50 pt-10 overflow-hidden relative w-full reveal"
+      style="animation-delay: 300ms;">
+      <div
+        class="absolute inset-y-0 left-0 w-24 sm:w-32 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none">
+      </div>
+      <div
+        class="absolute inset-y-0 right-0 w-24 sm:w-32 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none">
+      </div>
+
+      <p class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] text-center mb-6">Expertise &
+        Technologies</p>
+
+      <div class="flex whitespace-nowrap overflow-hidden">
+        <!-- Marquee Track (Double for loop) -->
+        <div class="flex items-center gap-12 sm:gap-20 min-w-max px-6" style="animation: marquee 40s linear infinite;">
+          <!-- Set 1 -->
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Python</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">React.js</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Node.js</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">AWS</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Docker</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">TypeScript</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Solidity</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">MongoDB</span>
+          <!-- Set 2 -->
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Python</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">React.js</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Node.js</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">AWS</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Docker</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">TypeScript</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Solidity</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- ── Main Footer Body ── -->
 <footer class="bg-slate-900 border-t border-slate-800/60 relative overflow-hidden">
@@ -2022,21 +2266,56 @@
   setInterval(updateClock, 1000);
 
   /* Newsletter form */
-  var nlForm = document.getElementById('footerNewsletter');
-  var nlBtn = document.getElementById('newsletterBtn');
-  var nlMsg = document.getElementById('newsletterMsg');
-  var nlInput = document.getElementById('newsletterEmail');
-  if (nlBtn && nlInput) {
-    nlBtn.addEventListener('click', function() {
-      if (!nlInput.value || !nlInput.value.includes('@')) {
-        nlInput.style.animation = 'shake 0.4s ease';
-        nlInput.addEventListener('animationend', function() { nlInput.style.animation = ''; }, { once: true });
-        return;
-      }
-      if (nlMsg) { nlMsg.classList.remove('hidden'); }
-      nlInput.value = '';
-    });
-  }
+    var nlForm = document.getElementById('footerNewsletter');
+    var nlBtn = document.getElementById('newsletterBtn');
+    var nlMsg = document.getElementById('newsletterMsg');
+    var nlInput = document.getElementById('newsletterEmail');
+    if (nlBtn && nlInput) {
+      if(nlForm) { nlForm.addEventListener('submit', function(e) { e.preventDefault(); }); }
+      nlBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!nlInput.value || !nlInput.value.includes('@')) {
+          nlInput.style.animation = 'shake 0.4s ease';
+          nlInput.addEventListener('animationend', function () { nlInput.style.animation = ''; }, { once: true });
+          return;
+        }
+        
+        // Show loading state
+        var originalBtnContent = nlBtn.innerHTML;
+        nlBtn.innerHTML = '<span class="relative z-10 block w-4 h-4 rounded-full border-2 border-white/20 border-t-white animate-spin"></span>';
+        
+        if (typeof emailjs !== 'undefined') {
+          emailjs.send("service_vap0e7b", "template_0d7egxw", {
+            from_name: "Newsletter Subscriber",
+            from_email: nlInput.value,
+            message: "A new user wants to subscribe to your newsletter/project updates!"
+          }).then(function() {
+            if (nlMsg) { 
+              nlMsg.classList.remove('hidden'); 
+              nlMsg.classList.remove('text-red-400');
+              nlMsg.classList.add('text-emerald-400');
+              nlMsg.textContent = "✓ You're in — thanks!";
+            }
+            nlInput.value = '';
+            nlBtn.innerHTML = originalBtnContent;
+          }).catch(function(err) {
+            console.error("Newsletter Error:", err);
+            if (nlMsg) { 
+              nlMsg.classList.remove('hidden'); 
+              nlMsg.classList.remove('text-emerald-400');
+              nlMsg.classList.add('text-red-400');
+              nlMsg.textContent = "❌ Failed to subscribe.";
+            }
+            nlBtn.innerHTML = originalBtnContent;
+          });
+        } else {
+          // Fallback if emailjs fails to load
+          if (nlMsg) { nlMsg.classList.remove('hidden'); }
+          nlInput.value = '';
+          nlBtn.innerHTML = originalBtnContent;
+        }
+      });
+    }
 
   /* Marquee clone for infinite scroll */
   var marqueeTpl = document.getElementById('marqueeTpl');

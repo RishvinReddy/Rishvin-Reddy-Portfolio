@@ -45,6 +45,17 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <link rel="stylesheet" href="animations.css">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      if(typeof emailjs !== "undefined") {
+        emailjs.init("mUWYYaTiZhAWgB0TH"); 
+      }
+    })();
+  </script>
+
 </head>
 
 <body class="overflow-x-hidden">
@@ -875,7 +886,7 @@
     </script>
 
     <!-- ===== Header Spacer (since header is fixed) ===== -->
-    <div class="h-32 shrink-0"></div>
+    <div class="h-12 shrink-0"></div>
 
 
   <main class="pt-32 pb-20 container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
@@ -1573,94 +1584,263 @@
   </svg>
 </button>
 
-<!-- ── Pre-footer CTA Banner ── -->
-<div class="relative overflow-hidden bg-gradient-to-r from-slate-950 via-primary/20 to-indigo-950">
-  <!-- Animated gradient sweep -->
-  <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-indigo-500/10 animate-pulse"></div>
-  <!-- Grid overlay texture -->
-  <div class="absolute inset-0 opacity-5"
-    style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+  <!-- === ULTIMATE CTA & NEWSLETTER (Combined Premium Footer Capstone) === -->
+  <section class="bg-slate-900 relative py-32 overflow-hidden border-t border-slate-800/50">
+    <!-- Ambient glow orbs -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute -top-40 left-1/5 w-[600px] h-[400px] bg-primary/4 rounded-full blur-[140px]"></div>
+      <div class="absolute -bottom-20 right-1/5 w-[500px] h-[400px] bg-indigo-500/4 rounded-full blur-[140px]"></div>
+    </div>
+    <!-- Inline Styles for Custom Keyframes -->
+    <style>
+      @keyframes float-slow {
 
-  <div class="container mx-auto px-6 lg:px-20 py-16 relative z-10">
-    <div class="max-w-3xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-6">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-        </span>
-        Open for Collaboration
-      </div>
+        0%,
+        100% {
+          transform: translateY(0) rotate(-2deg);
+        }
 
-      <h2 class="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight">
-        Have an idea? Let's build<br>
-        <span class="bg-gradient-to-r from-primary via-rose-400 to-indigo-400 bg-clip-text text-transparent">
-          something great together.
-        </span>
-      </h2>
-      <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-        From IoT systems to full-stack web apps — I turn complex ideas into polished, production-ready solutions.
-      </p>
+        50% {
+          transform: translateY(-15px) rotate(2deg);
+        }
+      }
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="CTA_page.html"
-          class="inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold text-white rounded-full bg-gradient-to-r from-primary to-rose-500 shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 hover:-translate-y-0.5 hover:scale-105 transition-all duration-300 relative overflow-hidden group">
-          <span class="absolute inset-0 -translate-x-full skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent group-hover:translate-x-full transition-transform duration-700"></span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Start a Conversation
-        </a>
-        <a href="Portfolio_page.html"
-          class="inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold text-white rounded-full border border-white/20 hover:border-white/40 hover:bg-white/5 transition-all duration-300">
-          View My Work
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      @keyframes float-slow-reverse {
+
+        0%,
+        100% {
+          transform: translateY(0) rotate(2deg);
+        }
+
+        50% {
+          transform: translateY(-15px) rotate(-2deg);
+        }
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes blink {
+
+        0%,
+        100% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+
+    <!-- Floating UI Elements (Parallax/Float effect) -->
+    <!-- Mini Terminal -->
+    <div class="absolute top-24 left-[5%] xl:left-[10%] w-56 hidden lg:block"
+      style="animation: float-slow 6s ease-in-out infinite;">
+      <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-700/50 backdrop-blur-xl shadow-2xl">
+        <div class="flex items-center gap-1.5 mb-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-primary/80"></div>
+        </div>
+        <div class="font-mono text-[10px] text-primary">
+          <span class="text-slate-500">➜</span> ~ ./deploy.sh<br>
+          <span class="text-slate-300">Deploying to production</span><span
+            class="inline-block w-1.5 h-2.5 bg-primary ml-1 translate-y-[2px]"
+            style="animation: blink 1s step-end infinite;"></span>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- ── Tech Marquee Tape ── -->
-<div class="bg-slate-950 border-y border-slate-800/60 py-4 overflow-hidden">
-  <div class="flex items-center gap-8 animate-marquee whitespace-nowrap" style="animation: marquee 22s linear infinite;">
-    <template id="marqueeTpl">
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block"></span>
-        IoT Engineering
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-indigo-400/50 inline-block"></span>
-        Blockchain
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/50 inline-block"></span>
-        Full-Stack Web
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-amber-400/50 inline-block"></span>
-        Arduino & ESP32
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-rose-400/50 inline-block"></span>
-        Python & C++
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400/50 inline-block"></span>
-        Smart Systems
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-violet-400/50 inline-block"></span>
-        Machine Learning
-      </span>
-      <span class="inline-flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-slate-300 transition-colors cursor-default">
-        <span class="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block"></span>
-        Cloud & APIs
-      </span>
-    </template>
-  </div>
-  <style>
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .animate-marquee { display: flex; }
-  </style>
-</div>
+    <!-- Mini Analytics Card -->
+    <div class="absolute top-52 right-[5%] xl:right-[10%] w-48 hidden lg:block"
+      style="animation: float-slow-reverse 7s ease-in-out infinite;">
+      <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-700/50 backdrop-blur-xl shadow-2xl">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">System Uptime</span>
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+        </div>
+        <div class="text-2xl font-black text-white mb-2">99.99%</div>
+        <!-- Fake Sparkline SVG -->
+        <svg class="w-full h-6 border-b border-primary/30" viewBox="0 0 100 20" fill="none">
+          <path d="M0 15Q10 5, 20 12T40 8T60 14T80 4T100 10" stroke="#6366f1" stroke-width="2" stroke-linecap="round" />
+          <path d="M0 15Q10 5, 20 12T40 8T60 14T80 4T100 10V20H0V15Z" fill="url(#spark-grad)" />
+          <defs>
+            <linearGradient id="spark-grad" x1="0" y1="0" x2="0" y2="20" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1" stop-opacity="0.3" />
+              <stop offset="1" stop-color="#6366f1" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="relative container mx-auto px-6 lg:px-20 z-10 text-center">
+
+      <!-- Main Call to Action -->
+      <div class="max-w-4xl mx-auto mb-20 reveal">
+        <!-- Availability Badge -->
+        <div class="mb-8 flex items-center justify-center">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full backdrop-blur-sm shadow-xl hover:bg-primary/20 transition-colors cursor-default">
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <span class="text-xs font-bold tracking-widest uppercase text-primary">Open for Collaboration</span>
+          </div>
+        </div>
+
+        <!-- Headline -->
+        <h2
+          class="text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-white mb-8 font-display leading-[1.02]">
+          Ready to build <br class="hidden sm:block">
+          <span class="relative inline-block mt-2">
+            <span class="bg-gradient-to-r from-primary via-rose-400 to-indigo-400 bg-clip-text text-transparent">
+              something great together?
+            </span>
+            <span class="absolute -bottom-2 left-0 right-0 h-[6px] rounded-full opacity-30 blur-sm flex"
+              style="background: linear-gradient(90deg, var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to));"></span>
+          </span>
+        </h2>
+
+        <p class="text-xl sm:text-2xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-12 font-medium">
+          From rapid prototyping to production-grade deployment, I help turn complex engineering challenges into
+          polished, <span class="text-white font-bold">robust solutions</span>.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+          <a href="Contact_page.html"
+            class="group relative px-8 py-4 text-white rounded-2xl font-bold text-lg bg-gradient-to-r from-primary to-rose-500 shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 hover:-translate-y-1 overflow-hidden flex items-center gap-3 w-full sm:w-auto justify-center transition-all duration-300">
+            <span class="relative z-10 flex items-center gap-2">
+              Start a Conversation
+              <svg class="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+            </span>
+            <div
+              class="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]">
+            </div>
+          </a>
+          <a href="Portfolio_page.html"
+            class="px-8 py-4 rounded-2xl border border-white/20 text-white font-semibold hover:bg-white/5 hover:border-white/40 transition-all duration-300 backdrop-blur-md w-full sm:w-auto flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+              </path>
+            </svg>
+            View My Work
+          </a>
+        </div>
+      </div>
+
+      <!-- Enhanced Newsletter Strip -->
+      <div class="max-w-3xl mx-auto reveal" style="animation-delay: 200ms;">
+        <form id="newsletter-form"
+          class="bg-slate-800/40 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-2 sm:p-3 flex flex-col sm:flex-row gap-3 shadow-2xl relative shadow-black/50 ring-1 ring-white/5 text-left">
+          <div class="flex-grow flex items-center px-4">
+            <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-3 flex-shrink-0">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <input type="email" id="newsletter-email" placeholder="Get weekly engineering insights..."
+              class="bg-transparent border-none text-white placeholder-slate-400 focus:ring-0 w-full outline-none h-12 text-base font-medium"
+              required />
+          </div>
+          <button id="newsletter-submit-btn" type="submit"
+            class="px-8 py-3 bg-gradient-to-r from-primary to-rose-500 shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 text-white font-bold rounded-xl transition-all whitespace-nowrap active:scale-95 transform">
+            Subscribe
+          </button>
+          <div id="newsletter-status"
+            class="absolute -bottom-8 left-0 right-0 text-center text-sm font-medium opacity-0 transition-opacity">
+          </div>
+        </form>
+
+        <!-- Social Proof -->
+        <div class="mt-8 text-center">
+          <p class="text-slate-400 text-sm">
+             Open to internships & collaboration opportunities
+          </p>
+          <p class="text-slate-500 text-xs mt-1">
+            Usually responds within 24 hours
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Infinite Scrolling Tech Marquee -->
+    <div class="mt-20 border-t border-slate-800/50 pt-10 overflow-hidden relative w-full reveal"
+      style="animation-delay: 300ms;">
+      <div
+        class="absolute inset-y-0 left-0 w-24 sm:w-32 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none">
+      </div>
+      <div
+        class="absolute inset-y-0 right-0 w-24 sm:w-32 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none">
+      </div>
+
+      <p class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] text-center mb-6">Expertise &
+        Technologies</p>
+
+      <div class="flex whitespace-nowrap overflow-hidden">
+        <!-- Marquee Track (Double for loop) -->
+        <div class="flex items-center gap-12 sm:gap-20 min-w-max px-6" style="animation: marquee 40s linear infinite;">
+          <!-- Set 1 -->
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Python</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">React.js</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Node.js</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">AWS</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Docker</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">TypeScript</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Solidity</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">MongoDB</span>
+          <!-- Set 2 -->
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Python</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">React.js</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Node.js</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">AWS</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Docker</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">TypeScript</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">Solidity</span>
+          <span
+            class="text-2xl sm:text-3xl font-bold text-slate-800 hover:text-slate-600 transition-colors cursor-default">MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- ── Main Footer Body ── -->
 <footer class="bg-slate-900 border-t border-slate-800/60 relative overflow-hidden">
@@ -1851,21 +2031,56 @@
   setInterval(updateClock, 1000);
 
   /* Newsletter form */
-  var nlForm = document.getElementById('footerNewsletter');
-  var nlBtn = document.getElementById('newsletterBtn');
-  var nlMsg = document.getElementById('newsletterMsg');
-  var nlInput = document.getElementById('newsletterEmail');
-  if (nlBtn && nlInput) {
-    nlBtn.addEventListener('click', function() {
-      if (!nlInput.value || !nlInput.value.includes('@')) {
-        nlInput.style.animation = 'shake 0.4s ease';
-        nlInput.addEventListener('animationend', function() { nlInput.style.animation = ''; }, { once: true });
-        return;
-      }
-      if (nlMsg) { nlMsg.classList.remove('hidden'); }
-      nlInput.value = '';
-    });
-  }
+    var nlForm = document.getElementById('footerNewsletter');
+    var nlBtn = document.getElementById('newsletterBtn');
+    var nlMsg = document.getElementById('newsletterMsg');
+    var nlInput = document.getElementById('newsletterEmail');
+    if (nlBtn && nlInput) {
+      if(nlForm) { nlForm.addEventListener('submit', function(e) { e.preventDefault(); }); }
+      nlBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!nlInput.value || !nlInput.value.includes('@')) {
+          nlInput.style.animation = 'shake 0.4s ease';
+          nlInput.addEventListener('animationend', function () { nlInput.style.animation = ''; }, { once: true });
+          return;
+        }
+        
+        // Show loading state
+        var originalBtnContent = nlBtn.innerHTML;
+        nlBtn.innerHTML = '<span class="relative z-10 block w-4 h-4 rounded-full border-2 border-white/20 border-t-white animate-spin"></span>';
+        
+        if (typeof emailjs !== 'undefined') {
+          emailjs.send("service_vap0e7b", "template_0d7egxw", {
+            from_name: "Newsletter Subscriber",
+            from_email: nlInput.value,
+            message: "A new user wants to subscribe to your newsletter/project updates!"
+          }).then(function() {
+            if (nlMsg) { 
+              nlMsg.classList.remove('hidden'); 
+              nlMsg.classList.remove('text-red-400');
+              nlMsg.classList.add('text-emerald-400');
+              nlMsg.textContent = "✓ You're in — thanks!";
+            }
+            nlInput.value = '';
+            nlBtn.innerHTML = originalBtnContent;
+          }).catch(function(err) {
+            console.error("Newsletter Error:", err);
+            if (nlMsg) { 
+              nlMsg.classList.remove('hidden'); 
+              nlMsg.classList.remove('text-emerald-400');
+              nlMsg.classList.add('text-red-400');
+              nlMsg.textContent = "❌ Failed to subscribe.";
+            }
+            nlBtn.innerHTML = originalBtnContent;
+          });
+        } else {
+          // Fallback if emailjs fails to load
+          if (nlMsg) { nlMsg.classList.remove('hidden'); }
+          nlInput.value = '';
+          nlBtn.innerHTML = originalBtnContent;
+        }
+      });
+    }
 
   /* Marquee clone for infinite scroll */
   var marqueeTpl = document.getElementById('marqueeTpl');
